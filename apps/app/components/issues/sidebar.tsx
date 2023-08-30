@@ -160,14 +160,14 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
         if (err.status === 400)
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "This URL already exists for this issue.",
+            title: "错误!",
+            message: "该任务的URL已经存在。",
           });
         else
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "Something went wrong. Please try again.",
+            title: "错误!",
+            message: "出错了。请重试。",
           });
       });
   };
@@ -239,8 +239,8 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
     ).then(() => {
       setToastAlert({
         type: "success",
-        title: "Link Copied!",
-        message: "Issue link copied to clipboard.",
+        title: "链接已复制！",
+        message: "任务链接已复制到剪贴板。 ",
       });
     });
   };
@@ -583,7 +583,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
           {(fieldsToShow.includes("all") || fieldsToShow.includes("link")) && (
             <div className={`min-h-[116px] py-1 text-xs ${uneditable ? "opacity-60" : ""}`}>
               <div className="flex items-center justify-between gap-2">
-                <h4>Links</h4>
+                <h4>链接</h4>
                 {!isNotAllowed && (
                   <button
                     type="button"

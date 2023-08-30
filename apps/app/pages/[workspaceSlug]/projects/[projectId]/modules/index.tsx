@@ -158,12 +158,12 @@ const ProjectModules: NextPage = () => {
           </>
         ) : (
           <EmptyState
-            title="Manage your project with modules"
-            description="Modules are smaller, focused projects that help you group and organize issues."
+            title="通过模块管理项目"
+            description="模块是规模较小、重点突出的项目，可帮助您对任务进行分组和组织。"
             image={emptyModule}
             primaryButton={{
               icon: <PlusIcon className="h-4 w-4" />,
-              text: "New Module",
+              text: "新增模块",
               onClick: () => {
                 const e = new KeyboardEvent("keydown", {
                   key: "m",

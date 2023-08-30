@@ -73,29 +73,29 @@ const WorkspacePage: NextPage = () => {
       left={
         <div className="flex items-center gap-2 pl-3">
           <GridViewOutlined fontSize="small" />
-          Dashboard
+          仪表盘
         </div>
       }
       right={
         <div className="flex items-center gap-3 px-3">
-          <button
-            onClick={() => setIsProductUpdatesModalOpen(true)}
-            className="flex items-center gap-1.5 bg-custom-background-80 text-xs font-medium py-1.5 px-3 rounded"
-          >
-            <BoltOutlined fontSize="small" className="-my-1" />
-            What{"'"}s New?
-          </button>
-          <Link href="https://github.com/makeplane/plane" target="_blank" rel="noopener noreferrer">
-            <a className="flex items-center gap-1.5 bg-custom-background-80 text-xs font-medium py-1.5 px-3 rounded">
-              <Image
-                src={theme === "dark" ? githubWhiteImage : githubBlackImage}
-                height={16}
-                width={16}
-                alt="GitHub Logo"
-              />
-              Star us on GitHub
-            </a>
-          </Link>
+          {/*<button*/}
+          {/*  onClick={() => setIsProductUpdatesModalOpen(true)}*/}
+          {/*  className="flex items-center gap-1.5 bg-custom-background-80 text-xs font-medium py-1.5 px-3 rounded"*/}
+          {/*>*/}
+          {/*  <BoltOutlined fontSize="small" className="-my-1" />*/}
+          {/*  What{"'"}s New?*/}
+          {/*</button>*/}
+          {/*<Link href="https://github.com/makeplane/plane" target="_blank" rel="noopener noreferrer">*/}
+          {/*  <a className="flex items-center gap-1.5 bg-custom-background-80 text-xs font-medium py-1.5 px-3 rounded">*/}
+          {/*    <Image*/}
+          {/*      src={theme === "dark" ? githubWhiteImage : githubBlackImage}*/}
+          {/*      height={16}*/}
+          {/*      width={16}*/}
+          {/*      alt="GitHub Logo"*/}
+          {/*    />*/}
+          {/*    Star us on GitHub*/}
+          {/*  </a>*/}
+          {/*</Link>*/}
         </div>
       }
     >
@@ -147,7 +147,7 @@ const WorkspacePage: NextPage = () => {
         ) : (
           <div className="p-8">
             <h3 className="text-2xl font-semibold">
-              Good {greeting}, {user?.first_name} {user?.last_name}
+                {greeting === "morning" ? "上午" :  "下午"}好, {user?.first_name} {user?.last_name}
             </h3>
             <h6 className="text-custom-text-400 font-medium">
               {greeting === "morning" ? "🌤️" : greeting === "afternoon" ? "🌥️" : "🌙️"}
@@ -155,9 +155,9 @@ const WorkspacePage: NextPage = () => {
             </h6>
             <div className="mt-7 bg-custom-primary-100/5 flex justify-between gap-5 md:gap-8">
               <div className="p-5 md:p-8 pr-0">
-                <h5 className="text-xl font-semibold">Create a project</h5>
+                <h5 className="text-xl font-semibold">创建项目</h5>
                 <p className="mt-2 mb-5">
-                  Manage your projects by creating issues, cycles, modules, views and pages.
+                  通过创建任务、周期、模块、视图和页面来管理项目。
                 </p>
                 <PrimaryButton
                   onClick={() => {
@@ -167,7 +167,7 @@ const WorkspacePage: NextPage = () => {
                     document.dispatchEvent(e);
                   }}
                 >
-                  Create Project
+                  创建项目
                 </PrimaryButton>
               </div>
               <div className="hidden md:block self-end overflow-hidden pt-8">

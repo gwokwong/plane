@@ -75,7 +75,7 @@ const ProjectIssues: NextPage = () => {
                     className="relative !py-1.5 rounded-md font-normal text-custom-sidebar-text-200 border-custom-border-200 hover:text-custom-text-100 hover:bg-custom-sidebar-background-90"
                     outline
                   >
-                    <span>Inbox</span>
+                    <span>收件箱</span>
                     {inboxList && inboxList?.[0]?.pending_issue_count !== 0 && (
                       <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full text-custom-text-100 bg-custom-sidebar-background-80 border border-custom-sidebar-border-200">
                         {inboxList?.[0]?.pending_issue_count}
@@ -93,7 +93,7 @@ const ProjectIssues: NextPage = () => {
               }}
             >
               <PlusIcon className="h-4 w-4" />
-              Add Issue
+              添加任务
             </PrimaryButton>
           </div>
         }

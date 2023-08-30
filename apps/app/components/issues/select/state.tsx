@@ -66,7 +66,7 @@ export const IssueStateSelect: React.FC<Props> = ({ setIsOpen, value, onChange, 
           )}
           {selectedOption?.name
             ? selectedOption.name
-            : currentDefaultState?.name ?? <span className="text-custom-text-200">State</span>}
+            : currentDefaultState?.name ?? <span className="text-custom-text-200">状态</span>}
         </div>
       }
       footerOption={

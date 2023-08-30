@@ -152,15 +152,15 @@ export const SinglePageBlock: React.FC<Props> = ({
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Page block converted to issue successfully.",
+          title: "成功!",
+          message: "页面区块成功转换为任务",
         });
       })
       .catch((res) => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Page block could not be converted to issue. Please try again.",
+          title: "错误!",
+          message: "页面块无法转换为任务，请重试",
         });
       });
   };

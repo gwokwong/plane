@@ -35,10 +35,10 @@ export const IssueProjectSelect: React.FC<IssueProjectSelectProps> = ({ value, o
             </CustomSelect.Option>
           ))
         ) : (
-          <p className="text-gray-400">No projects found!</p>
+          <p className="text-gray-400">未找到任何项目！</p>
         )
       ) : (
-        <div className="px-2 text-sm text-custom-text-200">Loading...</div>
+        <div className="px-2 text-sm text-custom-text-200">加载中...</div>
       )}
     </CustomSelect>
   );

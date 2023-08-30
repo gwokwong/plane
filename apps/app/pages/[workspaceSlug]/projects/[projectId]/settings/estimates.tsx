@@ -72,8 +72,8 @@ const EstimatesSettings: NextPage = () => {
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Error: Estimate could not be deleted. Please try again",
+          title: "错误!",
+          message: "错误： 无法删除估算。请重试",
         });
       });
   };
@@ -96,8 +96,8 @@ const EstimatesSettings: NextPage = () => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Estimate could not be disabled. Please try again",
+          title: "错误!",
+          message: "估算无法禁用。请重试",
         })
       );
   };
@@ -128,7 +128,7 @@ const EstimatesSettings: NextPage = () => {
         <div className="h-full flex flex-col p-8 overflow-hidden">
           <SettingsHeader />
           <section className="flex items-center justify-between">
-            <h3 className="text-2xl font-semibold">Estimates</h3>
+            <h3 className="text-2xl font-semibold">估算</h3>
             <div className="col-span-12 space-y-5 sm:col-span-7">
               <div className="flex items-center gap-2">
                 <div
@@ -142,7 +142,7 @@ const EstimatesSettings: NextPage = () => {
                   Create New Estimate
                 </div>
                 {projectDetails?.estimate && (
-                  <SecondaryButton onClick={disableEstimates}>Disable Estimates</SecondaryButton>
+                  <SecondaryButton onClick={disableEstimates}>禁用估算</SecondaryButton>
                 )}
               </div>
             </div>
@@ -168,7 +168,7 @@ const EstimatesSettings: NextPage = () => {
                   image={emptyEstimate}
                   primaryButton={{
                     icon: <PlusIcon className="h-4 w-4" />,
-                    text: "Add Estimate",
+                    text: "添加估算",
                     onClick: () => {
                       setEstimateToUpdate(undefined);
                       setEstimateFormOpen(true);

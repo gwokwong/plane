@@ -92,7 +92,7 @@ const ProjectCycles: NextPage = () => {
     <ProjectAuthorizationWrapper
       breadcrumbs={
         <Breadcrumbs>
-          <BreadcrumbItem title="Projects" link={`/${workspaceSlug}/projects`} />
+          <BreadcrumbItem title="项目" link={`/${workspaceSlug}/projects`} />
           <BreadcrumbItem title={`${truncateText(projectDetails?.name ?? "Project", 32)} Cycles`} />
         </Breadcrumbs>
       }

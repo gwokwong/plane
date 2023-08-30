@@ -20,15 +20,14 @@ const PageNotFound: NextPage = () => (
           <Image src={Image404} layout="fill" alt="404- Page not found" />
         </div>
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold">Oops! Something went wrong.</h3>
+          <h3 className="text-lg font-semibold">哎呀！出错了</h3>
           <p className="text-sm text-custom-text-200">
-            Sorry, the page you are looking for cannot be found. It may have been removed, had its
-            name changed, or is temporarily unavailable.
+            抱歉，找不到您要查找的页面。该页面可能已被删除、更改名称或暂时不可用。
           </p>
         </div>
         <Link href="/">
           <a className="block">
-            <SecondaryButton size="md">Go to Home</SecondaryButton>
+            <SecondaryButton size="md">返回首页</SecondaryButton>
           </a>
         </Link>
       </div>

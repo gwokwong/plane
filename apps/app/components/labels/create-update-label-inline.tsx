@@ -195,7 +195,7 @@ export const CreateUpdateLabelInline = forwardRef<HTMLDivElement, Props>(
             register={register}
             placeholder="Label title"
             validations={{
-              required: "Label title is required",
+              required: "标签标题为必填项",
             }}
             error={errors.name}
           />
@@ -203,11 +203,11 @@ export const CreateUpdateLabelInline = forwardRef<HTMLDivElement, Props>(
         <SecondaryButton onClick={() => handleClose()}>Cancel</SecondaryButton>
         {isUpdating ? (
           <PrimaryButton onClick={handleSubmit(handleLabelUpdate)} loading={isSubmitting}>
-            {isSubmitting ? "Updating" : "Update"}
+            {isSubmitting ? "更新中" : "更新"}
           </PrimaryButton>
         ) : (
           <PrimaryButton onClick={handleSubmit(handleLabelCreate)} loading={isSubmitting}>
-            {isSubmitting ? "Adding" : "Add"}
+            {isSubmitting ? "添加中" : "添加"}
           </PrimaryButton>
         )}
       </div>

@@ -5,7 +5,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 export default async function handleSlackAuthorize(req: NextApiRequest, res: NextApiResponse) {
   const { code } = req.body;
 
-  if (!code || code === "") return res.status(400).json({ message: "Code is required" });
+  if (!code || code === "") return res.status(400).json({ message: "验证码是必填项" });
 
   const response = await axios({
     method: "post",

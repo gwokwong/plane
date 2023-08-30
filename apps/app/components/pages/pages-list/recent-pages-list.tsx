@@ -58,7 +58,7 @@ export const RecentPagesList: React.FC<TPagesListProps> = ({ viewType }) => {
             image={emptyPage}
             primaryButton={{
               icon: <PlusIcon className="h-4 w-4" />,
-              text: "New Page",
+              text: "新页面",
               onClick: () => {
                 const e = new KeyboardEvent("keydown", {
                   key: "d",

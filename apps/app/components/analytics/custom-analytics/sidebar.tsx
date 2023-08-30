@@ -172,8 +172,8 @@ export const AnalyticsSidebar: React.FC<Props> = ({
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "There was some error in exporting the analytics. Please try again.",
+          title: "错误!",
+          message: "导出分析时出现错误。请重试。",
         })
       );
   };
@@ -192,7 +192,7 @@ export const AnalyticsSidebar: React.FC<Props> = ({
       <div className="flex items-center gap-2 flex-wrap">
         <div className="flex items-center gap-1 bg-custom-background-80 rounded-md px-3 py-1 text-custom-text-200 text-xs">
           <LayerDiagonalIcon height={14} width={14} />
-          {analytics ? analytics.total : "..."} Issues
+          {analytics ? analytics.total : "..."} 任务
         </div>
         {isProjectLevel && (
           <div className="flex items-center gap-1 bg-custom-background-80 rounded-md px-3 py-1 text-custom-text-200 text-xs">
@@ -212,7 +212,7 @@ export const AnalyticsSidebar: React.FC<Props> = ({
           <>
             {!isProjectLevel && selectedProjects && selectedProjects.length > 0 && (
               <div className="hidden h-full overflow-hidden md:flex md:flex-col">
-                <h4 className="font-medium">Selected Projects</h4>
+                <h4 className="font-medium">已选择项目</h4>
                 <div className="space-y-6 mt-4 h-full overflow-y-auto">
                   {selectedProjects.map((projectId) => {
                     const project = projects?.find((p) => p.id === projectId);
@@ -245,21 +245,21 @@ export const AnalyticsSidebar: React.FC<Props> = ({
                             <div className="flex items-center justify-between gap-2 text-xs">
                               <div className="flex items-center gap-2">
                                 <UserGroupIcon className="h-4 w-4 text-custom-text-200" />
-                                <h6>Total members</h6>
+                                <h6>成员总数</h6>
                               </div>
                               <span className="text-custom-text-200">{project.total_members}</span>
                             </div>
                             <div className="flex items-center justify-between gap-2 text-xs">
                               <div className="flex items-center gap-2">
                                 <ContrastIcon height={16} width={16} />
-                                <h6>Total cycles</h6>
+                                <h6>总周期</h6>
                               </div>
                               <span className="text-custom-text-200">{project.total_cycles}</span>
                             </div>
                             <div className="flex items-center justify-between gap-2 text-xs">
                               <div className="flex items-center gap-2">
                                 <UserGroupIcon className="h-4 w-4 text-custom-text-200" />
-                                <h6>Total modules</h6>
+                                <h6>模块总数</h6>
                               </div>
                               <span className="text-custom-text-200">{project.total_modules}</span>
                             </div>
@@ -273,14 +273,14 @@ export const AnalyticsSidebar: React.FC<Props> = ({
             {projectId ? (
               cycleId && cycleDetails ? (
                 <div className="hidden md:block h-full overflow-y-auto">
-                  <h4 className="font-medium break-words">Analytics for {cycleDetails.name}</h4>
+                  <h4 className="font-medium break-words">{cycleDetails.name} 分析</h4>
                   <div className="space-y-4 mt-4">
                     <div className="flex items-center gap-2 text-xs">
                       <h6 className="text-custom-text-200">Lead</h6>
                       <span>{cycleDetails.owned_by?.display_name}</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
-                      <h6 className="text-custom-text-200">Start Date</h6>
+                      <h6 className="text-custom-text-200">开始时间</h6>
                       <span>
                         {cycleDetails.start_date && cycleDetails.start_date !== ""
                           ? renderShortDate(cycleDetails.start_date)
@@ -288,7 +288,7 @@ export const AnalyticsSidebar: React.FC<Props> = ({
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
-                      <h6 className="text-custom-text-200">Target Date</h6>
+                      <h6 className="text-custom-text-200">预计日期</h6>
                       <span>
                         {cycleDetails.end_date && cycleDetails.end_date !== ""
                           ? renderShortDate(cycleDetails.end_date)
@@ -299,14 +299,14 @@ export const AnalyticsSidebar: React.FC<Props> = ({
                 </div>
               ) : moduleId && moduleDetails ? (
                 <div className="hidden md:block h-full overflow-y-auto">
-                  <h4 className="font-medium break-words">Analytics for {moduleDetails.name}</h4>
+                  <h4 className="font-medium break-words"> {moduleDetails.name} 分析</h4>
                   <div className="space-y-4 mt-4">
                     <div className="flex items-center gap-2 text-xs">
-                      <h6 className="text-custom-text-200">Lead</h6>
+                      <h6 className="text-custom-text-200">领导</h6>
                       <span>{moduleDetails.lead_detail?.display_name}</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
-                      <h6 className="text-custom-text-200">Start Date</h6>
+                      <h6 className="text-custom-text-200">开始时间</h6>
                       <span>
                         {moduleDetails.start_date && moduleDetails.start_date !== ""
                           ? renderShortDate(moduleDetails.start_date)
@@ -314,7 +314,7 @@ export const AnalyticsSidebar: React.FC<Props> = ({
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
-                      <h6 className="text-custom-text-200">Target Date</h6>
+                      <h6 className="text-custom-text-200">目标时间</h6>
                       <span>
                         {moduleDetails.target_date && moduleDetails.target_date !== ""
                           ? renderShortDate(moduleDetails.target_date)
@@ -343,7 +343,7 @@ export const AnalyticsSidebar: React.FC<Props> = ({
                   </div>
                   <div className="space-y-4 mt-4">
                     <div className="flex items-center gap-2 text-xs">
-                      <h6 className="text-custom-text-200">Network</h6>
+                      <h6 className="text-custom-text-200">网络</h6>
                       <span>
                         {NETWORK_CHOICES.find((n) => n.key === projectDetails?.network)?.label ??
                           ""}

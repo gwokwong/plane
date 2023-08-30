@@ -38,19 +38,19 @@ export const NotAuthorizedView: React.FC<Props> = ({ actionButton, type }) => {
         <div className="w-full max-w-md text-base text-custom-text-200">
           {user ? (
             <p>
-              You have signed in as {user.email}. <br />
+              您已登录为 {user.email}. <br />
               <Link href={`/?next=${currentPath}`}>
-                <a className="font-medium text-custom-text-100">Sign in</a>
+                <a className="font-medium text-custom-text-100">登录</a>
               </Link>{" "}
-              with different account that has access to this page.
+              使用不同的账户访问该页面
             </p>
           ) : (
             <p>
-              You need to{" "}
+              您需要{" "}
               <Link href={`/?next=${currentPath}`}>
-                <a className="font-medium text-custom-text-100">Sign in</a>
+                <a className="font-medium text-custom-text-100">登录</a>
               </Link>{" "}
-              with an account that has access to this page.
+              使用可访问此页面的账号
             </p>
           )}
         </div>

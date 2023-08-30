@@ -22,8 +22,8 @@ const CustomErrorComponent = () => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Failed to sign out. Please try again.",
+          title: "错误!",
+          message: "退出登录错误。请重试。",
         })
       )
       .finally(() => router.push("/"));

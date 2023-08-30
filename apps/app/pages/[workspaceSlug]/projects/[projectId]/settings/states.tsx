@@ -77,8 +77,8 @@ const StatesSettings: NextPage = () => {
           <SettingsHeader />
           <div className="grid grid-cols-12 gap-10">
             <div className="col-span-12 sm:col-span-5">
-              <h3 className="text-2xl font-semibold text-custom-text-100">States</h3>
-              <p className="text-custom-text-200">Manage the states of this project.</p>
+              <h3 className="text-2xl font-semibold text-custom-text-100">状态</h3>
+              <p className="text-custom-text-200">管理该项目的状态</p>
             </div>
             <div className="col-span-12 space-y-8 sm:col-span-7">
               {states && projectDetails && orderedStateGroups ? (

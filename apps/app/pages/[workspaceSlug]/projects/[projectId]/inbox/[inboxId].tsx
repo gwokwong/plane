@@ -45,7 +45,7 @@ const ProjectInbox: NextPage = () => {
               }}
             >
               <PlusIcon className="h-4 w-4" />
-              Add Issue
+              添加任务
             </PrimaryButton>
           </div>
         }

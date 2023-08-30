@@ -210,14 +210,14 @@ export const IssueMainContent: React.FC<Props> = ({
         </div>
       </div>
       <div className="flex flex-col gap-3 py-3">
-        <h3 className="text-lg">Attachments</h3>
+        <h3 className="text-lg">附件</h3>
         <div className="grid  grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           <IssueAttachmentUpload disabled={uneditable} />
           <IssueAttachments />
         </div>
       </div>
       <div className="space-y-5 pt-3">
-        <h3 className="text-lg text-custom-text-100">Comments/Activity</h3>
+        <h3 className="text-lg text-custom-text-100">评论/活动</h3>
         <IssueActivitySection
           activity={issueActivity}
           handleCommentUpdate={handleCommentUpdate}

@@ -191,8 +191,8 @@ export const CreateUpdateIssueModal: React.FC<IssuesModalProps> = ({
       .then((res) => {
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Issue created successfully.",
+          title: "成功!",
+          message: "任务创建成功。",
         });
 
         router.push(
@@ -204,8 +204,8 @@ export const CreateUpdateIssueModal: React.FC<IssuesModalProps> = ({
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Issue could not be created. Please try again.",
+          title: "错误!",
+          message: "无法创建任务。请重试。",
         });
       });
   };
@@ -258,8 +258,8 @@ export const CreateUpdateIssueModal: React.FC<IssuesModalProps> = ({
 
           setToastAlert({
             type: "success",
-            title: "Success!",
-            message: "Issue created successfully.",
+            title: "成功!",
+            message: "任务创建成功。",
           });
 
           if (payload.assignees_list?.some((assignee) => assignee === user?.id))
@@ -298,15 +298,15 @@ export const CreateUpdateIssueModal: React.FC<IssuesModalProps> = ({
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Issue updated successfully.",
+          title: "成功!",
+          message: "任务更新成功。",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Issue could not be updated. Please try again.",
+          title: "错误!",
+          message: "任务无法更新。请重试。",
         });
       });
   };

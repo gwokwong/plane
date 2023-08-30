@@ -78,7 +78,7 @@ const EmojiIconPicker: React.FC<Props> = ({ label, value, onChange, onIconColorC
                 <Tab.Panel>
                   {recentEmojis.length > 0 && (
                     <div className="py-2">
-                      <h3 className="mb-2 text-xs text-custom-text-200">Recent</h3>
+                      <h3 className="mb-2 text-xs text-custom-text-200">最近</h3>
                       <div className="grid grid-cols-8 gap-2">
                         {recentEmojis.map((emoji) => (
                           <button

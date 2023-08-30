@@ -128,14 +128,14 @@ export const EmailCodeForm = ({ handleSignIn }: any) => {
             name="email"
             register={register}
             validations={{
-              required: "Email address is required",
+              required: "电子邮件地址为必填项",
               validate: (value) =>
                 /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
                   value
-                ) || "Email address is not valid",
+                ) || "电子邮件地址无效",
             }}
             error={errors.email}
-            placeholder="Enter your email address..."
+            placeholder="请输入您的电子邮件地址..."
             className="border-custom-border-300 h-[46px]"
           />
         </div>
@@ -148,10 +148,10 @@ export const EmailCodeForm = ({ handleSignIn }: any) => {
               name="token"
               register={register}
               validations={{
-                required: "Code is required",
+                required: "验证码是必填项",
               }}
               error={errors.token}
-              placeholder="Enter code..."
+              placeholder="输入代码..."
               className="border-custom-border-300 h-[46px]"
             />
             <button
@@ -172,13 +172,13 @@ export const EmailCodeForm = ({ handleSignIn }: any) => {
               disabled={isResendDisabled}
             >
               {resendCodeTimer > 0 ? (
-                <span className="text-right">Request new code in {resendCodeTimer} seconds</span>
+                <span className="text-right">在{resendCodeTimer}秒后申请验证码</span>
               ) : isCodeResending ? (
-                "Sending new code..."
+                "发送新代码..."
               ) : errorResendingCode ? (
-                "Please try again later"
+                "请稍后再试"
               ) : (
-                <span className="font-medium">Resend code</span>
+                <span className="font-medium">重新发送验证码</span>
               )}
             </button>
           </>
@@ -192,7 +192,7 @@ export const EmailCodeForm = ({ handleSignIn }: any) => {
             disabled={!isValid && isDirty}
             loading={isLoading}
           >
-            {isLoading ? "Signing in..." : "Sign in"}
+            {isLoading ? "登录中..." : "登录"}
           </PrimaryButton>
         ) : (
           <PrimaryButton
@@ -206,7 +206,7 @@ export const EmailCodeForm = ({ handleSignIn }: any) => {
             disabled={!isValid && isDirty}
             loading={isSubmitting}
           >
-            {isSubmitting ? "Sending code..." : "Send sign in code"}
+            {isSubmitting ? "发送新代码..." : "发送验证码"}
           </PrimaryButton>
         )}
       </form>

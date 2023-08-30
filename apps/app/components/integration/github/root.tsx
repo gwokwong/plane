@@ -169,8 +169,8 @@ export const GithubImporterRoot: React.FC<Props> = ({ user }) => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Import was unsuccessful. Please try again.",
+          title: "错误!",
+          message: "导入不成功。请重试。",
         })
       );
   };

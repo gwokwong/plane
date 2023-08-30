@@ -47,8 +47,8 @@ const ResetPasswordPage: NextPage = () => {
     if (formData.password !== formData.confirmPassword) {
       setToastAlert({
         type: "error",
-        title: "Error!",
-        message: "Passwords do not match.",
+        title: "错误!",
+        message: "密码不一致",
       });
 
       return;
@@ -64,8 +64,8 @@ const ResetPasswordPage: NextPage = () => {
       .then(() => {
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Password reset successfully. You can now login with your new password.",
+          title: "成功!",
+          message: "密码重置成功。您现在可以使用新密码登录。",
         });
         router.push("/");
       })
@@ -75,7 +75,7 @@ const ResetPasswordPage: NextPage = () => {
           title: "Error!",
           message:
             err?.error ||
-            "Something went wrong. Please try again later or contact the support team.",
+            "出错了。请稍后再试或联系支持团队。",
         })
       );
   };
@@ -125,7 +125,7 @@ const ResetPasswordPage: NextPage = () => {
                 name="password"
                 register={register}
                 validations={{
-                  required: "Password is required",
+                  required: "密码是必填项",
                 }}
                 error={errors.password}
                 placeholder="Enter new password..."
@@ -139,7 +139,7 @@ const ResetPasswordPage: NextPage = () => {
                 name="confirmPassword"
                 register={register}
                 validations={{
-                  required: "Password confirmation is required",
+                  required: "确定密码是必填项",
                 }}
                 error={errors.confirmPassword}
                 placeholder="Confirm new password..."

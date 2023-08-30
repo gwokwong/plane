@@ -90,14 +90,14 @@ export const CreateStateModal: React.FC<Props> = ({ isOpen, projectId, handleClo
         if (err.status === 400)
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "Another state exists with the same name. Please try again with another name.",
+            title: "错误!",
+            message: "存在另一个同名的任务。请使用其他名称重试。",
           });
         else
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "State could not be created. Please try again.",
+            title: "错误!",
+            message: "无法创建状态。请重试。",
           });
       });
   };

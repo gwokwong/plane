@@ -83,14 +83,14 @@ export const CreateUpdateEstimateModal: React.FC<Props> = ({ handleClose, data, 
         if (err.status === 400)
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "Estimate with that name already exists. Please try again with another name.",
+            title: "错误!",
+            message: "已存在使用该名称的估计。请使用其他名称重试。",
           });
         else
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "Estimate could not be created. Please try again.",
+            title: "错误!",
+            message: "无法创建估算。请重试。",
           });
       });
   };
@@ -134,8 +134,8 @@ export const CreateUpdateEstimateModal: React.FC<Props> = ({ handleClose, data, 
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Estimate could not be updated. Please try again.",
+          title: "错误!",
+          message: "估算无法更新。请重试。",
         });
       });
 
@@ -146,8 +146,8 @@ export const CreateUpdateEstimateModal: React.FC<Props> = ({ handleClose, data, 
     if (!formData.name || formData.name === "") {
       setToastAlert({
         type: "error",
-        title: "Error!",
-        message: "Estimate title cannot be empty.",
+        title: "错误!",
+        message: "估算标题不能为空。",
       });
       return;
     }
@@ -162,8 +162,8 @@ export const CreateUpdateEstimateModal: React.FC<Props> = ({ handleClose, data, 
     ) {
       setToastAlert({
         type: "error",
-        title: "Error!",
-        message: "Estimate point cannot be empty.",
+        title: "错误!",
+        message: "估算点不能为空。",
       });
       return;
     }
@@ -180,8 +180,8 @@ export const CreateUpdateEstimateModal: React.FC<Props> = ({ handleClose, data, 
     ) {
       setToastAlert({
         type: "error",
-        title: "Error!",
-        message: "Estimate points cannot have duplicate values.",
+        title: "错误!",
+        message: "估算点不能有重复的值。",
       });
       return;
     }

@@ -21,7 +21,7 @@ export const IssuePrioritySelect: React.FC<Props> = ({ value, onChange }) => (
           {getPriorityIcon(value, `text-xs ${value ? "" : "text-custom-text-200"}`)}
         </span>
         <span className={`${value ? "" : "text-custom-text-200"} capitalize`}>
-          {value ?? "Priority"}
+          {value ?? "优先级"}
         </span>
       </div>
     }

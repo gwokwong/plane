@@ -113,7 +113,7 @@ export const ParentIssuesListModal: React.FC<Props> = ({
                     />
                     <Combobox.Input
                       className="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-custom-text-100 outline-none focus:ring-0 sm:text-sm placeholder:text-custom-text-400"
-                      placeholder="Type to search..."
+                      placeholder="输入关键字搜索..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       displayValue={() => ""}
@@ -161,7 +161,7 @@ export const ParentIssuesListModal: React.FC<Props> = ({
                         <div className="flex flex-col items-center justify-center gap-4 px-3 py-8 text-center">
                           <LayerDiagonalIcon height="52" width="52" />
                           <h3 className="text-custom-text-200">
-                            No issues found. Create a new issue with{" "}
+                            未找到任务。用 {" "}创建新任务
                             <pre className="inline rounded bg-custom-background-80 px-2 py-1 text-sm">
                               C
                             </pre>

@@ -141,9 +141,9 @@ export const DeleteIssueModal: React.FC<Props> = ({ isOpen, handleClose, data, u
         mutate(PROJECT_ARCHIVED_ISSUES_LIST_WITH_PARAMS(projectId as string, params));
         handleClose();
         setToastAlert({
-          title: "Success",
+          title: "成功",
           type: "success",
-          message: "Issue deleted successfully",
+          message: "任务已成功删除",
         });
         router.back();
       })
@@ -208,7 +208,7 @@ export const DeleteIssueModal: React.FC<Props> = ({ isOpen, handleClose, data, u
                   <div className="flex justify-end gap-2">
                     <SecondaryButton onClick={onClose}>Cancel</SecondaryButton>
                     <DangerButton onClick={handleIssueDelete} loading={isDeleteLoading}>
-                      {isDeleteLoading ? "Deleting..." : "Delete Issue"}
+                      {isDeleteLoading ? "刪除..." : "删除任务"}
                     </DangerButton>
                   </div>
                 </div>

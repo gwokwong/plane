@@ -69,8 +69,8 @@ export const UserDetails: React.FC<Props> = ({ user }) => {
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Details updated successfully.",
+          title: "成功!",
+          message: "详细信息已成功更新",
         });
       })
       .catch((err) => {
@@ -95,47 +95,47 @@ export const UserDetails: React.FC<Props> = ({ user }) => {
     >
       <div className="relative sm:text-lg">
         <div className="text-custom-primary-100 absolute -top-1 -left-3">{'"'}</div>
-        <h5>Hey there 👋🏻</h5>
-        <h5 className="mt-5 mb-6">Let{"'"}s get you onboard!</h5>
-        <h4 className="text-xl sm:text-2xl font-semibold">Set up your Plane profile.</h4>
+        <h5>嘿，您好 👋🏻</h5>
+        <h5 className="mt-5 mb-6">让我们一起加入吧!</h5>
+        <h4 className="text-xl sm:text-2xl font-semibold">设置您的个人资料</h4>
       </div>
 
       <div className="space-y-7 sm:w-3/4 md:w-2/5">
         <div className="space-y-1 text-sm">
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName">名字</label>
           <Input
             id="firstName"
             name="first_name"
             autoComplete="off"
-            placeholder="Enter your first name..."
+            placeholder="输入您的名字..."
             register={register}
             validations={{
-              required: "First name is required",
+              required: "名字是必填项",
             }}
             error={errors.first_name}
           />
         </div>
         <div className="space-y-1 text-sm">
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName">姓</label>
           <Input
             id="lastName"
             name="last_name"
             autoComplete="off"
             register={register}
-            placeholder="Enter your last name..."
+            placeholder="输入您的姓..."
             validations={{
-              required: "Last name is required",
+              required: "姓是必填项",
             }}
             error={errors.last_name}
           />
         </div>
         <div className="space-y-1 text-sm">
-          <span>What{"'"}s your role?</span>
+          <span>您的角色？</span>
           <div className="w-full">
             <Controller
               name="role"
               control={control}
-              rules={{ required: "This field is required" }}
+              rules={{ required: "此栏为必填项" }}
               render={({ field: { value, onChange } }) => (
                 <CustomSelect
                   value={value}
@@ -144,7 +144,7 @@ export const UserDetails: React.FC<Props> = ({ user }) => {
                     value ? (
                       value.toString()
                     ) : (
-                      <span className="text-custom-text-400">Select your role...</span>
+                      <span className="text-custom-text-400">选择您的角色...</span>
                     )
                   }
                   input
@@ -165,7 +165,7 @@ export const UserDetails: React.FC<Props> = ({ user }) => {
       </div>
 
       <PrimaryButton type="submit" size="md" disabled={!isValid} loading={isSubmitting}>
-        {isSubmitting ? "Updating..." : "Continue"}
+        {isSubmitting ? "更新..." : "继续"}
       </PrimaryButton>
     </form>
   );

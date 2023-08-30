@@ -65,15 +65,15 @@ export const SingleProjectCard: React.FC<ProjectCardProps> = ({
       .then(() => {
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Successfully added the project to favorites.",
+          title: "成功!",
+          message: "成功将项目添加到收藏夹",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't remove the project from favorites. Please try again.",
+          title: "错误!",
+          message: "无法从收藏夹中删除项目，请重试。",
         });
       });
   };
@@ -93,15 +93,15 @@ export const SingleProjectCard: React.FC<ProjectCardProps> = ({
       .then(() => {
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Successfully removed the project from favorites.",
+          title: "成功!",
+          message: "成功将项目从收藏夹中删除",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't remove the project from favorites. Please try again.",
+          title: "错误!",
+          message: "无法从收藏夹中删除项目，请重试",
         });
       });
   };
@@ -113,8 +113,8 @@ export const SingleProjectCard: React.FC<ProjectCardProps> = ({
     copyTextToClipboard(`${originURL}/${workspaceSlug}/projects/${project.id}/issues`).then(() => {
       setToastAlert({
         type: "success",
-        title: "Link Copied!",
-        message: "Project link copied to clipboard.",
+        title: "链接已复制！",
+        message: "项目链接已复制到剪贴板",
       });
     });
   };

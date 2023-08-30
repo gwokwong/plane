@@ -111,15 +111,15 @@ const GeneralSettings: NextPage = () => {
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Project updated successfully",
+          title: "成功!",
+          message: "项目更新成功",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Project could not be updated. Please try again.",
+          title: "错误!",
+          message: "项目无法更新，请重试",
         });
       });
   };
@@ -147,7 +147,7 @@ const GeneralSettings: NextPage = () => {
       await projectService
         .checkProjectIdentifierAvailability(workspaceSlug as string, payload.identifier ?? "")
         .then(async (res) => {
-          if (res.exists) setError("identifier", { message: "Identifier already exists" });
+          if (res.exists) setError("identifier", { message: "标识符已存在" });
           else await updateProject(payload);
         });
     else await updateProject(payload);
@@ -175,7 +175,7 @@ const GeneralSettings: NextPage = () => {
             link={`/${workspaceSlug}/projects/${projectDetails?.id}/issues`}
             linkTruncate
           />
-          <BreadcrumbItem title="General Settings" unshrinkTitle />
+          <BreadcrumbItem title="通用设置" unshrinkTitle />
         </Breadcrumbs>
       }
     >
@@ -190,9 +190,9 @@ const GeneralSettings: NextPage = () => {
         <div className="space-y-8 sm:space-y-12">
           <div className="grid grid-cols-12 items-start gap-4 sm:gap-16">
             <div className="col-span-12 sm:col-span-6">
-              <h4 className="text-lg font-semibold">Icon & Name</h4>
+              <h4 className="text-lg font-semibold">图标和名称</h4>
               <p className="text-sm text-custom-text-200">
-                Select an icon and a name for your project.
+                为项目选择图标和名称
               </p>
             </div>
             <div className="col-span-12 flex gap-2 sm:col-span-6">
@@ -221,9 +221,9 @@ const GeneralSettings: NextPage = () => {
                   name="name"
                   error={errors.name}
                   register={register}
-                  placeholder="Project Name"
+                  placeholder="项目名称"
                   validations={{
-                    required: "Name is required",
+                    required: "项目名称是必填项",
                   }}
                 />
               ) : (
@@ -235,8 +235,8 @@ const GeneralSettings: NextPage = () => {
           </div>
           <div className="grid grid-cols-12 gap-4 sm:gap-16">
             <div className="col-span-12 sm:col-span-6">
-              <h4 className="text-lg font-semibold">Description</h4>
-              <p className="text-sm text-custom-text-200">Give a description to your project.</p>
+              <h4 className="text-lg font-semibold">描述</h4>
+              <p className="text-sm text-custom-text-200">对项目进行描述</p>
             </div>
             <div className="col-span-12 sm:col-span-6">
               {projectDetails ? (
@@ -258,9 +258,9 @@ const GeneralSettings: NextPage = () => {
           </div>
           <div className="grid grid-cols-12 gap-4 sm:gap-16">
             <div className="col-span-12 sm:col-span-6">
-              <h4 className="text-lg font-semibold">Cover Photo</h4>
+              <h4 className="text-lg font-semibold">封面照片</h4>
               <p className="text-sm text-custom-text-200">
-                Select your cover photo from the given library.
+                从指定图片库中选择封面照片
               </p>
             </div>
             <div className="col-span-12 sm:col-span-6">
@@ -292,9 +292,9 @@ const GeneralSettings: NextPage = () => {
           </div>
           <div className="grid grid-cols-12 gap-4 sm:gap-16">
             <div className="col-span-12 sm:col-span-6">
-              <h4 className="text-lg font-semibold">Identifier</h4>
+              <h4 className="text-lg font-semibold">标识符</h4>
               <p className="text-sm text-custom-text-200">
-                Create a 1-6 characters{"'"} identifier for the project.
+                为项目创建 1-6 个字符的标识符
               </p>
             </div>
             <div className="col-span-12 sm:col-span-6">
@@ -304,19 +304,19 @@ const GeneralSettings: NextPage = () => {
                   name="identifier"
                   error={errors.identifier}
                   register={register}
-                  placeholder="Enter identifier"
+                  placeholder="输入标识符"
                   onChange={handleIdentifierChange}
                   validations={{
-                    required: "Identifier is required",
+                    required: "标识符为必填项",
                     validate: (value) =>
-                      /^[A-Z0-9]+$/.test(value.toUpperCase()) || "Identifier must be in uppercase.",
+                      /^[A-Z0-9]+$/.test(value.toUpperCase()) || "标识符必须是大写文本",
                     minLength: {
                       value: 1,
-                      message: "Identifier must at least be of 1 character",
+                      message: "标识符必须至少为1个字符",
                     },
                     maxLength: {
                       value: 5,
-                      message: "Identifier must at most be of 5 characters",
+                      message: "标识符最多只能有5个字符",
                     },
                   }}
                 />
@@ -329,8 +329,8 @@ const GeneralSettings: NextPage = () => {
           </div>
           <div className="grid grid-cols-12 gap-4 sm:gap-16">
             <div className="col-span-12 sm:col-span-6">
-              <h4 className="text-lg font-semibold">Network</h4>
-              <p className="text-sm text-custom-text-200">Select privacy type for the project.</p>
+              <h4 className="text-lg font-semibold">网络</h4>
+              <p className="text-sm text-custom-text-200">为项目选择隐私类型</p>
             </div>
             <div className="col-span-12 sm:col-span-6">
               {projectDetails ? (
@@ -341,7 +341,7 @@ const GeneralSettings: NextPage = () => {
                     <CustomSelect
                       value={value}
                       onChange={onChange}
-                      label={currentNetwork?.label ?? "Select network"}
+                      label={currentNetwork?.label ?? "选择网络"}
                       input
                     >
                       {NETWORK_CHOICES.map((network) => (
@@ -362,7 +362,7 @@ const GeneralSettings: NextPage = () => {
           <div className="sm:text-right">
             {projectDetails ? (
               <SecondaryButton type="submit" loading={isSubmitting} disabled={!isAdmin}>
-                {isSubmitting ? "Updating Project..." : "Update Project"}
+                {isSubmitting ? "更新项目中..." : "更新项目"}
               </SecondaryButton>
             ) : (
               <Loader className="mt-2 w-full">
@@ -373,11 +373,10 @@ const GeneralSettings: NextPage = () => {
           {memberDetails?.role === 20 && (
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold">Danger Zone</h4>
+                <h4 className="text-lg font-semibold">危险区域</h4>
                 <p className="text-sm text-custom-text-200">
-                  The danger zone of the project delete page is a critical area that requires
-                  careful consideration and attention. When deleting a project, all of the data and
-                  resources within that project will be permanently removed and cannot be recovered.
+                  项目删除页面的危险区域是需要仔细考虑和注意的关键区域。注意：删除项目时，该项目的所有数据和资源将被永久删除，且无法恢复。
+
                 </p>
               </div>
               <div className="col-span-12 sm:col-span-6">
@@ -387,7 +386,7 @@ const GeneralSettings: NextPage = () => {
                       onClick={() => setSelectedProject(projectDetails.id ?? null)}
                       outline
                     >
-                      Delete Project
+                      删除项目
                     </DangerButton>
                   </div>
                 ) : (

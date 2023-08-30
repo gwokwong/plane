@@ -231,7 +231,7 @@ export const SubIssuesList: FC<Props> = ({ parentIssue, user, disabled = false }
             label={
               <>
                 <PlusIcon className="h-3 w-3" />
-                Add sub-issue
+                添加子任务
               </>
             }
             buttonClassName="whitespace-nowrap"

@@ -56,8 +56,8 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
   user,
   secondaryButton,
   primaryButtonText = {
-    loading: "Creating...",
-    default: "Create Workspace",
+    loading: "创建中...",
+    default: "创建工作区",
   },
 }) => {
   const [slugError, setSlugError] = useState(false);
@@ -86,8 +86,8 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
             .then(async (res) => {
               setToastAlert({
                 type: "success",
-                title: "Success!",
-                message: "Workspace created successfully.",
+                title: "成功!",
+                message: "工作区创建成功。",
               });
 
               mutate<IWorkspace[]>(
@@ -100,8 +100,8 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
             .catch(() =>
               setToastAlert({
                 type: "error",
-                title: "Error!",
-                message: "Workspace could not be created. Please try again.",
+                title: "错误!",
+                message: "无法创建工作区。请重试。",
               })
             );
         } else setSlugError(true);
@@ -109,8 +109,8 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Some error occurred while creating workspace. Please try again.",
+          title: "错误!",
+          message: "创建工作区时发生一些错误。请重试。",
         });
       });
   };
@@ -127,7 +127,7 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
     <form className="space-y-6 sm:space-y-9" onSubmit={handleSubmit(handleCreateWorkspace)}>
       <div className="space-y-6 sm:space-y-7">
         <div className="space-y-1 text-sm">
-          <label htmlFor="workspaceName">Workspace Name</label>
+          <label htmlFor="workspaceName">工作空间名称</label>
           <Input
             id="workspaceName"
             name="name"
@@ -137,21 +137,21 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
               setValue("slug", e.target.value.toLocaleLowerCase().trim().replace(/ /g, "-"))
             }
             validations={{
-              required: "Workspace name is required",
+              required: "工作区名称为必填项",
               validate: (value) =>
                 /^[\w\s-]*$/.test(value) ||
-                `Name can only contain (" "), ( - ), ( _ ) & alphanumeric characters.`,
+                `名称只能包含 (" "), ( - ), ( _ ) 和字母数字字符。`,
               maxLength: {
                 value: 80,
-                message: "Workspace name should not exceed 80 characters",
+                message: "工作区名称不应超过 80 个字符",
               },
             }}
-            placeholder="Enter workspace name..."
+            placeholder="输入工作区名称..."
             error={errors.name}
           />
         </div>
         <div className="space-y-1 text-sm">
-          <label htmlFor="workspaceUrl">Workspace URL</label>
+          <label htmlFor="workspaceUrl">工作区网址</label>
           <div className="flex w-full items-center rounded-md border border-custom-border-200 px-3">
             <span className="whitespace-nowrap text-sm text-custom-text-200">
               {window && window.location.host}/
@@ -164,7 +164,7 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
               register={register}
               className="block w-full rounded-md bg-transparent py-2 !px-0 text-sm"
               validations={{
-                required: "Workspace URL is required",
+                required: "工作区网址是必需的",
               }}
               onChange={(e) =>
                 /^[a-zA-Z0-9_-]+$/.test(e.target.value)
@@ -174,26 +174,26 @@ export const CreateWorkspaceForm: React.FC<Props> = ({
             />
           </div>
           {slugError && (
-            <span className="-mt-3 text-sm text-red-500">Workspace URL is already taken!</span>
+            <span className="-mt-3 text-sm text-red-500">工作区网址已被占用！</span>
           )}
           {invalidSlug && (
-            <span className="text-sm text-red-500">{`URL can only contain ( - ), ( _ ) & alphanumeric characters.`}</span>
+            <span className="text-sm text-red-500">{`URL只能包含( - ), ( _ )和字母数字字符`}</span>
           )}
         </div>
         <div className="space-y-1 text-sm">
-          <span>What size is your organization?</span>
+          <span>你的组织规模有多大？</span>
           <div className="w-full">
             <Controller
               name="organization_size"
               control={control}
-              rules={{ required: "This field is required" }}
+              rules={{ required: "此字段为必填项" }}
               render={({ field: { value, onChange } }) => (
                 <CustomSelect
                   value={value}
                   onChange={onChange}
                   label={
                     ORGANIZATION_SIZE.find((c) => c === value) ?? (
-                      <span className="text-custom-text-200">Select organization size</span>
+                      <span className="text-custom-text-200">选择组织规模</span>
                     )
                   }
                   input

@@ -13,7 +13,7 @@ type Props = {
 
 export const AnalyticsYearWiseIssues: React.FC<Props> = ({ defaultAnalytics }) => (
   <div className="py-3 border border-custom-border-200 rounded-[10px]">
-    <h1 className="px-3 text-base font-medium">Issues closed in a year</h1>
+    <h1 className="px-3 text-base font-medium">本年度已完成任务</h1>
     {defaultAnalytics.issue_completed_month_wise.length > 0 ? (
       <LineGraph
         data={[
@@ -40,7 +40,7 @@ export const AnalyticsYearWiseIssues: React.FC<Props> = ({ defaultAnalytics }) =
         sliceTooltip={(datum) => (
           <div className="rounded-md border border-custom-border-200 bg-custom-background-80 p-2 text-xs">
             {datum.slice.points[0].data.yFormatted}
-            <span className="text-custom-text-200"> issues closed in </span>
+            <span className="text-custom-text-200"> 任务关闭于 </span>
             {datum.slice.points[0].data.xFormatted}
           </div>
         )}
@@ -52,7 +52,7 @@ export const AnalyticsYearWiseIssues: React.FC<Props> = ({ defaultAnalytics }) =
     ) : (
       <div className="px-7 py-4">
         <ProfileEmptyState
-          title="No Data yet"
+          title="暂无数据"
           description="Close issues to view analysis of the same in the form of a graph."
           image={emptyGraph}
         />

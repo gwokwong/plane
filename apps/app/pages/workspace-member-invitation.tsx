@@ -74,20 +74,20 @@ const WorkspaceInvitation: NextPage = () => {
                 {invitationDetail.accepted ? (
                   <>
                     <EmptySpace
-                      title={`You are already a member of ${invitationDetail.workspace.name}`}
-                      description="Your workspace is where you'll create projects, collaborate on your issues, and organize different streams of work in your Plane account."
+                      title={`您已经是 ${invitationDetail.workspace.name}的成员`}
+                      description="您的工作区是您在Mission plan 账户中创建项目、协作处理问题和组织不同工作流的地方。"
                     >
                       <EmptySpaceItem
                         Icon={CubeIcon}
-                        title="Continue to Dashboard"
+                        title="继续到仪表板"
                         action={() => router.push("/")}
                       />
                     </EmptySpace>
                   </>
                 ) : (
                   <EmptySpace
-                    title={`You have been invited to ${invitationDetail.workspace.name}`}
-                    description="Your workspace is where you'll create projects, collaborate on your issues, and organize different streams of work in your Plane account."
+                    title={`您已受邀参加 ${invitationDetail.workspace.name}`}
+                    description="您的工作区是您在Mission plan 账户中创建项目、协作处理问题和组织不同工作流的地方。"
                   >
                     <EmptySpaceItem Icon={CheckIcon} title="Accept" action={handleAccept} />
                     <EmptySpaceItem
@@ -104,14 +104,14 @@ const WorkspaceInvitation: NextPage = () => {
           </>
         ) : error ? (
           <EmptySpace
-            title="This invitation link is not active anymore."
-            description="Your workspace is where you'll create projects, collaborate on your issues, and organize different streams of work in your Plane account."
-            link={{ text: "Or start from an empty project", href: "/" }}
+            title="该邀请链接已失效"
+            description="您的工作区是您在Mission plan 账户中创建项目、协作处理问题和组织不同工作流的地方。"
+            link={{ text: "或从空白项目开始", href: "/" }}
           >
             {!user ? (
               <EmptySpaceItem
                 Icon={UserIcon}
-                title="Sign in to continue"
+                title="登录以继续"
                 action={() => {
                   router.push("/");
                 }}
@@ -119,19 +119,19 @@ const WorkspaceInvitation: NextPage = () => {
             ) : (
               <EmptySpaceItem
                 Icon={CubeIcon}
-                title="Continue to Dashboard"
+                title="继续到仪表板"
                 action={() => {
                   router.push("/");
                 }}
               />
             )}
-            <EmptySpaceItem
-              Icon={StarIcon}
-              title="Star us on GitHub"
-              action={() => {
-                router.push("https://github.com/makeplane");
-              }}
-            />
+            {/*<EmptySpaceItem*/}
+            {/*  Icon={StarIcon}*/}
+            {/*  title="Star us on GitHub"*/}
+            {/*  action={() => {*/}
+            {/*    router.push("https://github.com/makeplane");*/}
+            {/*  }}*/}
+            {/*/>*/}
             <EmptySpaceItem
               Icon={ShareIcon}
               title="Join our community of active creators"

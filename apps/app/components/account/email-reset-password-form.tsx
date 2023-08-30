@@ -38,22 +38,22 @@ export const EmailResetPasswordForm: React.FC<Props> = ({ setIsResettingPassword
       .then(() =>
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Password reset link has been sent to your email address.",
+          title: "成功!",
+          message: "密码重置链接已发送至您的电子邮件地址。",
         })
       )
       .catch((err) => {
         if (err.status === 400)
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "Please check the Email ID entered.",
+            title: "错误!",
+            message: "请核对输入的电子邮件 ID。",
           });
         else
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "Something went wrong. Please try again.",
+            title: "错误!",
+            message: "出错了。请重试。",
           });
       });
   };
@@ -70,14 +70,14 @@ export const EmailResetPasswordForm: React.FC<Props> = ({ setIsResettingPassword
           name="email"
           register={register}
           validations={{
-            required: "Email address is required",
+            required: "电子邮件地址为必填项",
             validate: (value) =>
               /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
                 value
               ) || "Email address is not valid",
           }}
           error={errors.email}
-          placeholder="Enter registered email address.."
+          placeholder="请输入注册的电子邮件地址.."
           className="border-custom-border-300 h-[46px]"
         />
       </div>
@@ -89,7 +89,7 @@ export const EmailResetPasswordForm: React.FC<Props> = ({ setIsResettingPassword
           Go Back
         </SecondaryButton>
         <PrimaryButton type="submit" className="w-full text-center h-[46px]" loading={isSubmitting}>
-          {isSubmitting ? "Sending link..." : "Send reset link"}
+          {isSubmitting ? "发送链接..." : "发送重置链接"}
         </PrimaryButton>
       </div>
     </form>

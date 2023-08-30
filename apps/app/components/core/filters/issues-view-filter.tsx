@@ -29,26 +29,31 @@ import { Properties, TIssueViewOptions } from "types";
 // constants
 import { GROUP_BY_OPTIONS, ORDER_BY_OPTIONS, FILTER_ISSUE_OPTIONS } from "constants/issue";
 
-const issueViewOptions: { type: TIssueViewOptions; Icon: any }[] = [
+const issueViewOptions: { type: TIssueViewOptions; Icon: any; Name:any}[] = [
   {
     type: "list",
     Icon: FormatListBulletedOutlined,
+    Name: "列表",
   },
   {
     type: "kanban",
     Icon: GridViewOutlined,
+    Name: "看板",
   },
   {
     type: "calendar",
     Icon: CalendarMonthOutlined,
+    Name: "日历",
   },
   {
     type: "spreadsheet",
     Icon: TableChartOutlined,
+    Name: "电子表格",
   },
   {
     type: "gantt_chart",
     Icon: WaterfallChartOutlined,
+    Name: "甘特图",
   },
 ];
 
@@ -89,7 +94,7 @@ export const IssuesFilterView: React.FC = () => {
             <Tooltip
               key={option.type}
               tooltipContent={
-                <span className="capitalize">{replaceUnderscoreIfSnakeCase(option.type)} View</span>
+                <span className="capitalize">{replaceUnderscoreIfSnakeCase(option.Name)}</span>
               }
               position="bottom"
             >
@@ -158,7 +163,7 @@ export const IssuesFilterView: React.FC = () => {
                   : "text-custom-sidebar-text-200"
               }`}
             >
-              View
+              视图
               <ChevronDownIcon className="h-3 w-3" aria-hidden="true" />
             </Popover.Button>
 
@@ -178,12 +183,12 @@ export const IssuesFilterView: React.FC = () => {
                       issueView !== "spreadsheet" &&
                       issueView !== "gantt_chart" && (
                         <div className="flex items-center justify-between">
-                          <h4 className="text-custom-text-200">Group by</h4>
+                          <h4 className="text-custom-text-200">分组</h4>
                           <div className="w-28">
                             <CustomMenu
                               label={
                                 GROUP_BY_OPTIONS.find((option) => option.key === groupByProperty)
-                                  ?.name ?? "Select"
+                                  ?.name ?? "选择"
                               }
                               className="!w-full"
                               buttonClassName="w-full"
@@ -207,7 +212,7 @@ export const IssuesFilterView: React.FC = () => {
                       )}
                     {issueView !== "calendar" && issueView !== "spreadsheet" && (
                       <div className="flex items-center justify-between">
-                        <h4 className="text-custom-text-200">Order by</h4>
+                        <h4 className="text-custom-text-200">排序</h4>
                         <div className="w-28">
                           <CustomMenu
                             label={
@@ -234,7 +239,7 @@ export const IssuesFilterView: React.FC = () => {
                       </div>
                     )}
                     <div className="flex items-center justify-between">
-                      <h4 className="text-custom-text-200">Issue type</h4>
+                      <h4 className="text-custom-text-200">任务类型</h4>
                       <div className="w-28">
                         <CustomMenu
                           label={
@@ -262,7 +267,7 @@ export const IssuesFilterView: React.FC = () => {
 
                     {issueView !== "calendar" && issueView !== "spreadsheet" && (
                       <div className="flex items-center justify-between">
-                        <h4 className="text-custom-text-200">Show sub-issues</h4>
+                        <h4 className="text-custom-text-200">显示空状态</h4>
                         <div className="w-28">
                           <ToggleSwitch
                             value={showSubIssues}
@@ -289,14 +294,14 @@ export const IssuesFilterView: React.FC = () => {
                       issueView !== "gantt_chart" && (
                         <div className="relative flex justify-end gap-x-3">
                           <button type="button" onClick={() => resetFilterToDefault()}>
-                            Reset to default
+                            重置为默认值
                           </button>
                           <button
                             type="button"
                             className="font-medium text-custom-primary"
                             onClick={() => setNewFilterDefaultView()}
                           >
-                            Set as default
+                            设为默认值
                           </button>
                         </div>
                       )}
@@ -304,7 +309,7 @@ export const IssuesFilterView: React.FC = () => {
 
                   {issueView !== "gantt_chart" && (
                     <div className="space-y-2 py-3">
-                      <h4 className="text-sm text-custom-text-200">Display Properties</h4>
+                      <h4 className="text-sm text-custom-text-200">字段显示</h4>
                       <div className="flex flex-wrap items-center gap-2 text-custom-text-200">
                         {Object.keys(properties).map((key) => {
                           if (key === "estimate" && !isEstimateActive) return null;
@@ -334,7 +339,16 @@ export const IssuesFilterView: React.FC = () => {
                               }`}
                               onClick={() => setProperties(key as keyof Properties)}
                             >
-                              {key === "key" ? "ID" : replaceUnderscoreIfSnakeCase(key)}
+                              {/*{key === "key" ? "ID" : replaceUnderscoreIfSnakeCase(key)}*/}
+                              {key === "key" && <div>ID</div>}
+                              {key === "assignee" && <div>负责人</div>}
+                              {key === "due_date" && <div>到期时间</div>}
+                              {key === "labels" && <div>标签</div>}
+                              {key === "priority" && <div>优先级</div>}
+                              {key === "state" && <div>状态</div>}
+                              {key === "sub_issue_count" && <div>子任务数</div>}
+                              {key === "attachment_count" && <div>附件数</div>}
+                              {key === "link" && <div>链接</div>}
                             </button>
                           );
                         })}

@@ -159,8 +159,8 @@ const MembersSettings: NextPage = () => {
           }
           setToastAlert({
             type: "success",
-            message: "Member removed successfully",
-            title: "Success",
+            message: "成功删除成员",
+            title: "成功",
           });
         }}
       />
@@ -175,14 +175,14 @@ const MembersSettings: NextPage = () => {
         <SettingsHeader />
         <section className="space-y-5">
           <div className="flex items-end justify-between gap-4">
-            <h3 className="text-2xl font-semibold">Members</h3>
+            <h3 className="text-2xl font-semibold">成员</h3>
             <button
               type="button"
               className="flex items-center gap-2 text-custom-primary outline-none"
               onClick={() => setInviteModal(true)}
             >
               <PlusIcon className="h-4 w-4" />
-              Add Member
+              添加成员
             </button>
           </div>
           {!projectMembers || !projectInvitations ? (

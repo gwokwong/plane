@@ -80,9 +80,9 @@ const ControlSettings: NextPage = () => {
         );
 
         setToastAlert({
-          title: "Success",
+          title: "成功",
           type: "success",
-          message: "Project updated successfully",
+          message: "项目更新成功",
         });
       })
       .catch((err) => {
@@ -109,7 +109,7 @@ const ControlSettings: NextPage = () => {
             link={`/${workspaceSlug}/projects/${projectId}/issues`}
             linkTruncate
           />
-          <BreadcrumbItem title="Control Settings" unshrinkTitle />
+          <BreadcrumbItem title="控制设置" unshrinkTitle />
         </Breadcrumbs>
       }
     >
@@ -172,9 +172,9 @@ const ControlSettings: NextPage = () => {
           </div>
           <div className="grid grid-cols-12 items-start gap-4 sm:gap-16">
             <div className="col-span-12 sm:col-span-6">
-              <h4 className="text-lg font-semibold">Default Assignee</h4>
+              <h4 className="text-lg font-semibold">默认负责人</h4>
               <p className="text-sm text-custom-text-200">
-                Select the default assignee for the project.
+                选择项目的默认负责人。
               </p>
             </div>
             <div className="col-span-12 sm:col-span-6">
@@ -229,7 +229,7 @@ const ControlSettings: NextPage = () => {
           </div>
           <div className="sm:text-right">
             <SecondaryButton type="submit" loading={isSubmitting}>
-              {isSubmitting ? "Updating Project..." : "Update Project"}
+              {isSubmitting ? "更新项目..." : "更新项目"}
             </SecondaryButton>
           </div>
         </div>

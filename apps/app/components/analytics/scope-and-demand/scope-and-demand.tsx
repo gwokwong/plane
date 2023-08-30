@@ -62,7 +62,7 @@ export const ScopeAndDemand: React.FC<Props> = ({ fullScreen = true }) => {
                   count: user?.count,
                   id: user?.created_by__id,
                 }))}
-                title="Most issues created"
+                title="创建任务最多"
                 emptyStateMessage="Co-workers and the number issues created by them appears here."
                 workspaceSlug={workspaceSlug?.toString() ?? ""}
               />
@@ -75,7 +75,7 @@ export const ScopeAndDemand: React.FC<Props> = ({ fullScreen = true }) => {
                   count: user?.count,
                   id: user?.assignees__id,
                 }))}
-                title="Most issues closed"
+                title="完成任务最多"
                 emptyStateMessage="Co-workers and the number issues closed by them appears here."
                 workspaceSlug={workspaceSlug?.toString() ?? ""}
               />

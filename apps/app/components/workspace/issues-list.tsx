@@ -35,7 +35,7 @@ export const IssuesList: React.FC<Props> = ({ issues, type }) => {
 
   return (
     <div>
-      <h3 className="mb-2 font-semibold capitalize">{type} Issues</h3>
+      <h3 className="mb-2 font-semibold capitalize">{type=="overdue"?"超期":"进行中"}任务</h3>
       {issues ? (
         <div className="h-[calc(100%-2.25rem)] rounded-[10px] border border-custom-border-200 bg-custom-background-100 p-4 text-sm">
           <div
@@ -43,9 +43,12 @@ export const IssuesList: React.FC<Props> = ({ issues, type }) => {
               type === "overdue" ? "bg-red-500/20 bg-opacity-20" : "bg-custom-background-80"
             }`}
           >
-            <h4 className="capitalize">{type}</h4>
-            <h4 className="col-span-2">Issue</h4>
-            <h4>{type === "overdue" ? "Due" : "Start"} Date</h4>
+            <h4 className="capitalize">
+              {/*{type}*/}
+              {type === "overdue" ? "超期" : "进行中"}
+            </h4>
+            <h4 className="col-span-2">任务</h4>
+            <h4>{type === "overdue" ? "超期" : "开始"} 时间</h4>
           </div>
           <div className="max-h-72 overflow-y-scroll">
             {issues.length > 0 ? (
@@ -73,7 +76,7 @@ export const IssuesList: React.FC<Props> = ({ issues, type }) => {
                           {type === "overdue" && (
                             <ExclamationTriangleIcon className="h-3.5 w-3.5" />
                           )}
-                          {dateDifference} {dateDifference > 1 ? "days" : "day"}
+                          {dateDifference} {dateDifference > 1 ? "天" : "天"}
                         </h5>
                         <h5 className="col-span-2">{truncateText(issue.name, 30)}</h5>
                         <h5 className="cursor-default">
@@ -89,9 +92,9 @@ export const IssuesList: React.FC<Props> = ({ issues, type }) => {
                 <div className="my-5 flex flex-col items-center gap-4">
                   <LayerDiagonalIcon height={60} width={60} />
                   <span className="text-custom-text-200">
-                    No issues found. Use{" "}
+                    任务为空，使用快捷键{" "}
                     <pre className="inline rounded bg-custom-background-80 px-2 py-1">C</pre>{" "}
-                    shortcut to create a new issue
+                   快速添加任务
                   </span>
                 </div>
               </div>

@@ -40,7 +40,7 @@ const defaultValues: IAnalyticsParams = {
   project: null,
 };
 
-const tabsList = ["Scope and Demand", "Custom Analytics"];
+const tabsList = ["适用范围和需求", "自定义分析"];
 
 export const AnalyticsProjectModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const [fullScreen, setFullScreen] = useState(false);
@@ -135,7 +135,7 @@ export const AnalyticsProjectModal: React.FC<Props> = ({ isOpen, onClose }) => {
     }
 
     const eventType =
-      tab === "Scope and Demand" ? "SCOPE_AND_DEMAND_ANALYTICS" : "CUSTOM_ANALYTICS";
+      tab === "适用范围和需求" ? "SCOPE_AND_DEMAND_ANALYTICS" : "CUSTOM_ANALYTICS";
 
     trackEventServices.trackAnalyticsEvent(
       eventPayload,
@@ -161,8 +161,7 @@ export const AnalyticsProjectModal: React.FC<Props> = ({ isOpen, onClose }) => {
       >
         <div className="flex items-center justify-between gap-4 bg-custom-background-100 px-5 py-4 text-sm">
           <h3 className="break-words">
-            Analytics for{" "}
-            {cycleId ? cycleDetails?.name : moduleId ? moduleDetails?.name : projectDetails?.name}
+            {cycleId ? cycleDetails?.name : moduleId ? moduleDetails?.name : projectDetails?.name}{" "} 分析
           </h3>
           <div className="flex items-center gap-2">
             <button

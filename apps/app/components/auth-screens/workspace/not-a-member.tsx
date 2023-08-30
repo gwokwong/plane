@@ -10,21 +10,20 @@ export const NotAWorkspaceMember = () => (
     <div className="grid h-full place-items-center p-4">
       <div className="space-y-8 text-center">
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold">Not Authorized!</h3>
+          <h3 className="text-lg font-semibold">未授权！</h3>
           <p className="mx-auto w-1/2 text-sm text-custom-text-200">
-            You{"'"}re not a member of this workspace. Please contact the workspace admin to get an
-            invitation or check your pending invitations.
+            您不是此工作区的成员。请联系工作区管理员获取邀请或查看您的待发邀请。
           </p>
         </div>
         <div className="flex items-center justify-center gap-2">
           <Link href="/invitations">
             <a>
-              <SecondaryButton>Check pending invites</SecondaryButton>
+              <SecondaryButton>检查待处理的邀请</SecondaryButton>
             </a>
           </Link>
           <Link href="/create-workspace">
             <a>
-              <PrimaryButton>Create new workspace</PrimaryButton>
+              <PrimaryButton>创建新工作区</PrimaryButton>
             </a>
           </Link>
         </div>

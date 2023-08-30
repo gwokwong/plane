@@ -170,7 +170,7 @@ export const SelectDuplicateInboxIssueModal: React.FC<Props> = (props) => {
                         <div className="flex flex-col items-center justify-center gap-4 px-3 py-8 text-center">
                           <LayerDiagonalIcon height="56" width="56" />
                           <h3 className="text-sm text-custom-text-200">
-                            No issues found. Create a new issue with{" "}
+                            未找到任务。用 {" "}创建新任务
                             <pre className="inline rounded bg-custom-background-80 px-2 py-1">
                               C
                             </pre>

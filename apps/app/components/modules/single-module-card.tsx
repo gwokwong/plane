@@ -74,8 +74,8 @@ export const SingleModuleCard: React.FC<Props> = ({ module, handleEditModule, us
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't add the module to favorites. Please try again.",
+          title: "错误!",
+          message: "无法将模块添加到收藏夹。请重试。",
         });
       });
   };
@@ -98,8 +98,8 @@ export const SingleModuleCard: React.FC<Props> = ({ module, handleEditModule, us
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't remove the module from favorites. Please try again.",
+          title: "错误!",
+          message: "无法从收藏夹中删除模块。请重试。",
         });
       });
   };
@@ -113,8 +113,8 @@ export const SingleModuleCard: React.FC<Props> = ({ module, handleEditModule, us
     ).then(() => {
       setToastAlert({
         type: "success",
-        title: "Link Copied!",
-        message: "Module link copied to clipboard.",
+        title: "链接已复制！",
+        message: "模块链接已复制到剪贴板",
       });
     });
   };

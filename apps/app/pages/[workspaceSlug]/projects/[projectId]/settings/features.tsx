@@ -121,8 +121,8 @@ const FeaturesSettings: NextPage = () => {
 
     setToastAlert({
       type: "success",
-      title: "Success!",
-      message: "Project feature updated successfully.",
+      title: "成功!",
+      message: "项目功能更新成功",
     });
 
     await projectService
@@ -130,8 +130,8 @@ const FeaturesSettings: NextPage = () => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Project feature could not be updated. Please try again.",
+          title: "错误!",
+          message: "项目功能无法更新，请重试",
         })
       );
   };
@@ -152,7 +152,7 @@ const FeaturesSettings: NextPage = () => {
       <div className="p-8">
         <SettingsHeader />
         <section className="space-y-5">
-          <h3 className="text-2xl font-semibold">Features</h3>
+          <h3 className="text-2xl font-semibold">功能</h3>
           <div className="space-y-5">
             {featuresList.map((feature) => (
               <div
@@ -199,7 +199,7 @@ const FeaturesSettings: NextPage = () => {
               rel="noreferrer"
               className="hover:text-custom-text-100"
             >
-              <SecondaryButton outline>Plane is open-source, view Roadmap</SecondaryButton>
+              <SecondaryButton outline>Mission Plan 是开源的，查看路线图</SecondaryButton>
             </a>
             <a
               href="https://github.com/makeplane/plane"
@@ -207,7 +207,7 @@ const FeaturesSettings: NextPage = () => {
               rel="noreferrer"
               className="hover:text-custom-text-100"
             >
-              <SecondaryButton outline>Star us on GitHub</SecondaryButton>
+              <SecondaryButton outline>在GitHub上给我们Star</SecondaryButton>
             </a>
           </div>
         </section>

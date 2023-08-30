@@ -44,10 +44,10 @@ export const EmailPasswordForm: React.FC<Props> = ({ onSubmit }) => {
     <>
       <h1 className="text-center text-2xl sm:text-2.5xl font-semibold text-custom-text-100">
         {isResettingPassword
-          ? "Reset your password"
+          ? "重置密码"
           : isSignUpPage
-          ? "Sign up on Plane"
-          : "Sign in to Plane"}
+          ? "注册MissionPlan"
+          : "登录MissionPlan"}
       </h1>
       {isResettingPassword ? (
         <EmailResetPasswordForm setIsResettingPassword={setIsResettingPassword} />
@@ -63,14 +63,14 @@ export const EmailPasswordForm: React.FC<Props> = ({ onSubmit }) => {
               name="email"
               register={register}
               validations={{
-                required: "Email address is required",
+                required: "电子邮件地址为必填项",
                 validate: (value) =>
                   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
                     value
-                  ) || "Email address is not valid",
+                  ) || "电子邮件地址无效",
               }}
               error={errors.email}
-              placeholder="Enter your email address..."
+              placeholder="输入您的电子邮件地址..."
               className="border-custom-border-300 h-[46px]"
             />
           </div>
@@ -81,10 +81,10 @@ export const EmailPasswordForm: React.FC<Props> = ({ onSubmit }) => {
               name="password"
               register={register}
               validations={{
-                required: "Password is required",
+                required: "密码是必填项",
               }}
               error={errors.password}
-              placeholder="Enter your password..."
+              placeholder="输入您的密码..."
               className="border-custom-border-300 h-[46px]"
             />
           </div>
@@ -92,7 +92,7 @@ export const EmailPasswordForm: React.FC<Props> = ({ onSubmit }) => {
             {isSignUpPage ? (
               <Link href="/">
                 <a className="text-custom-text-200 hover:text-custom-primary-100">
-                  Already have an account? Sign in.
+                  已有账号？去登录
                 </a>
               </Link>
             ) : (
@@ -101,7 +101,7 @@ export const EmailPasswordForm: React.FC<Props> = ({ onSubmit }) => {
                 onClick={() => setIsResettingPassword(true)}
                 className="text-custom-text-200 hover:text-custom-primary-100"
               >
-                Forgot your password?
+                忘记密码?
               </button>
             )}
           </div>
@@ -114,20 +114,22 @@ export const EmailPasswordForm: React.FC<Props> = ({ onSubmit }) => {
             >
               {isSignUpPage
                 ? isSubmitting
-                  ? "Signing up..."
-                  : "Sign up"
+                  ? "注册中..."
+                  : "注册"
                 : isSubmitting
-                ? "Signing in..."
-                : "Sign in"}
+                ? "登录中..."
+                : "登录"}
             </PrimaryButton>
             {!isSignUpPage && (
               <Link href="/sign-up">
                 <a className="block text-custom-text-200 hover:text-custom-primary-100 text-xs mt-4">
-                  Don{"'"}t have an account? Sign up.
+                  还没有账号？去注册
                 </a>
               </Link>
             )}
           </div>
+          <p className="text-custom-text-200 m-1 text-red-400 ">演示账号：captain@plane.so</p>
+          <p className="text-custom-text-200 m-1 text-red-400"> 密码：password123</p>
         </form>
       )}
     </>

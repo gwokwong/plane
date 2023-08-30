@@ -119,7 +119,7 @@ export const CreateLabelModal: React.FC<Props> = ({
                       as="h3"
                       className="text-lg font-medium leading-6 text-custom-text-100"
                     >
-                      Create Label
+                      创建标签
                     </Dialog.Title>
                     <div className="mt-8 flex items-center gap-2">
                       <Popover className="relative">
@@ -186,7 +186,7 @@ export const CreateLabelModal: React.FC<Props> = ({
                           register={register}
                           width="full"
                           validations={{
-                            required: "Label title is required",
+                            required: "标签标题是必填项",
                           }}
                         />
                       </div>
@@ -195,7 +195,7 @@ export const CreateLabelModal: React.FC<Props> = ({
                   <div className="mt-5 flex justify-end gap-2">
                     <SecondaryButton onClick={onClose}>Cancel</SecondaryButton>
                     <PrimaryButton type="submit" loading={isSubmitting}>
-                      {isSubmitting ? "Creating Label..." : "Create Label"}
+                      {isSubmitting ? "创建标签中..." : "创建标签"}
                     </PrimaryButton>
                   </div>
                 </form>

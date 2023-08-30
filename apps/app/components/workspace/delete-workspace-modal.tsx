@@ -74,15 +74,15 @@ export const DeleteWorkspaceModal: React.FC<Props> = ({ isOpen, data, onClose, u
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Workspace deleted successfully.",
+          message: "工作区删除成功",
+          title: "成功",
         });
       })
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Something went wrong. Please try again later.",
+          title: "错误!",
+          message: "出错了。请稍后再试。",
         })
       );
   };

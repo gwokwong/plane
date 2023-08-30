@@ -54,15 +54,15 @@ export const DeleteViewModal: React.FC<Props> = ({ isOpen, data, setIsOpen, user
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "View deleted successfully.",
+          title: "成功!",
+          message: "视图已成功删除",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "View could not be deleted. Please try again.",
+          title: "错误!",
+          message: "无法删除视图，请重试",
         });
       })
       .finally(() => {

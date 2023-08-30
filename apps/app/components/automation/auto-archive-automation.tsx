@@ -31,10 +31,9 @@ export const AutoArchiveAutomation: React.FC<Props> = ({ projectDetails, handleC
       <div className="flex flex-col gap-7 px-6 py-5 rounded-[10px] border border-custom-border-300 bg-custom-background-90">
         <div className="flex items-center justify-between gap-x-8 gap-y-2">
           <div className="flex flex-col gap-2.5">
-            <h4 className="text-lg font-semibold">Auto-archive closed issues</h4>
+            <h4 className="text-lg font-semibold">自动存档已关闭的任务</h4>
             <p className="text-sm text-custom-text-200">
-              Plane will automatically archive issues that have been completed or cancelled for the
-              configured time period.
+              Mission Plan 会自动归档在配置的时间段已完成或已取消的任务。
             </p>
           </div>
           <ToggleSwitch
@@ -50,13 +49,13 @@ export const AutoArchiveAutomation: React.FC<Props> = ({ projectDetails, handleC
         {projectDetails?.archive_in !== 0 && (
           <div className="flex items-center justify-between gap-2 w-full">
             <div className="w-1/2 text-base font-medium">
-              Auto-archive issues that are closed for
+              自动存档因以下原因关闭的任务
             </div>
             <div className="w-1/2">
               <CustomSelect
                 value={projectDetails?.archive_in}
                 label={`${projectDetails?.archive_in} ${
-                  projectDetails?.archive_in === 1 ? "Month" : "Months"
+                  projectDetails?.archive_in === 1 ? "个月" : "个月"
                 }`}
                 onChange={(val: number) => {
                   handleChange({ archive_in: val });
@@ -77,7 +76,7 @@ export const AutoArchiveAutomation: React.FC<Props> = ({ projectDetails, handleC
                     className="flex w-full select-none items-center rounded px-1 py-1.5 text-custom-text-200 hover:bg-custom-background-80"
                     onClick={() => setmonthModal(true)}
                   >
-                    Customize Time Range
+                    自定义时间范围
                   </button>
                 </>
               </CustomSelect>

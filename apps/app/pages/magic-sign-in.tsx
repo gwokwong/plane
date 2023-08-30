@@ -75,15 +75,15 @@ const MagicSignIn: NextPage = () => {
                     .then(() => {
                       setToastAlert({
                         type: "success",
-                        title: "Email sent",
-                        message: "A new link/code has been send to you.",
+                        title: "发送电子邮件",
+                        message: "新的链接/代码已发送给您",
                       });
                     })
                     .catch(() => {
                       setToastAlert({
                         type: "error",
-                        title: "Error",
-                        message: "Unable to send email.",
+                        title: "错误",
+                        message: "无法发送电子邮件",
                       });
                     });
                 }}

@@ -87,8 +87,8 @@ export const DeleteProjectModal: React.FC<TConfirmProjectDeletionProps> = ({
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Something went wrong. Please try again later.",
+          title: "错误!",
+          message: "出错了。请稍后再试",
         })
       );
   };

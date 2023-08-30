@@ -50,8 +50,8 @@ export const DeleteImportModal: React.FC<Props> = ({ isOpen, handleClose, data, 
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Something went wrong. Please try again.",
+          title: "错误!",
+          message: "出错了。请重试。",
         })
       )
       .finally(() => {
@@ -98,7 +98,7 @@ export const DeleteImportModal: React.FC<Props> = ({ isOpen, handleClose, data, 
                       />
                     </span>
                     <span className="flex items-center justify-start">
-                      <h3 className="text-xl font-medium 2xl:text-2xl">Delete Project</h3>
+                      <h3 className="text-xl font-medium 2xl:text-2xl">删除项目</h3>
                     </span>
                   </div>
                   <span>
@@ -113,28 +113,28 @@ export const DeleteImportModal: React.FC<Props> = ({ isOpen, handleClose, data, 
                   </span>
                   <div>
                     <p className="text-sm text-custom-text-200">
-                      To confirm, type{" "}
-                      <span className="font-medium text-custom-text-100">delete import</span> below:
+                      要确认，请在下面键入{" "}
+                      <span className="font-medium text-custom-text-100">删除导入</span> :
                     </p>
                     <Input
                       type="text"
                       name="typeDelete"
                       className="mt-2"
                       onChange={(e) => {
-                        if (e.target.value === "delete import") setConfirmDeleteImport(true);
+                        if (e.target.value === "删除导入") setConfirmDeleteImport(true);
                         else setConfirmDeleteImport(false);
                       }}
                       placeholder="Enter 'delete import'"
                     />
                   </div>
                   <div className="flex justify-end gap-2">
-                    <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
+                    <SecondaryButton onClick={handleClose}>取消</SecondaryButton>
                     <DangerButton
                       onClick={handleDeletion}
                       disabled={!confirmDeleteImport}
                       loading={deleteLoading}
                     >
-                      {deleteLoading ? "Deleting..." : "Delete Project"}
+                      {deleteLoading ? "删除中..." : "删除项目"}
                     </DangerButton>
                   </div>
                 </div>

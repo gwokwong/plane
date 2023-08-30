@@ -82,8 +82,8 @@ const SendWorkspaceInvitationModal: React.FC<Props> = (props) => {
         handleClose();
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Invitations sent successfully.",
+          title: "成功!",
+          message: "成功邀请了成员",
         });
         onSuccess();
       })
@@ -149,7 +149,7 @@ const SendWorkspaceInvitationModal: React.FC<Props> = (props) => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-custom-text-100"
                     >
-                      Invite people to collaborate
+                      邀请他人合作
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-custom-text-200">

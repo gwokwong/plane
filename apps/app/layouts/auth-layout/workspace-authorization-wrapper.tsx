@@ -53,7 +53,7 @@ export const WorkspaceAuthorizationLayout: React.FC<Props> = ({
     return (
       <div className="grid h-screen place-items-center p-4 bg-custom-background-100">
         <div className="flex flex-col items-center gap-3 text-center">
-          <h3 className="text-xl">Loading your workspace...</h3>
+          <h3 className="text-xl">加载工作区...</h3>
           <Spinner />
         </div>
       </div>

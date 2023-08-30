@@ -80,7 +80,7 @@ const MyIssuesPage: NextPage = () => {
     <WorkspaceAuthorizationLayout
       breadcrumbs={
         <Breadcrumbs>
-          <BreadcrumbItem title="My Issues" />
+          <BreadcrumbItem title="我的任务" />
         </Breadcrumbs>
       }
       right={
@@ -94,7 +94,7 @@ const MyIssuesPage: NextPage = () => {
             }}
           >
             <PlusIcon className="h-4 w-4" />
-            Add Issue
+            添加任务
           </PrimaryButton>
         </div>
       }

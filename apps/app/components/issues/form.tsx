@@ -179,9 +179,9 @@ export const IssueForm: FC<IssueFormProps> = ({
         if (res.response === "")
           setToastAlert({
             type: "error",
-            title: "Error!",
+            title: "错误!",
             message:
-              "Issue title isn't informative enough to generate the description. Please try with a different title.",
+              "任务标题信息量不足，无法生成说明。请尝试使用不同的标题。",
           });
         else handleAiAssistance(res.response_html);
       })
@@ -191,16 +191,16 @@ export const IssueForm: FC<IssueFormProps> = ({
         if (err.status === 429)
           setToastAlert({
             type: "error",
-            title: "Error!",
+            title: "错误!",
             message:
               error ||
-              "You have reached the maximum number of requests of 50 requests per month per user.",
+              "您已达到每个用户每月50次请求的上限",
           });
         else
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: error || "Some error occurred. Please try again.",
+            title: "错误!",
+            message: error || "发生错误，请重试",
           });
       })
       .finally(() => setIAmFeelingLucky(false));
@@ -311,15 +311,15 @@ export const IssueForm: FC<IssueFormProps> = ({
                     id="name"
                     name="name"
                     className="resize-none text-xl"
-                    placeholder="Title"
+                    placeholder="标题"
                     autoComplete="off"
                     error={errors.name}
                     register={register}
                     validations={{
-                      required: "Title is required",
+                      required: "标题为必填项",
                       maxLength: {
                         value: 255,
-                        message: "Title should be less than 255 characters",
+                        message: "标题应少于255个字符",
                       },
                     }}
                   />
@@ -518,13 +518,13 @@ export const IssueForm: FC<IssueFormProps> = ({
                           renderAs="button"
                           onClick={() => setParentIssueListModalOpen(true)}
                         >
-                          Change parent issue
+                          更改父任务
                         </CustomMenu.MenuItem>
                         <CustomMenu.MenuItem
                           renderAs="button"
                           onClick={() => setValue("parent", null)}
                         >
-                          Remove parent issue
+                          移除父任务
                         </CustomMenu.MenuItem>
                       </>
                     ) : (
@@ -532,7 +532,7 @@ export const IssueForm: FC<IssueFormProps> = ({
                         renderAs="button"
                         onClick={() => setParentIssueListModalOpen(true)}
                       >
-                        Select Parent Issue
+                        选择父任务
                       </CustomMenu.MenuItem>
                     )}
                   </CustomMenu>
@@ -546,19 +546,19 @@ export const IssueForm: FC<IssueFormProps> = ({
             className="flex cursor-pointer items-center gap-1"
             onClick={() => setCreateMore((prevData) => !prevData)}
           >
-            <span className="text-xs">Create more</span>
+            <span className="text-xs">创建更多</span>
             <ToggleSwitch value={createMore} onChange={() => {}} size="md" />
           </div>
           <div className="flex items-center gap-2">
-            <SecondaryButton onClick={handleClose}>Discard</SecondaryButton>
+            <SecondaryButton onClick={handleClose}>取消</SecondaryButton>
             <PrimaryButton type="submit" loading={isSubmitting}>
               {status
                 ? isSubmitting
-                  ? "Updating Issue..."
-                  : "Update Issue"
+                  ? "更新任务中..."
+                  : "更新任务"
                 : isSubmitting
-                ? "Adding Issue..."
-                : "Add Issue"}
+                ? "添加任务中..."
+                : "添加任务"}
             </PrimaryButton>
           </div>
         </div>

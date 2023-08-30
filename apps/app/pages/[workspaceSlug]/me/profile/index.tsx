@@ -94,15 +94,15 @@ const Profile: NextPage = () => {
         }, false);
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Profile updated successfully.",
+          title: "成功!",
+          message: "个人资料更新成功",
         });
       })
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "There was some error in updating your profile. Please try again.",
+          title: "错误!",
+          message: "在更新您的个人资料时出现了一些错误。请重试。",
         })
       );
   };
@@ -119,8 +119,8 @@ const Profile: NextPage = () => {
           .then(() => {
             setToastAlert({
               type: "success",
-              title: "Success!",
-              message: "Profile picture removed successfully.",
+              title: "成功!",
+              message: "成功删除个人照片",
             });
             mutateUser((prevData: any) => {
               if (!prevData) return prevData;
@@ -130,8 +130,8 @@ const Profile: NextPage = () => {
           .catch(() => {
             setToastAlert({
               type: "error",
-              title: "Error!",
-              message: "There was some error in deleting your profile picture. Please try again.",
+              title: "错误!",
+              message: "在删除您的个人照片时出现了一些错误，请重试。",
             });
           })
           .finally(() => setIsRemoving(false));
@@ -167,9 +167,9 @@ const Profile: NextPage = () => {
         <div className="p-8">
           <div className="mb-8 space-y-6">
             <div>
-              <h3 className="text-3xl font-semibold">Profile Settings</h3>
+              <h3 className="text-3xl font-semibold">个人资料设置</h3>
               <p className="mt-1 text-custom-text-200">
-                This information will be visible to only you.
+                这些信息只有您自己能看到
               </p>
             </div>
             <SettingsNavbar profilePage />
@@ -177,9 +177,9 @@ const Profile: NextPage = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 sm:space-y-12">
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold text-custom-text-100">Profile Picture</h4>
+                <h4 className="text-lg font-semibold text-custom-text-100">个人照片</h4>
                 <p className="text-sm text-custom-text-200">
-                  Max file size is 5MB. Supported file types are .jpg and .png.
+                  最大文件大小为5MB。支持的文件类型为.jpg和.png。
                 </p>
               </div>
               <div className="col-span-12 sm:col-span-6">
@@ -206,7 +206,7 @@ const Profile: NextPage = () => {
                         setIsImageUploadModalOpen(true);
                       }}
                     >
-                      Upload
+                      上传
                     </SecondaryButton>
                     {myProfile.avatar && myProfile.avatar !== "" && (
                       <DangerButton
@@ -222,9 +222,9 @@ const Profile: NextPage = () => {
             </div>
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold">Cover Photo</h4>
+                <h4 className="text-lg font-semibold text-custom-text-100">全名</h4>
                 <p className="text-sm text-custom-text-200">
-                  Select your cover photo from the given library.
+                  该名称将显示在您正在进行的所有项目中。
                 </p>
               </div>
               <div className="col-span-12 sm:col-span-6">
@@ -279,7 +279,7 @@ const Profile: NextPage = () => {
             </div>
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold text-custom-text-100">Display Name</h4>
+                <h4 className="text-lg font-semibold text-custom-text-100">显示名称</h4>
                 <p className="text-sm text-custom-text-200">
                   This could be your first name, or a nickname — however you{"'"}d like people to
                   refer to you in Plane.
@@ -335,19 +335,19 @@ const Profile: NextPage = () => {
             </div>
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold text-custom-text-100">Role</h4>
-                <p className="text-sm text-custom-text-200">Add your role.</p>
+                <h4 className="text-lg font-semibold text-custom-text-100">角色</h4>
+                <p className="text-sm text-custom-text-200">添加你的角色</p>
               </div>
               <div className="col-span-12 sm:col-span-6">
                 <Controller
                   name="role"
                   control={control}
-                  rules={{ required: "This field is required" }}
+                  rules={{ required: "该字段为必填字段" }}
                   render={({ field: { value, onChange } }) => (
                     <CustomSelect
                       value={value}
                       onChange={onChange}
-                      label={value ? value.toString() : "Select your role"}
+                      label={value ? value.toString() : "选择您的角色"}
                       buttonClassName={errors.role ? "border-red-500 bg-red-500/10" : ""}
                       width="w-full"
                       input
@@ -395,7 +395,7 @@ const Profile: NextPage = () => {
             </div>
             <div className="sm:text-right">
               <SecondaryButton type="submit" loading={isSubmitting}>
-                {isSubmitting ? "Updating..." : "Update profile"}
+                {isSubmitting ? "更新..." : "更新个人资料"}
               </SecondaryButton>
             </div>
           </form>

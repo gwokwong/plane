@@ -114,8 +114,8 @@ export const SnoozeNotificationModal: React.FC<SnoozeModalProps> = (props) => {
       handleClose();
       onSuccess();
       setToastAlert({
-        title: "Notification snoozed",
-        message: "Notification snoozed successfully",
+        title: "通知已忽略",
+        message: "通知已成功忽略",
         type: "success",
       });
     });

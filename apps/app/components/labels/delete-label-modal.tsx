@@ -59,8 +59,8 @@ export const DeleteLabelModal: React.FC<Props> = ({ isOpen, onClose, data, user 
         mutate(PROJECT_ISSUE_LABELS(projectId.toString()));
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Label could not be deleted. Please try again.",
+          title: "错误!",
+          message: "标签无法删除。请重试。",
         });
       });
   };
@@ -120,7 +120,7 @@ export const DeleteLabelModal: React.FC<Props> = ({ isOpen, onClose, data, user 
                 <div className="flex justify-end gap-2 p-4 sm:px-6">
                   <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
                   <DangerButton onClick={handleDeletion} loading={isDeleteLoading}>
-                    {isDeleteLoading ? "Deleting..." : "Delete"}
+                    {isDeleteLoading ? "删除..." : "删除"}
                   </DangerButton>
                 </div>
               </Dialog.Panel>

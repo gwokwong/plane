@@ -50,32 +50,32 @@ type Props = {
 
 const navigation = (workspaceSlug: string, projectId: string) => [
   {
-    name: "Issues",
+    name: "任务",
     href: `/${workspaceSlug}/projects/${projectId}/issues`,
     Icon: FilterNoneOutlined,
   },
   {
-    name: "Cycles",
+    name: "周期",
     href: `/${workspaceSlug}/projects/${projectId}/cycles`,
     Icon: ContrastOutlined,
   },
   {
-    name: "Modules",
+    name: "模块",
     href: `/${workspaceSlug}/projects/${projectId}/modules`,
     Icon: DatasetOutlined,
   },
   {
-    name: "Views",
+    name: "视图",
     href: `/${workspaceSlug}/projects/${projectId}/views`,
     Icon: PhotoFilterOutlined,
   },
   {
-    name: "Pages",
+    name: "页面",
     href: `/${workspaceSlug}/projects/${projectId}/pages`,
     Icon: ArticleOutlined,
   },
   {
-    name: "Settings",
+    name: "设置",
     href: `/${workspaceSlug}/projects/${projectId}/settings`,
     Icon: SettingsOutlined,
   },
@@ -137,8 +137,8 @@ export const SingleSidebarProject: React.FC<Props> = observer(
       projectService.removeProjectFromFavorites(workspaceSlug as string, project.id).catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't remove the project from favorites. Please try again.",
+          title: "错误!",
+          message: "无法从收藏夹中删除项目，请重试",
         })
       );
     };
@@ -231,7 +231,7 @@ export const SingleSidebarProject: React.FC<Props> = observer(
                     <CustomMenu.MenuItem onClick={handleDeleteProject}>
                       <span className="flex items-center justify-start gap-2 ">
                         <TrashIcon className="h-4 w-4" />
-                        <span>Delete project</span>
+                        <span>删除项目</span>
                       </span>
                     </CustomMenu.MenuItem>
                   )}
@@ -239,7 +239,7 @@ export const SingleSidebarProject: React.FC<Props> = observer(
                     <CustomMenu.MenuItem onClick={handleAddToFavorites}>
                       <span className="flex items-center justify-start gap-2">
                         <StarIcon className="h-4 w-4" />
-                        <span>Add to favorites</span>
+                        <span>添加至收藏夹</span>
                       </span>
                     </CustomMenu.MenuItem>
                   )}
@@ -247,14 +247,14 @@ export const SingleSidebarProject: React.FC<Props> = observer(
                     <CustomMenu.MenuItem onClick={handleRemoveFromFavorites}>
                       <span className="flex items-center justify-start gap-2">
                         <StarIcon className="h-4 w-4 text-orange-400" fill="#f6ad55" />
-                        <span>Remove from favorites</span>
+                        <span>移除收藏夹</span>
                       </span>
                     </CustomMenu.MenuItem>
                   )}
                   <CustomMenu.MenuItem onClick={handleCopyText}>
                     <span className="flex items-center justify-start gap-2">
                       <LinkIcon className="h-4 w-4" />
-                      <span>Copy project link</span>
+                      <span>复制项目链接</span>
                     </span>
                   </CustomMenu.MenuItem>
 

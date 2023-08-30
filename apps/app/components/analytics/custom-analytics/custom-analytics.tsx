@@ -87,7 +87,7 @@ export const CustomAnalytics: React.FC<Props> = ({
             ) : (
               <div className="grid h-full place-items-center p-5">
                 <div className="space-y-4 text-custom-text-200">
-                  <p className="text-sm">No matching issues found. Try changing the parameters.</p>
+                  <p className="text-sm">未找到匹配任务，尝试更改参数。</p>
                 </div>
               </div>
             )

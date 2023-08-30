@@ -11,9 +11,9 @@ type Props = {
 
 export const AnalyticsDemand: React.FC<Props> = ({ defaultAnalytics }) => (
   <div className="space-y-3 rounded-[10px] border border-custom-border-200 p-3">
-    <h5 className="text-xs text-red-500">DEMAND</h5>
+    <h5 className="text-xs text-red-500">需求量</h5>
     <div>
-      <h4 className="text-custom-text-100 text-base font-medium">Total open tasks</h4>
+      <h4 className="text-custom-text-100 text-base font-medium">未完成任务总数</h4>
       <h3 className="mt-1 text-xl font-semibold">{defaultAnalytics.open_issues}</h3>
     </div>
     <div className="space-y-6">
@@ -53,7 +53,7 @@ export const AnalyticsDemand: React.FC<Props> = ({ defaultAnalytics }) => (
     <div className="!mt-6 flex w-min items-center gap-2 whitespace-nowrap rounded-md border border-custom-border-200 bg-custom-background-80 p-2 text-xs">
       <p className="flex items-center gap-1 text-custom-text-200">
         <PlayIcon className="h-4 w-4 -rotate-90" aria-hidden="true" />
-        <span>Estimate Demand:</span>
+        <span>需求估算:</span>
       </p>
       <p className="font-medium">
         {defaultAnalytics.open_estimate_sum}/{defaultAnalytics.total_estimate_sum}

@@ -105,15 +105,15 @@ export const PagesView: React.FC<Props> = ({ pages, viewType }) => {
         mutate(RECENT_PAGES_LIST(projectId.toString()));
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Successfully added the page to favorites.",
+          title: "成功!",
+          message: "成功将页面添加到收藏夹",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't add the page to favorites. Please try again.",
+          title: "错误!",
+          message: "无法将页面添加到收藏夹。请重试",
         });
       });
   };
@@ -153,15 +153,15 @@ export const PagesView: React.FC<Props> = ({ pages, viewType }) => {
         mutate(RECENT_PAGES_LIST(projectId.toString()));
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Successfully removed the page from favorites.",
+          title: "成功!",
+          message: "成功将页面从收藏夹中删除",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't remove the page from favorites. Please try again.",
+          title: "错误!",
+          message: "无法从收藏夹中删除该页面。请重试。",
         });
       });
   };
@@ -262,7 +262,7 @@ export const PagesView: React.FC<Props> = ({ pages, viewType }) => {
               image={emptyPage}
               primaryButton={{
                 icon: <PlusIcon className="h-4 w-4" />,
-                text: "New Page",
+                text: "新页面",
                 onClick: () => {
                   const e = new KeyboardEvent("keydown", {
                     key: "d",

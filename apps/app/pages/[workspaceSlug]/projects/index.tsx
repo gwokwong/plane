@@ -142,11 +142,11 @@ const ProjectsPage: NextPage = () => {
           ) : (
             <EmptyState
               image={emptyProject}
-              title="No projects yet"
-              description="Get started by creating your first project"
+              title="暂无项目"
+              description="开始创建您的第一个项目"
               primaryButton={{
                 icon: <PlusIcon className="h-4 w-4" />,
-                text: "New Project",
+                text: "创建项目",
                 onClick: () => {
                   const e = new KeyboardEvent("keydown", {
                     key: "p",

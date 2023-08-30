@@ -118,7 +118,7 @@ export const JiraImportUsers: FC = () => {
                       type="text"
                       register={register}
                       validations={{
-                        required: "This field is required",
+                        required: "该字段为必填字段",
                       }}
                       error={errors?.data?.users?.[index]?.email}
                     />

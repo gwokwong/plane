@@ -62,10 +62,10 @@ export const PageForm: React.FC<Props> = ({ handleFormSubmit, handleClose, statu
               error={errors.name}
               register={register}
               validations={{
-                required: "Title is required",
+                required: "标题是必填项",
                 maxLength: {
                   value: 255,
-                  message: "Title should be less than 255 characters",
+                  message: "标题应少于255个字符",
                 },
               }}
             />

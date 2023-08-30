@@ -58,8 +58,8 @@ export const SingleEstimate: React.FC<Props> = ({
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Estimate points could not be used. Please try again.",
+          title: "错误!",
+          message: "无法使用估算点数。请重试。",
         });
       });
   };

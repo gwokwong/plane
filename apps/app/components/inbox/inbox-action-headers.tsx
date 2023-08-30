@@ -93,8 +93,8 @@ export const InboxActionHeader = () => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Something went wrong while updating inbox status. Please try again.",
+          title: "错误!",
+          message: "在更新收件箱状态时出了问题。请重试。",
         })
       )
       .finally(() => {

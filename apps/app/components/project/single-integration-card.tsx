@@ -84,8 +84,8 @@ export const SingleIntegration: React.FC<Props> = ({ integration }) => {
 
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Repository could not be synced with the project. Please try again.",
+          title: "错误!",
+          message: "版本库无法与项目同步，请重试",
         });
       });
   };

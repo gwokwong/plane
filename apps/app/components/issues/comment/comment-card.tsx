@@ -151,7 +151,7 @@ export const CommentCard: React.FC<Props> = ({
       </div>
       {user?.id === comment.actor && (
         <CustomMenu ellipsis>
-          <CustomMenu.MenuItem onClick={() => setIsEditing(true)}>Edit</CustomMenu.MenuItem>
+          <CustomMenu.MenuItem onClick={() => setIsEditing(true)}>编辑</CustomMenu.MenuItem>
           <CustomMenu.MenuItem
             onClick={() => {
               handleCommentDeletion(comment.id);

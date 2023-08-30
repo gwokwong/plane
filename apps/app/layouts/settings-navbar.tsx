@@ -14,29 +14,29 @@ const SettingsNavbar: React.FC<Props> = ({ profilePage = false }) => {
     href: string;
   }> = [
     {
-      label: "General",
+      label: "通用",
       href: `/${workspaceSlug}/settings`,
     },
     {
-      label: "Members",
+      label: "成员",
       href: `/${workspaceSlug}/settings/members`,
     },
-    {
-      label: "Billing & Plans",
-      href: `/${workspaceSlug}/settings/billing`,
-    },
-    {
-      label: "Integrations",
-      href: `/${workspaceSlug}/settings/integrations`,
-    },
-    {
-      label: "Imports",
-      href: `/${workspaceSlug}/settings/imports`,
-    },
-    {
-      label: "Exports",
-      href: `/${workspaceSlug}/settings/exports`,
-    },
+    // {
+    //   label: "Billing & Plans",
+    //   href: `/${workspaceSlug}/settings/billing`,
+    // },
+    // {
+    //   label: "Integrations",
+    //   href: `/${workspaceSlug}/settings/integrations`,
+    // },
+    // {
+    //   label: "Imports",
+    //   href: `/${workspaceSlug}/settings/imports`,
+    // },
+    // {
+    //   label: "Exports",
+    //   href: `/${workspaceSlug}/settings/exports`,
+    // },
   ];
 
   const projectLinks: Array<{
@@ -44,37 +44,37 @@ const SettingsNavbar: React.FC<Props> = ({ profilePage = false }) => {
     href: string;
   }> = [
     {
-      label: "General",
+      label: "通用",
       href: `/${workspaceSlug}/projects/${projectId}/settings`,
     },
     {
-      label: "Control",
+      label: "控制",
       href: `/${workspaceSlug}/projects/${projectId}/settings/control`,
     },
     {
-      label: "Members",
+      label: "成员",
       href: `/${workspaceSlug}/projects/${projectId}/settings/members`,
     },
     {
-      label: "Features",
+      label: "功能",
       href: `/${workspaceSlug}/projects/${projectId}/settings/features`,
     },
     {
-      label: "States",
+      label: "状态",
       href: `/${workspaceSlug}/projects/${projectId}/settings/states`,
     },
     {
-      label: "Labels",
+      label: "标签",
       href: `/${workspaceSlug}/projects/${projectId}/settings/labels`,
     },
-    {
-      label: "Integrations",
-      href: `/${workspaceSlug}/projects/${projectId}/settings/integrations`,
-    },
-    {
-      label: "Estimates",
-      href: `/${workspaceSlug}/projects/${projectId}/settings/estimates`,
-    },
+    // {
+    //   label: "Integrations",
+    //   href: `/${workspaceSlug}/projects/${projectId}/settings/integrations`,
+    // },
+    // {
+    //   label: "Estimates",
+    //   href: `/${workspaceSlug}/projects/${projectId}/settings/estimates`,
+    // },
     {
       label: "Automations",
       href: `/${workspaceSlug}/projects/${projectId}/settings/automations`,
@@ -86,15 +86,15 @@ const SettingsNavbar: React.FC<Props> = ({ profilePage = false }) => {
     href: string;
   }> = [
     {
-      label: "General",
+      label: "通用",
       href: `/${workspaceSlug}/me/profile`,
     },
     {
-      label: "Activity",
+      label: "活动",
       href: `/${workspaceSlug}/me/profile/activity`,
     },
     {
-      label: "Preferences",
+      label: "偏好",
       href: `/${workspaceSlug}/me/profile/preferences`,
     },
   ];

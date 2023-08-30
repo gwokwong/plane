@@ -13,10 +13,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { eventName, user, extra } = req.body;
 
   if (!eventName) {
-    return res.status(400).json({ message: "Bad request" });
+    return res.status(400).json({ message: "错误请求" });
   }
 
-  if (!user) return res.status(401).json({ message: "Unauthorized" });
+  if (!user) return res.status(401).json({ message: "未经授权" });
 
   // TODO: cache user info
 
@@ -34,5 +34,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     });
 
-  res.status(200).json({ message: "success" });
+  res.status(200).json({ message: "成功" });
 }

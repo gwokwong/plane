@@ -71,16 +71,16 @@ export const CreateUpdateAnalyticsModal: React.FC<Props> = ({ isOpen, handleClos
       .then(() => {
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Analytics saved successfully.",
+          title: "成功!",
+          message: "分析已成功保存",
         });
         onClose();
       })
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Analytics could not be saved. Please try again.",
+          title: "错误!",
+          message: "无法保存分析结果。请重试。",
         })
       );
   };
@@ -125,19 +125,19 @@ export const CreateUpdateAnalyticsModal: React.FC<Props> = ({ isOpen, handleClos
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Title"
+                        placeholder="标题"
                         autoComplete="off"
                         error={errors.name}
                         register={register}
                         width="full"
                         validations={{
-                          required: "Title is required",
+                          required: "标题为必填项",
                         }}
                       />
                       <TextArea
                         id="description"
                         name="description"
-                        placeholder="Description"
+                        placeholder="描述"
                         className="mt-3 h-32 resize-none text-sm"
                         error={errors.description}
                         register={register}
@@ -147,7 +147,7 @@ export const CreateUpdateAnalyticsModal: React.FC<Props> = ({ isOpen, handleClos
                   <div className="mt-5 flex justify-end gap-2">
                     <SecondaryButton onClick={onClose}>Cancel</SecondaryButton>
                     <PrimaryButton type="submit" loading={isSubmitting}>
-                      {isSubmitting ? "Saving..." : "Save Analytics"}
+                      {isSubmitting ? "保存..." : "保存分析结果"}
                     </PrimaryButton>
                   </div>
                 </form>

@@ -21,7 +21,7 @@ export const CompletedIssuesGraph: React.FC<Props> = ({ month, issues, setMonth 
 
   for (let i = 1; i <= weeks; i++) {
     data.push({
-      week_in_month: `Week ${i}`,
+      week_in_month: `第 ${i} 周`,
       completed_count: issues?.find((item) => item.week_in_month === i)?.completed_count ?? 0,
     });
   }
@@ -29,7 +29,7 @@ export const CompletedIssuesGraph: React.FC<Props> = ({ month, issues, setMonth 
   return (
     <div>
       <div className="mb-0.5 flex justify-between">
-        <h3 className="font-semibold">Issues closed by you</h3>
+        <h3 className="font-semibold">我关闭的任务</h3>
         <CustomMenu label={<span className="text-sm">{MONTHS[month - 1]}</span>} noBorder>
           {MONTHS.map((month, index) => (
             <CustomMenu.MenuItem key={month} onClick={() => setMonth(index + 1)}>
@@ -41,7 +41,7 @@ export const CompletedIssuesGraph: React.FC<Props> = ({ month, issues, setMonth 
       <div className="rounded-[10px] border border-custom-border-200 bg-custom-background-100 p-8 pl-4">
         {data.every((item) => item.completed_count === 0) ? (
           <div className="flex items-center justify-center h-72">
-            <h4 className="text-[#d687ff]">No issues closed this month</h4>
+            <h4 className="text-[#d687ff]">本月无已完成的任务</h4>
           </div>
         ) : (
           <>
@@ -64,7 +64,7 @@ export const CompletedIssuesGraph: React.FC<Props> = ({ month, issues, setMonth 
               sliceTooltip={(datum) => (
                 <div className="rounded-md border border-custom-border-200 bg-custom-background-80 p-2 text-xs">
                   {datum.slice.points[0].data.yFormatted}
-                  <span className="text-custom-text-200"> issues closed in </span>
+                  <span className="text-custom-text-200"> 任务关闭于 </span>
                   {datum.slice.points[0].data.xFormatted}
                 </div>
               )}
@@ -74,7 +74,7 @@ export const CompletedIssuesGraph: React.FC<Props> = ({ month, issues, setMonth 
             />
             <h4 className="mt-4 flex items-center justify-center gap-2 text-[#d687ff]">
               <span className="h-2 w-2 bg-[#d687ff]" />
-              Completed Issues
+              已完成任务
             </h4>
           </>
         )}

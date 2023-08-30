@@ -22,22 +22,22 @@ import { useMobxStore } from "lib/mobx/store-provider";
 const workspaceLinks = (workspaceSlug: string) => [
   {
     Icon: GridViewOutlined,
-    name: "Dashboard",
+    name: "仪表盘",
     href: `/${workspaceSlug}`,
   },
   {
     Icon: BarChartRounded,
-    name: "Analytics",
+    name: "分析",
     href: `/${workspaceSlug}/analytics`,
   },
   {
     Icon: WorkOutlineOutlined,
-    name: "Projects",
+    name: "项目",
     href: `/${workspaceSlug}/projects`,
   },
   {
     Icon: TaskAltOutlined,
-    name: "My Issues",
+    name: "我的任务",
     href: `/${workspaceSlug}/me/my-issues`,
   },
 ];

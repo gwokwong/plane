@@ -160,16 +160,16 @@ const MembersSettings: NextPage = () => {
               .then(() => {
                 setToastAlert({
                   type: "success",
-                  title: "Success",
-                  message: "Member removed successfully",
+                  title: "成功",
+                  message: "成功删除成员",
                 });
               })
               .catch((err) => {
                 const error = err?.error;
                 setToastAlert({
                   type: "error",
-                  title: "Error",
-                  message: error || "Something went wrong",
+                  title: "错误",
+                  message: error || "出了点问题",
                 });
               })
               .finally(() => {

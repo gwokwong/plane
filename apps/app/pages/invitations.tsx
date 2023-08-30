@@ -68,8 +68,8 @@ const OnBoard: NextPage = () => {
     if (invitationsRespond.length === 0) {
       setToastAlert({
         type: "error",
-        title: "Error!",
-        message: "Please select at least one invitation.",
+        title: "错误!",
+        message: "请至少选择一个邀请",
       });
       return;
     }
@@ -205,11 +205,11 @@ const OnBoard: NextPage = () => {
             ) : (
               <div className="fixed top-0 left-0 h-full w-full grid place-items-center">
                 <EmptyState
-                  title="No pending invites"
-                  description="You can see here if someone invites you to a workspace."
+                  title="没有待发邀请"
+                  description="您可以在这里查看是否有人邀请您进入工作区。"
                   image={emptyInvitation}
                   primaryButton={{
-                    text: "Back to Dashboard",
+                    text: "返回仪表盘",
                     onClick: () => router.push("/"),
                   }}
                 />

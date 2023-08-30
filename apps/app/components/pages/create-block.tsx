@@ -72,8 +72,8 @@ export const CreateBlock: React.FC<Props> = ({ user }) => {
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Page could not be created. Please try again.",
+          title: "错误!",
+          message: "页面无法创建。请重试。",
         });
       });
 

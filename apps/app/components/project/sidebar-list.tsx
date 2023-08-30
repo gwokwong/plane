@@ -71,8 +71,8 @@ export const ProjectSidebarList: FC = () => {
     copyTextToClipboard(`${originURL}/${workspaceSlug}/projects/${projectId}/issues`).then(() => {
       setToastAlert({
         type: "success",
-        title: "Link Copied!",
-        message: "Project link copied to clipboard.",
+        title: "链接已复制！",
+        message: "项目链接已复制到剪贴板",
       });
     });
   };
@@ -182,7 +182,7 @@ export const ProjectSidebarList: FC = () => {
                               type="button"
                               className="group flex items-center gap-1 px-1.5 text-xs font-semibold text-custom-sidebar-text-400 text-left hover:bg-custom-sidebar-background-80 rounded w-full whitespace-nowrap"
                             >
-                              Favorites
+                              收藏夹
                               <Icon
                                 iconName={open ? "arrow_drop_down" : "arrow_right"}
                                 className="group-hover:opacity-100 opacity-0 !text-lg"
@@ -315,7 +315,7 @@ export const ProjectSidebarList: FC = () => {
             }}
           >
             <PlusIcon className="h-5 w-5" />
-            {!store?.theme?.sidebarCollapsed && "Add Project"}
+            {!store?.theme?.sidebarCollapsed && "新增项目t"}
           </button>
         )}
       </div>

@@ -54,15 +54,15 @@ export const CreateUpdateViewModal: React.FC<Props> = ({
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "View created successfully.",
+          title: "成功!",
+          message: "视图创建成功",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "View could not be created. Please try again.",
+          title: "错误!",
+          message: "无法创建视图，请重试",
         });
       });
   };

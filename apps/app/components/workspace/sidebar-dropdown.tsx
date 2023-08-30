@@ -29,15 +29,15 @@ import { useMobxStore } from "lib/mobx/store-provider";
 // Static Data
 const userLinks = (workspaceSlug: string, userId: string) => [
   {
-    name: "Workspace Settings",
+    name: "工作区设置",
     href: `/${workspaceSlug}/settings`,
   },
   {
-    name: "Workspace Invites",
+    name: "工作区邀请",
     href: "/invitations",
   },
   {
-    name: "My Profile",
+    name: "我的资料",
     href: `/${workspaceSlug}/profile/${userId}`,
   },
 ];
@@ -83,8 +83,8 @@ export const WorkspaceSidebarDropdown = () => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Failed to navigate to the workspace. Please try again.",
+          title: "错误!",
+          message: "导航到工作区错误。请重试。",
         })
       );
   };
@@ -100,8 +100,8 @@ export const WorkspaceSidebarDropdown = () => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Failed to sign out. Please try again.",
+          title: "错误!",
+          message: "退出登录错误，请重试。",
         })
       );
   };
@@ -194,7 +194,7 @@ export const WorkspaceSidebarDropdown = () => {
                       </Menu.Item>
                     ))
                   ) : (
-                    <p>No workspace found!</p>
+                    <p>未找到工作区！</p>
                   )}
                   <Menu.Item
                     as="button"
@@ -205,7 +205,7 @@ export const WorkspaceSidebarDropdown = () => {
                     className="flex w-full items-center gap-2 px-2 py-1 text-sm text-custom-sidebar-text-200 hover:bg-custom-sidebar-background-80"
                   >
                     <PlusIcon className="h-4 w-4" />
-                    Create Workspace
+                    创建工作区
                   </Menu.Item>
                 </div>
               ) : (
@@ -237,7 +237,7 @@ export const WorkspaceSidebarDropdown = () => {
                 className="flex w-full items-center justify-start rounded px-2 py-1 text-sm text-red-600 hover:bg-custom-sidebar-background-80"
                 onClick={handleSignOut}
               >
-                Sign out
+                退出登录
               </Menu.Item>
             </div>
           </Menu.Items>

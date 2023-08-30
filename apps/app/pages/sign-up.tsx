@@ -48,8 +48,8 @@ const SignUp: NextPage = () => {
       .then(async (response) => {
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Account created successfully.",
+          title: "成功!",
+          message: "账号创建成功。",
         });
 
         if (response) await mutateUser();
@@ -58,10 +58,10 @@ const SignUp: NextPage = () => {
       .catch((err) =>
         setToastAlert({
           type: "error",
-          title: "Error!",
+          title: "错误!",
           message:
             err?.error ||
-            "Something went wrong. Please try again later or contact the support team.",
+            "出错了。请稍后再试或联系支持团队。",
         })
       );
   };

@@ -64,8 +64,8 @@ export const DeleteIssueModal: React.FC<Props> = ({ isOpen, handleClose, data })
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Issue deleted successfully.",
+          title: "成功!",
+          message: "任务已成功删除",
         });
 
         // remove inboxIssueId from the url
@@ -78,8 +78,8 @@ export const DeleteIssueModal: React.FC<Props> = ({ isOpen, handleClose, data })
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Issue could not be deleted. Please try again.",
+          title: "错误!",
+          message: "任务无法删除。请重试。",
         })
       )
       .finally(() => setIsDeleting(false));

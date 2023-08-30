@@ -104,14 +104,14 @@ export const ModuleDetailsSidebar: React.FC<Props> = ({ module, isOpen, moduleIs
         if (err.status === 400)
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "This URL already exists for this module.",
+            title: "错误!",
+            message: "此模块的 URL 已经存在。",
           });
         else
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "Something went wrong. Please try again.",
+            title: "错误!",
+            message: "出错了。请重试。",
           });
       });
   };
@@ -553,7 +553,7 @@ export const ModuleDetailsSidebar: React.FC<Props> = ({ module, isOpen, moduleIs
                             className="fill-current text-custom-text-200"
                           />
                           <span className="text-xs italic text-custom-text-200">
-                            No issues found. Please add issue.
+                            未找到任务，请添加任务
                           </span>
                         </div>
                       )}

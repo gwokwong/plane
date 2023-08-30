@@ -136,8 +136,8 @@ const ArchivedIssueDetailsPage: NextPage = () => {
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Something went wrong. Please try again.",
+          title: "错误!",
+          message: "出错了。请重试。",
         });
       })
       .finally(() => setIsRestoring(false));

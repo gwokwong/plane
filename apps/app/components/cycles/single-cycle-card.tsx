@@ -101,8 +101,8 @@ export const SingleCycleCard: React.FC<TSingleStatProps> = ({
     ).then(() => {
       setToastAlert({
         type: "success",
-        title: "Link Copied!",
-        message: "Cycle link copied to clipboard.",
+        title: "链接已复制！",
+        message: "将周期链接复制到剪贴板",
       });
     });
   };

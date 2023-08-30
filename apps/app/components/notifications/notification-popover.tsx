@@ -186,8 +186,8 @@ export const NotificationPopover = () => {
                     ) : (
                       <div className="grid h-full w-full place-items-center overflow-hidden scale-75">
                         <EmptyState
-                          title="You're updated with all the notifications"
-                          description="You have read all the notifications."
+                          title="您将收到所有最新通知"
+                          description="您已阅读所有通知"
                           image={emptyNotification}
                           isFullScreen={false}
                         />

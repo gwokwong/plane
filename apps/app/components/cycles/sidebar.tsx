@@ -96,7 +96,7 @@ export const CycleDetailsSidebar: React.FC<Props> = ({
       .then(() => {
         setToastAlert({
           type: "success",
-          title: "Cycle link copied to clipboard",
+          title: "将周期链接复制到剪贴板",
         });
       })
       .catch(() => {
@@ -159,16 +159,16 @@ export const CycleDetailsSidebar: React.FC<Props> = ({
           });
           setToastAlert({
             type: "success",
-            title: "Success!",
-            message: "Cycle updated successfully.",
+            title: "成功!",
+            message: "周期更新成功",
           });
           return;
         } else {
           setToastAlert({
             type: "error",
-            title: "Error!",
+            title: "错误!",
             message:
-              "You have a cycle already on the given dates, if you want to create your draft cycle you can do that by removing dates",
+              "您已经在给定的日期创建了一个周期，如果您想创建自己的周期草稿，可以删除日期",
           });
           return;
         }
@@ -186,8 +186,8 @@ export const CycleDetailsSidebar: React.FC<Props> = ({
         });
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Cycle updated successfully.",
+          title: "成功!",
+          message: "周期更新成功",
         });
       } else {
         setToastAlert({
@@ -213,8 +213,8 @@ export const CycleDetailsSidebar: React.FC<Props> = ({
       if (!isDateGreaterThanToday(`${watch("end_date")}`)) {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Unable to create cycle in past date. Please enter a valid date.",
+          title: "错误!",
+          message: "无法在过去日期创建周期。请输入有效日期。",
         });
         return;
       }
@@ -233,16 +233,16 @@ export const CycleDetailsSidebar: React.FC<Props> = ({
           });
           setToastAlert({
             type: "success",
-            title: "Success!",
-            message: "Cycle updated successfully.",
+            title: "成功!",
+            message: "周期更新成功",
           });
           return;
         } else {
           setToastAlert({
             type: "error",
-            title: "Error!",
+            title: "错误!",
             message:
-              "You have a cycle already on the given dates, if you want to create your draft cycle you can do that by removing dates",
+              "您已经在给定的日期创建了一个周期，如果您想创建自己的周期草稿，可以删除日期",
           });
           return;
         }
@@ -260,8 +260,8 @@ export const CycleDetailsSidebar: React.FC<Props> = ({
         });
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Cycle updated successfully.",
+          title: "成功!",
+          message: "周期更新成功",
         });
       } else {
         setToastAlert({

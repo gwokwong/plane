@@ -176,7 +176,7 @@ const HomePage: NextPage = observer(() => {
               {parseInt(process.env.NEXT_PUBLIC_ENABLE_OAUTH || "0") ? (
                 <>
                   <h1 className="text-center text-2xl sm:text-2.5xl font-semibold text-custom-text-100">
-                    Sign in to Plane
+                    登录MissionPlan
                   </h1>
                   <div className="flex flex-col divide-y divide-custom-border-200">
                     <div className="pb-7">

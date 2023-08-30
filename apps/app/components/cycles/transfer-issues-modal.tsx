@@ -43,15 +43,15 @@ export const TransferIssuesModal: React.FC<Props> = ({ isOpen, handleClose }) =>
         mutate(CYCLE_ISSUES_WITH_PARAMS(cycleId as string, params));
         setToastAlert({
           type: "success",
-          title: "Issues transfered successfully",
-          message: "Issues have been transferred successfully",
+          title: "成功移交任务",
+          message: "已成功转移任务",
         });
       })
       .catch((err) => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Issues cannot be transfer. Please try again.",
+          title: "错误!",
+          message: "任务无法转移。请重试。",
         });
       });
   };

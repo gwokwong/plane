@@ -51,7 +51,7 @@ export const GithubLoginButton: FC<GithubLoginButtonProps> = ({ handleSignIn }) 
             width={20}
             alt="GitHub Logo"
           />
-          <span>Sign in with GitHub</span>
+          <span>使用 GitHub 登录</span>
         </button>
       </Link>
     </div>

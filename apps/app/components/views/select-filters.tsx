@@ -90,7 +90,7 @@ export const SelectFilters: React.FC<Props> = ({
         options={[
           {
             id: "priority",
-            label: "Priority",
+            label: "优先级",
             value: PRIORITIES,
             hasChildren: true,
             children: PRIORITIES.map((priority) => ({
@@ -128,7 +128,7 @@ export const SelectFilters: React.FC<Props> = ({
           },
           {
             id: "assignees",
-            label: "Assignees",
+            label: "负责人",
             value: members,
             hasChildren: true,
             children: members?.map((member) => ({
@@ -148,7 +148,7 @@ export const SelectFilters: React.FC<Props> = ({
           },
           {
             id: "created_by",
-            label: "Created by",
+            label: "创建人",
             value: members,
             hasChildren: true,
             children: members?.map((member) => ({
@@ -168,7 +168,7 @@ export const SelectFilters: React.FC<Props> = ({
           },
           {
             id: "labels",
-            label: "Labels",
+            label: "标签",
             value: issueLabels,
             hasChildren: true,
             children: issueLabels?.map((label) => ({
@@ -229,7 +229,7 @@ export const SelectFilters: React.FC<Props> = ({
           },
           {
             id: "target_date",
-            label: "Due date",
+            label: "到期时间",
             value: DATE_FILTER_OPTIONS,
             hasChildren: true,
             children: [
@@ -257,7 +257,7 @@ export const SelectFilters: React.FC<Props> = ({
                     }}
                     className="w-full rounded px-1 py-1.5 text-left text-custom-text-200 hover:bg-custom-background-80"
                   >
-                    Custom
+                    自定义
                   </button>
                 ),
               },

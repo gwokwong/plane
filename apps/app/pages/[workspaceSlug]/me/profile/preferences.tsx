@@ -57,7 +57,7 @@ const ProfilePreferences = observer(() => {
     <WorkspaceAuthorizationLayout
       breadcrumbs={
         <Breadcrumbs>
-          <BreadcrumbItem title="My Profile Preferences" />
+          <BreadcrumbItem title="我的个人资料偏好" />
         </Breadcrumbs>
       }
     >
@@ -65,9 +65,9 @@ const ProfilePreferences = observer(() => {
         <div className="p-8">
           <div className="mb-8 space-y-6">
             <div>
-              <h3 className="text-3xl font-semibold">Profile Settings</h3>
+              <h3 className="text-3xl font-semibold">个人资料设置</h3>
               <p className="mt-1 text-custom-text-200">
-                This information will be visible to only you.
+                这些信息只有您自己能看到
               </p>
             </div>
             <SettingsNavbar profilePage />
@@ -75,9 +75,9 @@ const ProfilePreferences = observer(() => {
           <div className="space-y-8 sm:space-y-12">
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold text-custom-text-100">Theme</h4>
+                <h4 className="text-lg font-semibold text-custom-text-100">主题</h4>
                 <p className="text-sm text-custom-text-200">
-                  Select or customize your interface color scheme.
+                  选择或自定义界面配色方案
                 </p>
               </div>
               <div className="col-span-12 sm:col-span-6">

@@ -66,9 +66,9 @@ const IsGuestCondition: React.FC<{
     setIsOpen(false);
 
     setToastAlert({
-      title: "Error",
+      title: "错误",
       type: "error",
-      message: "You don't have permission to create project.",
+      message: "您没有创建项目的权限",
     });
   }, [setIsOpen, setToastAlert]);
 
@@ -151,8 +151,8 @@ export const CreateProjectModal: React.FC<Props> = ({
         );
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Project created successfully.",
+          title: "成功!",
+          message: "项目创建成功",
         });
         if (setToFavorite) {
           handleAddToFavorites(res.id);
@@ -163,7 +163,7 @@ export const CreateProjectModal: React.FC<Props> = ({
         Object.keys(err.data).map((key) =>
           setToastAlert({
             type: "error",
-            title: "Error!",
+            title: "错误!",
             message: err.data[key],
           })
         );

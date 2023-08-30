@@ -75,15 +75,15 @@ export const DeletePageModal: React.FC<TConfirmPageDeletionProps> = ({
         handleClose();
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Page deleted successfully.",
+          title: "成功!",
+          message: "页面删除成功。",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Page could not be deleted. Please try again.",
+          title: "错误!",
+          message: "页面无法删除。请重试。",
         });
       })
       .finally(() => {
@@ -135,12 +135,11 @@ export const DeletePageModal: React.FC<TConfirmPageDeletionProps> = ({
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-custom-text-200">
-                          Are you sure you want to delete Page-{" "}
+                          您确定要删除页面-{" "}
                           <span className="break-words font-medium text-custom-text-100">
                             {data?.name}
                           </span>
-                          ? All of the data related to the page will be permanently removed. This
-                          action cannot be undone.
+                          ? 与页面相关的所有数据都将被永久删除。此操作无法撤销。
                         </p>
                       </div>
                     </div>
@@ -149,7 +148,7 @@ export const DeletePageModal: React.FC<TConfirmPageDeletionProps> = ({
                 <div className="flex justify-end gap-2 p-4 sm:px-6">
                   <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
                   <DangerButton onClick={handleDeletion} loading={isDeleteLoading}>
-                    {isDeleteLoading ? "Deleting..." : "Delete"}
+                    {isDeleteLoading ? "删除..." : "删除"}
                   </DangerButton>
                 </div>
               </Dialog.Panel>

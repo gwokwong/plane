@@ -41,7 +41,7 @@ export const SingleLabel: React.FC<Props> = ({
         <CustomMenu.MenuItem onClick={() => editLabel(label)}>
           <span className="flex items-center justify-start gap-2">
             <PencilIcon className="h-4 w-4" />
-            <span>Edit label</span>
+            <span>编辑标签</span>
           </span>
         </CustomMenu.MenuItem>
         <CustomMenu.MenuItem onClick={handleLabelDelete}>

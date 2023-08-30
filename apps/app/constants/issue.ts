@@ -2,25 +2,25 @@ export const GROUP_BY_OPTIONS: Array<{
   name: string;
   key: TIssueGroupByOptions;
 }> = [
-  { name: "States", key: "state" },
-  { name: "State Groups", key: "state_detail.group" },
-  { name: "Priority", key: "priority" },
+  { name: "状态", key: "state" },
+  { name: "状态组", key: "state_detail.group" },
+  { name: "优先级", key: "priority" },
   { name: "Project", key: "project" },
-  { name: "Labels", key: "labels" },
-  { name: "Assignees", key: "assignees" },
-  { name: "Created by", key: "created_by" },
-  { name: "None", key: null },
+  { name: "标签", key: "labels" },
+  { name: "负责人", key: "assignees" },
+  { name: "创建人", key: "created_by" },
+  { name: "无", key: null },
 ];
 
 export const ORDER_BY_OPTIONS: Array<{
   name: string;
   key: TIssueOrderByOptions;
 }> = [
-  { name: "Manual", key: "sort_order" },
-  { name: "Last created", key: "-created_at" },
-  { name: "Last updated", key: "-updated_at" },
-  { name: "Start date", key: "start_date" },
-  { name: "Priority", key: "priority" },
+  { name: "手动", key: "sort_order" },
+  { name: "最近创建", key: "-created_at" },
+  { name: "最近更新", key: "-updated_at" },
+  { name: "开始时间", key: "start_date" },
+  { name: "优先级", key: "priority" },
 ];
 
 export const FILTER_ISSUE_OPTIONS: Array<{
@@ -28,15 +28,15 @@ export const FILTER_ISSUE_OPTIONS: Array<{
   key: "active" | "backlog" | null;
 }> = [
   {
-    name: "All",
+    name: "全部",
     key: null,
   },
   {
-    name: "Active Issues",
+    name: "活动任务",
     key: "active",
   },
   {
-    name: "Backlog Issues",
+    name: "积压任务",
     key: "backlog",
   },
 ];

@@ -92,8 +92,8 @@ const SingleModule: React.FC = () => {
       .catch(() =>
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Selected issues could not be added to the module. Please try again.",
+          title: "错误!",
+          message: "所选任务无法添加到模块中。请重试。",
         })
       );
   };

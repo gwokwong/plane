@@ -82,7 +82,7 @@ const ConfirmProjectMemberRemove: React.FC<Props> = ({ isOpen, onClose, data, ha
                 <div className="flex justify-end gap-2 bg-custom-background-90 p-4 sm:px-6">
                   <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
                   <DangerButton onClick={handleDeletion} loading={isDeleteLoading}>
-                    {isDeleteLoading ? "Removing..." : "Remove"}
+                    {isDeleteLoading ? "移除..." : "移除"}
                   </DangerButton>
                 </div>
               </Dialog.Panel>

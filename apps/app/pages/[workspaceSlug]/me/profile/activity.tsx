@@ -41,9 +41,9 @@ const ProfileActivity = () => {
       <div className="p-8">
         <div className="mb-8 space-y-6">
           <div>
-            <h3 className="text-3xl font-semibold">Profile Settings</h3>
+            <h3 className="text-3xl font-semibold">个人资料设置</h3>
             <p className="mt-1 text-custom-text-200">
-              This information will be visible to only you.
+              这些信息只有您自己能看到
             </p>
           </div>
           <SettingsNavbar profilePage />

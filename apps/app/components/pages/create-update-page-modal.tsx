@@ -68,15 +68,15 @@ export const CreateUpdatePageModal: React.FC<Props> = ({ isOpen, handleClose, da
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Page created successfully.",
+          title: "成功!",
+          message: "页面创建成功",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Page could not be created. Please try again.",
+          title: "错误!",
+          message: "页面无法创建。请重试。",
         });
       });
   };
@@ -120,15 +120,15 @@ export const CreateUpdatePageModal: React.FC<Props> = ({ isOpen, handleClose, da
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Page updated successfully.",
+          title: "成功!",
+          message: "页面更新成功",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Page could not be updated. Please try again.",
+          title: "错误!",
+          message: "页面无法更新。请重试",
         });
       });
   };

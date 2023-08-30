@@ -199,9 +199,8 @@ export const InboxMainContent: React.FC = () => {
               </span>
             ) : (
               <span className="text-custom-text-200">
-                No issues found. Use{" "}
-                <pre className="inline rounded bg-custom-background-80 px-2 py-1">C</pre> shortcut
-                to create a new issue
+                 任务为空。使用快捷键{" "}
+                <pre className="inline rounded bg-custom-background-80 px-2 py-1">C</pre>添加任务
               </span>
             )}
           </div>

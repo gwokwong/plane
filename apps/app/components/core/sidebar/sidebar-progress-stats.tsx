@@ -104,7 +104,7 @@ export const SidebarProgressStats: React.FC<Props> = ({
             }`
           }
         >
-          Labels
+          标签
         </Tab>
         <Tab
           className={({ selected }) =>
@@ -115,7 +115,7 @@ export const SidebarProgressStats: React.FC<Props> = ({
             }`
           }
         >
-          States
+          状态
         </Tab>
       </Tab.List>
       <Tab.Panels className="flex w-full items-center justify-between pt-1 text-custom-text-200">
@@ -169,7 +169,7 @@ export const SidebarProgressStats: React.FC<Props> = ({
                           alt="User"
                         />
                       </div>
-                      <span>No assignee</span>
+                      <span>无负责人</span>
                     </div>
                   }
                   completed={assignee.completed_issues}

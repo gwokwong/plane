@@ -59,7 +59,7 @@ const ProjectAuthorizationWrapped: React.FC<Props> = ({
         {loading ? (
           <div className="grid h-full w-full place-items-center p-4 bg-custom-background-100">
             <div className="flex flex-col items-center gap-3 text-center">
-              <h3 className="text-xl">Loading your project...</h3>
+              <h3 className="text-xl">载入您的项目...</h3>
               <Spinner />
             </div>
           </div>
@@ -72,7 +72,7 @@ const ProjectAuthorizationWrapped: React.FC<Props> = ({
               description="Try creating a new project"
               image={emptyProject}
               primaryButton={{
-                text: "Create Project",
+                text: "创建项目",
                 onClick: () => {
                   const e = new KeyboardEvent("keydown", {
                     key: "p",

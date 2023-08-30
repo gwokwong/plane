@@ -93,8 +93,8 @@ const SingleCycle: React.FC = () => {
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Selected issues could not be added to the cycle. Please try again.",
+          title: "错误!",
+          message: "所选任务无法添加到周期中。请重试。",
         });
       });
   };
@@ -111,7 +111,7 @@ const SingleCycle: React.FC = () => {
         breadcrumbs={
           <Breadcrumbs>
             <BreadcrumbItem
-              title={`${truncateText(cycleDetails?.project_detail.name ?? "Project", 32)} Cycles`}
+              title={`${truncateText(cycleDetails?.project_detail.name ?? "Project", 32)} 周期`}
               link={`/${workspaceSlug}/projects/${projectId}/cycles`}
               linkTruncate
             />

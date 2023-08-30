@@ -52,8 +52,8 @@ export const SingleViewItem: React.FC<Props> = ({ view, handleEditView, handleDe
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't add the view to favorites. Please try again.",
+          title: "错误!",
+          message: "无法将视图添加到收藏夹，请重试。",
         });
       });
   };
@@ -76,8 +76,8 @@ export const SingleViewItem: React.FC<Props> = ({ view, handleEditView, handleDe
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Couldn't remove the view from favorites. Please try again.",
+          title: "错误!",
+          message: "无法从收藏夹中删除视图，请重试。",
         });
       });
   };

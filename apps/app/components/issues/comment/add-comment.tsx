@@ -113,7 +113,7 @@ export const AddComment: React.FC<Props> = ({
           </div>
 
           <SecondaryButton type="submit" disabled={isSubmitting || disabled} className="mt-2">
-            {isSubmitting ? "Adding..." : "Comment"}
+            {isSubmitting ? "添加中..." : "评论"}
           </SecondaryButton>
         </div>
       </form>

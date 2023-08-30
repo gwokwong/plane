@@ -168,7 +168,7 @@ export const IssueDescriptionForm: FC<IssueDetailsProps> = ({
             isSubmitting === "saved" ? "fadeOut" : "fadeIn"
           }`}
         >
-          {isSubmitting === "submitting" ? "Saving..." : "Saved"}
+          {isSubmitting === "submitting" ? "保存..." : "保存"}
         </div>
       </div>
     </div>

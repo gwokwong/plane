@@ -86,8 +86,8 @@ export const BulkDeleteIssuesModal: React.FC<Props> = ({ isOpen, setIsOpen, user
     if (!data.delete_issue_ids || data.delete_issue_ids.length === 0) {
       setToastAlert({
         type: "error",
-        title: "Error!",
-        message: "Please select at least one issue.",
+        title: "错误!",
+        message: "请至少选择一个任务。",
       });
       return;
     }

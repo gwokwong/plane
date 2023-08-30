@@ -70,8 +70,8 @@ export const InviteMembers: React.FC<Props> = ({
       .then(async () => {
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Invitations sent successfully.",
+          title: "成功!",
+          message: "邀请已成功发送。",
         });
 
         await nextStep();
@@ -101,11 +101,11 @@ export const InviteMembers: React.FC<Props> = ({
         if (e.code === "Enter") e.preventDefault();
       }}
     >
-      <h2 className="text-xl sm:text-2xl font-semibold">Invite people to collaborate</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold">邀请他人合作</h2>
       <div className="md:w-3/5 text-sm h-full max-h-[40vh] flex flex-col overflow-hidden">
         <div className="grid grid-cols-11 gap-x-4 mb-1 text-sm">
-          <h6 className="col-span-7">Co-workers Email</h6>
-          <h6 className="col-span-4">Role</h6>
+          <h6 className="col-span-7">同事电子邮件</h6>
+          <h6 className="col-span-4">角色</h6>
         </div>
         <div className="space-y-3 sm:space-y-4 mb-3 h-full overflow-y-auto">
           {fields.map((field, index) => (
@@ -115,10 +115,10 @@ export const InviteMembers: React.FC<Props> = ({
                   control={control}
                   name={`emails.${index}.email`}
                   rules={{
-                    required: "Email ID is required",
+                    required: "需要提供电子邮件地址",
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid Email ID",
+                      message: "无效电子邮件地址",
                     },
                   }}
                   render={({ field }) => (
@@ -126,7 +126,7 @@ export const InviteMembers: React.FC<Props> = ({
                       <Input
                         {...field}
                         className="text-xs sm:text-sm"
-                        placeholder="Enter their email..."
+                        placeholder="输入他们的电子邮件..."
                       />
                       {errors.emails?.[index]?.email && (
                         <span className="text-red-500 text-xs">
@@ -177,15 +177,15 @@ export const InviteMembers: React.FC<Props> = ({
           onClick={appendField}
         >
           <PlusIcon className="h-3 w-3" />
-          Add another
+          再添加一个
         </button>
       </div>
       <div className="flex items-center gap-4">
         <PrimaryButton type="submit" disabled={!isValid} loading={isSubmitting} size="md">
-          {isSubmitting ? "Sending..." : "Send Invite"}
+          {isSubmitting ? "发送中..." : "发送邀请"}
         </PrimaryButton>
         <SecondaryButton className="border border-none bg-transparent" size="md" onClick={nextStep}>
-          Skip this step
+          跳过此步骤
         </SecondaryButton>
       </div>
     </form>

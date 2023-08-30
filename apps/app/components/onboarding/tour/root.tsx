@@ -34,43 +34,43 @@ const TOUR_STEPS: {
 }[] = [
   {
     key: "issues",
-    title: "Plan with issues",
+    title: "任务",
     description:
-      "The issue is the building block of the Plane. Most concepts in Plane are either associated with issues and their properties.",
+      "任务是MissionPlan的基石。MissionPlan中的大多数概念都与任务及其属性有关。",
     image: IssuesTour,
     nextStep: "cycles",
   },
   {
     key: "cycles",
-    title: "Move with cycles",
+    title: "移至周期",
     description:
-      "Cycles help you and your team to progress faster, similar to the sprints commonly used in agile development.",
+      "周期可以帮助您和您的团队加快进度，类似于敏捷开发中常用的冲刺阶段。",
     image: CyclesTour,
     prevStep: "issues",
     nextStep: "modules",
   },
   {
     key: "modules",
-    title: "Break into modules",
+    title: "分解成模块",
     description:
-      "Modules break your big thing into Projects or Features, to help you organize better.",
+      "模块可将您的重要工作分解为项目或功能，帮助您更好地组织工作。",
     image: ModulesTour,
     prevStep: "cycles",
     nextStep: "views",
   },
   {
     key: "views",
-    title: "Views",
+    title: "视图",
     description:
-      "Create custom filters to display only the issues that matter to you. Save and share your filters in just a few clicks.",
+      "创建自定义筛选器，只显示与您相关的问题。只需点击几下，即可保存并共享您的筛选器。",
     image: ViewsTour,
     prevStep: "modules",
     nextStep: "pages",
   },
   {
     key: "pages",
-    title: "Document with pages",
-    description: "Use Pages to quickly jot down issues when you're in a meeting or starting a day.",
+    title: "pages文档",
+    description: "在开会或开始一天的工作时，用Pages快速记下问题。",
     image: PagesTour,
     prevStep: "views",
   },
@@ -94,20 +94,19 @@ export const TourRoot: React.FC<Props> = ({ onComplete }) => {
             </div>
             <div className="h-2/5 overflow-y-auto p-6">
               <h3 className="font-semibold sm:text-xl">
-                Welcome to Plane, {user?.first_name} {user?.last_name}
+                欢迎来到MissionPlan, {user?.first_name} {user?.last_name}
               </h3>
               <p className="text-custom-text-200 text-sm mt-3">
-                We{"'"}re glad that you decided to try out Plane. You can now manage your projects
-                with ease. Get started by creating a project.
+                我们很高兴您决定试用MissionPlan。现在您可以轻松管理您的项目了。创建项目，开始使用。
               </p>
               <div className="flex items-center gap-6 mt-8">
-                <PrimaryButton onClick={() => setStep("issues")}>Take a Product Tour</PrimaryButton>
+                <PrimaryButton onClick={() => setStep("issues")}>了解产品</PrimaryButton>
                 <button
                   type="button"
                   className="outline-custom-text-100 bg-transparent text-custom-primary-100 text-xs font-medium"
                   onClick={onComplete}
                 >
-                  No thanks, I will explore it myself
+                  不用了，谢谢，我自己会去探索
                 </button>
               </div>
             </div>
@@ -138,18 +137,18 @@ export const TourRoot: React.FC<Props> = ({ onComplete }) => {
                 <div className="flex items-center gap-4">
                   {currentStep?.prevStep && (
                     <SecondaryButton onClick={() => setStep(currentStep.prevStep ?? "welcome")}>
-                      Back
+                      后退
                     </SecondaryButton>
                   )}
                   {currentStep?.nextStep && (
                     <PrimaryButton onClick={() => setStep(currentStep.nextStep ?? "issues")}>
-                      Next
+                      下一步
                     </PrimaryButton>
                   )}
                 </div>
                 {TOUR_STEPS.findIndex((tourStep) => tourStep.key === step) ===
                   TOUR_STEPS.length - 1 && (
-                  <PrimaryButton onClick={onComplete}>Create my first project</PrimaryButton>
+                  <PrimaryButton onClick={onComplete}>创建我的第一个项目</PrimaryButton>
                 )}
               </div>
             </div>

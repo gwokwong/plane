@@ -92,7 +92,7 @@ export const DeleteEstimateModal: React.FC<Props> = ({
                       }}
                       loading={isDeleteLoading}
                     >
-                      {isDeleteLoading ? "Deleting..." : "Delete Estimate"}
+                      {isDeleteLoading ? "刪除..." : "删除估算"}
                     </DangerButton>
                   </div>
                 </div>

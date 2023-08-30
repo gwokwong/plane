@@ -98,7 +98,7 @@ const SingleView: React.FC = () => {
               }}
             >
               <PlusIcon className="h-4 w-4" />
-              Add Issue
+              添加任务
             </PrimaryButton>
           </div>
         }
@@ -106,10 +106,10 @@ const SingleView: React.FC = () => {
         {error ? (
           <EmptyState
             image={emptyView}
-            title="View does not exist"
-            description="The view you are looking for does not exist or has been deleted."
+            title="视图不存在"
+            description="您要查找的视图不存在或已被删除"
             primaryButton={{
-              text: "View other views",
+              text: "查看其他视图",
               onClick: () => router.push(`/${workspaceSlug}/projects/${projectId}/views`),
             }}
           />

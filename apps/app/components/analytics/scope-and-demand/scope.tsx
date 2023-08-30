@@ -11,10 +11,10 @@ type Props = {
 
 export const AnalyticsScope: React.FC<Props> = ({ defaultAnalytics }) => (
   <div className="rounded-[10px] border border-custom-border-200">
-    <h5 className="p-3 text-xs text-green-500">SCOPE</h5>
+    <h5 className="p-3 text-xs text-green-500">范围</h5>
     <div className="divide-y divide-custom-border-200">
       <div>
-        <h6 className="px-3 text-base font-medium">Pending issues</h6>
+        <h6 className="px-3 text-base font-medium">待处理问题</h6>
         {defaultAnalytics.pending_issue_user.length > 0 ? (
           <BarGraph
             data={defaultAnalytics.pending_issue_user}
@@ -31,7 +31,7 @@ export const AnalyticsScope: React.FC<Props> = ({ defaultAnalytics }) => (
               return (
                 <div className="rounded-md border border-custom-border-200 bg-custom-background-80 p-2 text-xs">
                   <span className="font-medium text-custom-text-200">
-                    {assignee ? assignee.assignees__display_name : "No assignee"}:{" "}
+                    {assignee ? assignee.assignees__display_name : "无负责人"}:{" "}
                   </span>
                   {datum.value}
                 </div>
@@ -74,7 +74,7 @@ export const AnalyticsScope: React.FC<Props> = ({ defaultAnalytics }) => (
         ) : (
           <div className="px-7 py-4">
             <ProfileEmptyState
-              title="No Data yet"
+              title="暂无数据"
               description="Analysis of pending issues by co-workers appears here."
               image={emptyBarGraph}
             />

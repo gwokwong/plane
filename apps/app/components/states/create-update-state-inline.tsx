@@ -109,22 +109,22 @@ export const CreateUpdateStateInline: React.FC<Props> = ({
 
           setToastAlert({
             type: "success",
-            title: "Success!",
-            message: "State created successfully.",
+            title: "成功!",
+            message: "成功创建状态。",
           });
         })
         .catch((err) => {
           if (err.status === 400)
             setToastAlert({
               type: "error",
-              title: "Error!",
-              message: "State with that name already exists. Please try again with another name.",
+              title: "错误!",
+              message: "已存在使用该名称的国家。请使用其他名称重试。",
             });
           else
             setToastAlert({
               type: "error",
-              title: "Error!",
-              message: "State could not be created. Please try again.",
+              title: "错误!",
+              message: "无法创建状态。请重试",
             });
         });
     } else {

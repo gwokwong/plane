@@ -181,8 +181,8 @@ const SinglePage: NextPage = () => {
     ).then(() => {
       setToastAlert({
         type: "success",
-        title: "Success",
-        message: "Added to favorites",
+        title: "成功",
+        message: "已添加到收藏夹",
       });
     });
 
@@ -204,8 +204,8 @@ const SinglePage: NextPage = () => {
     ).then(() => {
       setToastAlert({
         type: "success",
-        title: "Success",
-        message: "Removed from favorites",
+        title: "成功",
+        message: "已从收藏夹中删除",
       });
     });
 
@@ -269,8 +269,8 @@ const SinglePage: NextPage = () => {
       () => {
         setToastAlert({
           type: "success",
-          title: "Link Copied!",
-          message: "Page link copied to clipboard.",
+          title: "链接已复制！",
+          message: "页面链接已复制到剪贴板",
         });
       }
     );
@@ -432,7 +432,7 @@ const SinglePage: NextPage = () => {
                         className="flex items-center gap-1 rounded-sm bg-custom-background-80 p-1.5 text-xs"
                       >
                         <PlusIcon className="h-3.5 w-3.5" />
-                        {pageDetails.labels.length <= 0 && <span>Add Label</span>}
+                        {pageDetails.labels.length <= 0 && <span>添加标签</span>}
                       </button>
                     }
                     value={pageDetails.labels}
@@ -446,7 +446,7 @@ const SinglePage: NextPage = () => {
                       >
                         <span className="flex items-center justify-start gap-1 text-custom-text-200">
                           <PlusIcon className="h-4 w-4" aria-hidden="true" />
-                          <span>Create New Label</span>
+                          <span>创建新标签</span>
                         </span>
                       </button>
                     }

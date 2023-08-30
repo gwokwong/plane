@@ -59,8 +59,8 @@ export const DeleteModuleModal: React.FC<Props> = ({ isOpen, setIsOpen, data, us
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Module could not be deleted. Please try again.",
+          title: "错误!",
+          message: "模块无法删除。请重试。",
         });
         setIsDeleteLoading(false);
       });
@@ -124,7 +124,7 @@ export const DeleteModuleModal: React.FC<Props> = ({ isOpen, setIsOpen, data, us
                 <div className="flex justify-end gap-2 p-4 sm:px-6">
                   <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
                   <DangerButton onClick={handleDeletion} loading={isDeleteLoading}>
-                    {isDeleteLoading ? "Deleting..." : "Delete"}
+                    {isDeleteLoading ? "删除..." : "删除"}
                   </DangerButton>
                 </div>
               </Dialog.Panel>

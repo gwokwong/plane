@@ -77,7 +77,7 @@ export const JoinProjectModal: React.FC<TJoinProjectModalProps> = ({ onClose, on
                 <div className="mt-5 flex justify-end gap-2">
                   <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
                   <PrimaryButton type="submit" onClick={handleJoin} loading={isJoiningLoading}>
-                    {isJoiningLoading ? "Joining..." : "Join Project"}
+                    {isJoiningLoading ? "加入..." : "加入项目"}
                   </PrimaryButton>
                 </div>
               </Dialog.Panel>

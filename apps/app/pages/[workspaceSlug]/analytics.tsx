@@ -37,7 +37,7 @@ const defaultValues: IAnalyticsParams = {
   project: null,
 };
 
-const tabsList = ["Scope and Demand", "Custom Analytics"];
+const tabsList = ["适用范围和需求", "自定义分析"];
 
 const Analytics = () => {
   const router = useRouter();
@@ -66,7 +66,7 @@ const Analytics = () => {
     };
 
     const eventType =
-      tab === "Scope and Demand"
+      tab === "适用范围和需求"
         ? "WORKSPACE_SCOPE_AND_DEMAND_ANALYTICS"
         : "WORKSPACE_CUSTOM_ANALYTICS";
 
@@ -88,7 +88,7 @@ const Analytics = () => {
     <WorkspaceAuthorizationLayout
       breadcrumbs={
         <Breadcrumbs>
-          <BreadcrumbItem title="Workspace Analytics" />
+          <BreadcrumbItem title="工作区分析" />
         </Breadcrumbs>
       }
     >
@@ -131,12 +131,12 @@ const Analytics = () => {
           </div>
         ) : (
           <EmptyState
-            title="You can see your all projects' analytics here"
-            description="Let's create your first project and analyse the stats with various graphs."
+            title="您可以在此查看所有项目的分析结果"
+            description="让我们创建第一个项目，并用各种图表分析统计数据。"
             image={emptyAnalytics}
             primaryButton={{
               icon: <PlusIcon className="h-4 w-4" />,
-              text: "New Project",
+              text: "创建项目",
               onClick: () => {
                 const e = new KeyboardEvent("keydown", {
                   key: "p",

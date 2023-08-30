@@ -58,15 +58,15 @@ export const CreateUpdateModuleModal: React.FC<Props> = ({ isOpen, setIsOpen, da
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Module created successfully.",
+          title: "成功!",
+          message: "模块创建成功。",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Module could not be created. Please try again.",
+          title: "错误!",
+          message: "无法创建模块。请重试",
         });
       });
   };
@@ -89,15 +89,15 @@ export const CreateUpdateModuleModal: React.FC<Props> = ({ isOpen, setIsOpen, da
 
         setToastAlert({
           type: "success",
-          title: "Success!",
-          message: "Module updated successfully.",
+          title: "成功!",
+          message: "模块更新成功。",
         });
       })
       .catch(() => {
         setToastAlert({
           type: "error",
-          title: "Error!",
-          message: "Module could not be updated. Please try again.",
+          title: "错误!",
+          message: "模块无法更新,请重试。",
         });
       });
   };

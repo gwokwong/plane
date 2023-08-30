@@ -113,7 +113,7 @@ const SingleLabel: React.FC<Props> = ({ label, issueLabels, editLabel, handleLab
                 register={register}
                 placeholder="Label title"
                 validations={{
-                  required: "Label title is required",
+                  required: "标签是必填项",
                 }}
                 error={errors.name}
               />

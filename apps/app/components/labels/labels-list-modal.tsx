@@ -115,7 +115,7 @@ export const LabelsListModal: React.FC<Props> = ({ isOpen, handleClose, parent, 
                     <li className="p-2">
                       {query === "" && (
                         <h2 className="mt-4 mb-2 px-3 text-xs font-semibold text-custom-text-100">
-                          Labels
+                          标签
                         </h2>
                       )}
                       <ul className="text-sm text-gray-700">
