@@ -30,7 +30,7 @@ export const ProfileActivity = () => {
 
   return (
     <div className="space-y-2">
-      <h3 className="text-lg font-medium">Recent Activity</h3>
+      <h3 className="text-lg font-medium">最近活动</h3>
       <div className="border border-custom-border-100 rounded p-6">
         {userProfileActivity ? (
           userProfileActivity.results.length > 0 ? (
@@ -81,8 +81,8 @@ export const ProfileActivity = () => {
             </div>
           ) : (
             <ProfileEmptyState
-              title="No Data yet"
-              description="We couldn’t find data. Kindly view your inputs"
+              title="暂无数据"
+              description="我们找不到数据，请查看您的输入"
               image={recentActivityEmptyState}
             />
           )

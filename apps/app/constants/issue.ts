@@ -5,7 +5,7 @@ export const GROUP_BY_OPTIONS: Array<{
   { name: "状态", key: "state" },
   { name: "状态组", key: "state_detail.group" },
   { name: "优先级", key: "priority" },
-  { name: "Project", key: "project" },
+  { name: "项目", key: "project" },
   { name: "标签", key: "labels" },
   { name: "负责人", key: "assignees" },
   { name: "创建人", key: "created_by" },

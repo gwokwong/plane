@@ -60,7 +60,7 @@ const ProjectsPage: NextPage = () => {
       breadcrumbs={
         <Breadcrumbs>
           <BreadcrumbItem
-            title={`${truncateText(activeWorkspace?.name ?? "Workspace", 32)} Projects`}
+            title={`${truncateText(activeWorkspace?.name ?? "工作区", 32)} 项目`}
             unshrinkTitle={false}
           />
         </Breadcrumbs>
@@ -73,7 +73,7 @@ const ProjectsPage: NextPage = () => {
               className="w-full  border-none bg-transparent text-xs text-custom-text-200 focus:outline-none"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search"
+              placeholder="搜索"
             />
           </div>
 
@@ -85,7 +85,7 @@ const ProjectsPage: NextPage = () => {
             }}
           >
             <PlusIcon className="h-4 w-4" />
-            Add Project
+            新增项目
           </PrimaryButton>
         </div>
       }

@@ -587,7 +587,7 @@ export const CycleDetailsSidebar: React.FC<Props> = ({
                             className="fill-current text-custom-text-200"
                           />
                           <span className="text-xs italic text-custom-text-200">
-                            No issues found. Please add issue.
+                            未找到任务,请添加任务。
                           </span>
                         </div>
                       )}

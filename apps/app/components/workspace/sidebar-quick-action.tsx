@@ -26,7 +26,7 @@ export const WorkspaceSidebarQuickAction = () => {
         }}
       >
         <Icon iconName="edit_square" className="!text-lg !leading-4 text-custom-sidebar-text-300" />
-        {!store?.theme?.sidebarCollapsed && <span className="text-sm font-medium">New Issue</span>}
+        {!store?.theme?.sidebarCollapsed && <span className="text-sm font-medium">新建任务</span>}
       </button>
 
       <button

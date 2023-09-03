@@ -50,14 +50,14 @@ export const AnalyticsDemand: React.FC<Props> = ({ defaultAnalytics }) => (
         );
       })}
     </div>
-    <div className="!mt-6 flex w-min items-center gap-2 whitespace-nowrap rounded-md border border-custom-border-200 bg-custom-background-80 p-2 text-xs">
-      <p className="flex items-center gap-1 text-custom-text-200">
-        <PlayIcon className="h-4 w-4 -rotate-90" aria-hidden="true" />
-        <span>需求估算:</span>
-      </p>
-      <p className="font-medium">
-        {defaultAnalytics.open_estimate_sum}/{defaultAnalytics.total_estimate_sum}
-      </p>
-    </div>
+    {/*<div className="!mt-6 flex w-min items-center gap-2 whitespace-nowrap rounded-md border border-custom-border-200 bg-custom-background-80 p-2 text-xs">*/}
+    {/*  <p className="flex items-center gap-1 text-custom-text-200">*/}
+    {/*    <PlayIcon className="h-4 w-4 -rotate-90" aria-hidden="true" />*/}
+    {/*    <span>需求估算:</span>*/}
+    {/*  </p>*/}
+    {/*  <p className="font-medium">*/}
+    {/*    {defaultAnalytics.open_estimate_sum}/{defaultAnalytics.total_estimate_sum}*/}
+    {/*  </p>*/}
+    {/*</div>*/}
   </div>
 );

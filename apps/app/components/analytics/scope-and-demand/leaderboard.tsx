@@ -59,7 +59,7 @@ export const AnalyticsLeaderboard: React.FC<Props> = ({
       </div>
     ) : (
       <div className="px-7 py-4">
-        <ProfileEmptyState title="No Data yet" description={emptyStateMessage} image={emptyUsers} />
+        <ProfileEmptyState title="暂无数据" description={emptyStateMessage} image={emptyUsers} />
       </div>
     )}
   </div>

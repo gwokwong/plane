@@ -125,9 +125,9 @@ const IssueDetailsPage: NextPage = () => {
             linkTruncate
           />
           <Breadcrumbs.BreadcrumbItem
-            title={`Issue ${issueDetails?.project_detail.identifier ?? "Project"}-${
+            title={`Issue ${issueDetails?.project_detail.identifier ?? "项目"}-${
               issueDetails?.sequence_id ?? "..."
-            } Details`}
+            } 详情`}
             unshrinkTitle
           />
         </Breadcrumbs>
@@ -136,10 +136,10 @@ const IssueDetailsPage: NextPage = () => {
       {error ? (
         <EmptyState
           image={emptyIssue}
-          title="Issue does not exist"
-          description="The issue you are looking for does not exist, has been archived, or has been deleted."
+          title="任务不存在"
+          description="您要查找的任务不存在、已存档或已删除。"
           primaryButton={{
-            text: "View other issues",
+            text: "查看其他任务",
             onClick: () => router.push(`/${workspaceSlug}/projects/${projectId}/issues`),
           }}
         />

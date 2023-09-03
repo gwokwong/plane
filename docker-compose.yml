@@ -38,7 +38,7 @@ services:
                 container_name: planefrontend
                 build:
                         context: .
-                        dockerfile: ./apps/app/Dockerfile.web
+                        dockerfile: ./apps/app/Dockerfile.dev
                         args:
                                 NEXT_PUBLIC_API_BASE_URL: http://localhost:8000
                                 NEXT_PUBLIC_DEPLOY_URL: http://localhost/spaces

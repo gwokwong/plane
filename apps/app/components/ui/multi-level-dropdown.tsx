@@ -127,7 +127,7 @@ export const MultiLevelDropdown: React.FC<MultiLevelDropdownProps> = ({
                           <div className="space-y-1 p-1">
                             {option.children.length === 0 ? (
                               <p className="text-custom-text-200 text-center px-1 py-1.5">
-                                No {option.label} found
+                                未找到 {option.label} 
                               </p> //if no children found, show this message.
                             ) : (
                               option.children.map((child) => {

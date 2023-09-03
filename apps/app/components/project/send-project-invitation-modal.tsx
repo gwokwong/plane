@@ -97,9 +97,9 @@ const SendProjectInvitationModal: React.FC<Props> = (props) => {
       .then(() => {
         setIsOpen(false);
         setToastAlert({
-          title: "Success",
+          title: "成功",
           type: "success",
-          message: "Member added successfully",
+          message: "成功添加成员",
         });
         onSuccess();
       })

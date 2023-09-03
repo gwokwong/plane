@@ -17,7 +17,7 @@ export const ProfileStateDistribution: React.FC<Props> = ({ stateDistribution, u
 
   return (
     <div className="flex flex-col space-y-2">
-      <h3 className="text-lg font-medium">Issues by State</h3>
+      <h3 className="text-lg font-medium">按状态区分的任务</h3>
       <div className="flex-grow border border-custom-border-100 rounded p-7">
         {userProfile.state_distribution.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
@@ -80,7 +80,7 @@ export const ProfileStateDistribution: React.FC<Props> = ({ stateDistribution, u
           </div>
         ) : (
           <ProfileEmptyState
-            title="No Data yet"
+            title="暂无数据"
             description="Create issues to view the them by states in the graph for better analysis."
             image={stateGraph}
           />

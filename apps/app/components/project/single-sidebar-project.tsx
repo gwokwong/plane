@@ -54,26 +54,26 @@ const navigation = (workspaceSlug: string, projectId: string) => [
     href: `/${workspaceSlug}/projects/${projectId}/issues`,
     Icon: FilterNoneOutlined,
   },
-  {
-    name: "周期",
-    href: `/${workspaceSlug}/projects/${projectId}/cycles`,
-    Icon: ContrastOutlined,
-  },
-  {
-    name: "模块",
-    href: `/${workspaceSlug}/projects/${projectId}/modules`,
-    Icon: DatasetOutlined,
-  },
-  {
-    name: "视图",
-    href: `/${workspaceSlug}/projects/${projectId}/views`,
-    Icon: PhotoFilterOutlined,
-  },
-  {
-    name: "页面",
-    href: `/${workspaceSlug}/projects/${projectId}/pages`,
-    Icon: ArticleOutlined,
-  },
+  // {
+  //   name: "周期",
+  //   href: `/${workspaceSlug}/projects/${projectId}/cycles`,
+  //   Icon: ContrastOutlined,
+  // },
+  // {
+  //   name: "模块",
+  //   href: `/${workspaceSlug}/projects/${projectId}/modules`,
+  //   Icon: DatasetOutlined,
+  // },
+  // {
+  //   name: "视图",
+  //   href: `/${workspaceSlug}/projects/${projectId}/views`,
+  //   Icon: PhotoFilterOutlined,
+  // },
+  // {
+  //   name: "页面",
+  //   href: `/${workspaceSlug}/projects/${projectId}/pages`,
+  //   Icon: ArticleOutlined,
+  // },
   {
     name: "设置",
     href: `/${workspaceSlug}/projects/${projectId}/settings`,

@@ -52,9 +52,9 @@ const ProjectIssues: NextPage = () => {
       <ProjectAuthorizationWrapper
         breadcrumbs={
           <Breadcrumbs>
-            <BreadcrumbItem title="Projects" link={`/${workspaceSlug}/projects`} />
+            <BreadcrumbItem title="项目" link={`/${workspaceSlug}/projects`} />
             <BreadcrumbItem
-              title={`${truncateText(projectDetails?.name ?? "Project", 32)} Issues`}
+              title={`${truncateText(projectDetails?.name ?? "Project", 32)} 任务`}
             />
           </Breadcrumbs>
         }
@@ -66,7 +66,7 @@ const ProjectIssues: NextPage = () => {
               className="!py-1.5 rounded-md font-normal text-custom-sidebar-text-200 border-custom-border-200 hover:text-custom-text-100 hover:bg-custom-sidebar-background-90"
               outline
             >
-              Analytics
+              分析
             </SecondaryButton>
             {projectDetails && projectDetails.inbox_view && (
               <Link href={`/${workspaceSlug}/projects/${projectId}/inbox/${inboxList?.[0]?.id}`}>

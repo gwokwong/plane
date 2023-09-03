@@ -170,7 +170,7 @@ export const SingleList: React.FC<Props> = ({
                     {getGroupTitle()}
                   </h2>
                 ) : (
-                  <h2 className="font-medium leading-5">All Issues</h2>
+                  <h2 className="font-medium leading-5">全部任务</h2>
                 )}
                 <span className="text-custom-text-200 min-w-[2.5rem] rounded-full bg-custom-background-80 py-1 text-center text-xs">
                   {groupedIssues[groupTitle as keyof IIssue].length}
@@ -242,7 +242,7 @@ export const SingleList: React.FC<Props> = ({
                   ))
                 ) : (
                   <p className="bg-custom-background-100 px-4 py-2.5 text-sm text-custom-text-200">
-                    No issues.
+                    任务为空
                   </p>
                 )
               ) : (

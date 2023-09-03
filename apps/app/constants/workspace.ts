@@ -12,19 +12,19 @@ export const ROLE = {
   20: "Admin",
 };
 
-export const ORGANIZATION_SIZE = ["Just myself", "2-10", "11-50", "51-200", "201-500", "500+"];
+export const ORGANIZATION_SIZE = ["只有我自己", "2-10", "11-50", "51-200", "201-500", "500+"];
 
 export const USER_ROLES = [
-  { value: "Product / Project Manager", label: "Product / Project Manager" },
-  { value: "Development / Engineering", label: "Development / Engineering" },
-  { value: "Founder / Executive", label: "Founder / Executive" },
-  { value: "Freelancer / Consultant", label: "Freelancer / Consultant" },
-  { value: "Marketing / Growth", label: "Marketing / Growth" },
-  { value: "Sales / Business Development", label: "Sales / Business Development" },
-  { value: "Support / Operations", label: "Support / Operations" },
-  { value: "Student / Professor", label: "Student / Professor" },
-  { value: "Human Resources", label: "Human Resources" },
-  { value: "Other", label: "Other" },
+  { value: "Product / Project Manager", label: "产品经理/项目经理" },
+  { value: "Development / Engineering", label: "开发者/工程师" },
+  { value: "Founder / Executive", label: "创始人/执行官" },
+  { value: "Freelancer / Consultant", label: "自由职业者/顾问" },
+  { value: "Marketing / Growth", label: "市场营销" },
+  { value: "Sales / Business Development", label: "销售/业务开发" },
+  { value: "Support / Operations", label: "支持/运营" },
+  { value: "Student / Professor", label: "学生/教授" },
+  { value: "Human Resources", label: "人力资源" },
+  { value: "Other", label: "其他" },
 ];
 
 export const IMPORTERS_EXPORTERS_LIST = [

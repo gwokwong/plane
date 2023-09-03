@@ -76,7 +76,7 @@ export const ScopeAndDemand: React.FC<Props> = ({ fullScreen = true }) => {
                   id: user?.assignees__id,
                 }))}
                 title="完成任务最多"
-                emptyStateMessage="Co-workers and the number issues closed by them appears here."
+                emptyStateMessage="这里显示的是同事和由他们解决的任务数量"
                 workspaceSlug={workspaceSlug?.toString() ?? ""}
               />
               <div className={fullScreen ? "md:col-span-2" : ""}>

@@ -168,7 +168,7 @@ export const CustomSearchSelect = ({
                       ))
                     ) : (
                       <span className="flex items-center gap-2 p-1">
-                        <p className="text-left text-custom-text-200 ">No matching results</p>
+                        <p className="text-left text-custom-text-200 ">无匹配结果</p>
                       </span>
                     )
                   ) : (

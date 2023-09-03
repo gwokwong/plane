@@ -102,9 +102,9 @@ const WorkspaceSettings: NextPage = () => {
           };
         });
         setToastAlert({
-          title: "Success",
+          title: "成功",
           type: "success",
-          message: "Workspace updated successfully",
+          message: "工作区更新成功",
         });
       })
       .catch((err) => console.error(err));
@@ -121,8 +121,8 @@ const WorkspaceSettings: NextPage = () => {
         .then((res) => {
           setToastAlert({
             type: "success",
-            title: "Success!",
-            message: "Workspace picture removed successfully.",
+            title: "成功!",
+            message: "工作区图片已成功删除。",
           });
           mutate<IWorkspace[]>(USER_WORKSPACES, (prevData) =>
             prevData?.map((workspace) => (workspace.id === res.id ? res : workspace))
@@ -139,8 +139,8 @@ const WorkspaceSettings: NextPage = () => {
         .catch(() => {
           setToastAlert({
             type: "error",
-            title: "Error!",
-            message: "There was some error in deleting your profile picture. Please try again.",
+            title: "错误!",
+            message: "在删除您的个人照片时出现了一些错误。请重试。",
           });
         })
         .finally(() => setIsImageRemoving(false));
@@ -186,7 +186,7 @@ const WorkspaceSettings: NextPage = () => {
               <div className="col-span-12 sm:col-span-6">
                 <h4 className="text-lg font-semibold">Logo</h4>
                 <p className="text-sm text-custom-text-200">
-                  Max file size is 5MB. Supported file types are .jpg and .png.
+                  最大文件大小为5MB。支持的文件类型为.jpg和.png。
                 </p>
               </div>
               <div className="col-span-12 sm:col-span-6">
@@ -212,7 +212,7 @@ const WorkspaceSettings: NextPage = () => {
                         setIsImageUploadModalOpen(true);
                       }}
                     >
-                      {isImageUploading ? "Uploading..." : "Upload"}
+                      {isImageUploading ? "上传..." : "上传"}
                     </SecondaryButton>
                     {activeWorkspace.logo && activeWorkspace.logo !== "" && (
                       <DangerButton
@@ -228,8 +228,8 @@ const WorkspaceSettings: NextPage = () => {
             </div>
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold">URL</h4>
-                <p className="text-sm text-custom-text-200">Your workspace URL.</p>
+                <h4 className="text-lg font-semibold">网址</h4>
+                <p className="text-sm text-custom-text-200">您的工作区网址</p>
               </div>
               <div className="col-span-12 flex items-center gap-2 sm:col-span-6">
                 <div className="flex flex-col gap-1">
@@ -257,8 +257,8 @@ const WorkspaceSettings: NextPage = () => {
                     ).then(() => {
                       setToastAlert({
                         type: "success",
-                        title: "Link Copied!",
-                        message: "Workspace link copied to clipboard.",
+                        title: "链接已复制！",
+                        message: "工作区链接已复制到剪贴板",
                       });
                     })
                   }
@@ -270,8 +270,8 @@ const WorkspaceSettings: NextPage = () => {
             </div>
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold">Name</h4>
-                <p className="text-sm text-custom-text-200">Give a name to your workspace.</p>
+                <h4 className="text-lg font-semibold">名称</h4>
+                <p className="text-sm text-custom-text-200">为工作区命名</p>
               </div>
               <div className="col-span-12 sm:col-span-6">
                 <Input
@@ -282,7 +282,7 @@ const WorkspaceSettings: NextPage = () => {
                   register={register}
                   error={errors.name}
                   validations={{
-                    required: "Name is required",
+                    required: "名称为必填项",
                     maxLength: {
                       value: 80,
                       message: "Workspace name should not exceed 80 characters",
@@ -293,8 +293,8 @@ const WorkspaceSettings: NextPage = () => {
             </div>
             <div className="grid grid-cols-12 gap-4 sm:gap-16">
               <div className="col-span-12 sm:col-span-6">
-                <h4 className="text-lg font-semibold">Organization Size</h4>
-                <p className="text-sm text-custom-text-200">What size is your organization?</p>
+                <h4 className="text-lg font-semibold">组织规模</h4>
+                <p className="text-sm text-custom-text-200">你的组织规模有多大？</p>
               </div>
               <div className="col-span-12 sm:col-span-6">
                 <Controller
@@ -326,23 +326,20 @@ const WorkspaceSettings: NextPage = () => {
                 loading={isSubmitting}
                 disabled={!isAdmin}
               >
-                {isSubmitting ? "Updating..." : "Update Workspace"}
+                {isSubmitting ? "更新..." : "更新工作区"}
               </SecondaryButton>
             </div>
             {memberDetails?.role === 20 && (
               <div className="grid grid-cols-12 gap-4 sm:gap-16">
                 <div className="col-span-12 sm:col-span-6">
-                  <h4 className="text-lg font-semibold">Danger Zone</h4>
+                  <h4 className="text-lg font-semibold">危险区域</h4>
                   <p className="text-sm text-custom-text-200">
-                    The danger zone of the workspace delete page is a critical area that requires
-                    careful consideration and attention. When deleting a workspace, all of the data
-                    and resources within that workspace will be permanently removed and cannot be
-                    recovered.
+                   项目删除页面的危险区域是需要仔细考虑和注意的关键区域。注意：删除项目时，该项目的所有数据和资源将被永久删除，且无法恢复。
                   </p>
                 </div>
                 <div className="col-span-12 sm:col-span-6">
                   <DangerButton onClick={() => setIsOpen(true)} outline>
-                    Delete the workspace
+                     删除工作区
                   </DangerButton>
                 </div>
               </div>

@@ -3,21 +3,21 @@ import { renderDateFormat } from "helpers/date-time.helper";
 
 export const DATE_FILTER_OPTIONS = [
   {
-    name: "Last week",
+    name: "上周",
     value: [
       `${renderDateFormat(new Date(new Date().getTime() - 7 * 24 * 60 * 60 * 1000))};after`,
       `${renderDateFormat(new Date())};before`,
     ],
   },
   {
-    name: "2 weeks from now",
+    name: "2周后",
     value: [
       `${renderDateFormat(new Date())};after`,
       `${renderDateFormat(new Date(new Date().getTime() + 14 * 24 * 60 * 60 * 1000))};before`,
     ],
   },
   {
-    name: "1 month from now",
+    name: "1个月后",
     value: [
       `${renderDateFormat(new Date())};after`,
       `${renderDateFormat(
@@ -26,7 +26,7 @@ export const DATE_FILTER_OPTIONS = [
     ],
   },
   {
-    name: "2 months from now",
+    name: "2个月后",
     value: [
       `${renderDateFormat(new Date())};after`,
       `${renderDateFormat(

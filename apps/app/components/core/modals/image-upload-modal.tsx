@@ -128,7 +128,7 @@ export const ImageUploadModal: React.FC<Props> = ({
                     as="h3"
                     className="text-lg font-medium leading-6 text-custom-text-100"
                   >
-                    Upload Image
+                    上传图片
                   </Dialog.Title>
                   <div className="space-y-3">
                     <div className="flex items-center justify-center gap-3">
@@ -146,7 +146,7 @@ export const ImageUploadModal: React.FC<Props> = ({
                               type="button"
                               className="absolute top-0 right-0 z-40 translate-x-1/2 -translate-y-1/2 rounded bg-custom-background-90 px-2 py-0.5 text-xs font-medium text-custom-text-200"
                             >
-                              Edit
+                              编辑
                             </button>
                             <NextImage
                               layout="fill"
@@ -161,8 +161,8 @@ export const ImageUploadModal: React.FC<Props> = ({
                             <UserCircleIcon className="mx-auto h-16 w-16 text-custom-text-200" />
                             <span className="mt-2 block text-sm font-medium text-custom-text-200">
                               {isDragActive
-                                ? "Drop image here to upload"
-                                : "Drag & drop image here"}
+                                ? "将图片放在此处上传"
+                                : "将图像拖放到此处"}
                             </span>
                           </div>
                         )}
@@ -180,16 +180,16 @@ export const ImageUploadModal: React.FC<Props> = ({
                   </div>
                 </div>
                 <p className="my-4 text-custom-text-200 text-sm">
-                  File formats supported- .jpeg, .jpg, .png, .webp, .svg
+                  支持的文件格式- .jpeg, .jpg, .png, .webp, .svg
                 </p>
                 <div className="flex items-center justify-end gap-2">
-                  <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
+                  <SecondaryButton onClick={handleClose}>取消</SecondaryButton>
                   <PrimaryButton
                     onClick={handleSubmit}
                     disabled={!image}
                     loading={isImageUploading}
                   >
-                    {isImageUploading ? "Uploading..." : "Upload & Save"}
+                    {isImageUploading ? "上传..." : "上传并保存"}
                   </PrimaryButton>
                 </div>
               </Dialog.Panel>

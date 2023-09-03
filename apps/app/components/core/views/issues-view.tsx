@@ -489,8 +489,8 @@ export const IssuesView: React.FC<Props> = ({
                 if (viewId) {
                   setFilters({}, true);
                   setToastAlert({
-                    title: "View updated",
-                    message: "Your view has been updated",
+                    title: "查看更新",
+                    message: "您的视图已更新",
                     type: "success",
                   });
                 } else
@@ -527,7 +527,7 @@ export const IssuesView: React.FC<Props> = ({
             "Issues help you track individual pieces of work. With Issues, keep track of what's going on, who is working on it, and what's done.",
           primaryButton: {
             icon: <PlusIcon className="h-4 w-4" />,
-            text: "New Issue",
+            text: "添加任务",
             onClick: () => {
               const e = new KeyboardEvent("keydown", {
                 key: "c",

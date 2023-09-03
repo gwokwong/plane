@@ -83,7 +83,7 @@ export const WorkspaceSidebarMenu = () => {
         );
       })}
 
-      <NotificationPopover />
+      {/*<NotificationPopover />*/}
     </div>
   );
 };

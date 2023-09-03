@@ -215,7 +215,7 @@ const Onboarding: NextPage = () => {
         {step !== 4 && (
           <div className="sticky sm:fixed bottom-0 md:bottom-14 md:right-16 py-6 md:py-0 flex justify-center md:justify-end bg-custom-background-100 md:bg-transparent pointer-events-none w-full z-[1]">
             <div className="w-3/4 md:w-1/5 space-y-1">
-              <p className="text-xs text-custom-text-200">{step} of 3 steps</p>
+              <p className="text-xs text-custom-text-200">{step} / 3 </p>
               <div className="relative h-1 w-full rounded bg-custom-background-80">
                 <div
                   className="absolute top-0 left-0 h-1 rounded bg-custom-primary-100 duration-300"

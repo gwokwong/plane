@@ -59,7 +59,7 @@ export const SidebarLeadSelect: React.FC<Props> = ({ value, onChange }) => {
               {selectedOption ? (
                 selectedOption?.display_name
               ) : (
-                <span className="text-custom-text-200">No lead</span>
+                <span className="text-custom-text-200">无领导</span>
               )}
             </div>
           }

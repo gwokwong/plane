@@ -108,11 +108,11 @@ const MembersSettings: NextPage = () => {
       breadcrumbs={
         <Breadcrumbs>
           <BreadcrumbItem
-            title={`${truncateText(activeWorkspace?.name ?? "Workspace", 32)}`}
+            title={`${truncateText(activeWorkspace?.name ?? "工作区  ", 32)}`}
             link={`/${workspaceSlug}`}
             linkTruncate
           />
-          <BreadcrumbItem title="Members Settings" unshrinkTitle />
+          <BreadcrumbItem title="成员设置" unshrinkTitle />
         </Breadcrumbs>
       }
     >
@@ -138,8 +138,8 @@ const MembersSettings: NextPage = () => {
                 const error = err?.error;
                 setToastAlert({
                   type: "error",
-                  title: "Error",
-                  message: error || "Something went wrong",
+                  title: "错误",
+                  message: error || "出错了",
                 });
               })
               .finally(() => {
@@ -191,14 +191,14 @@ const MembersSettings: NextPage = () => {
         <SettingsHeader />
         <section className="space-y-5">
           <div className="flex items-end justify-between gap-4">
-            <h3 className="text-2xl font-semibold">Members</h3>
+            <h3 className="text-2xl font-semibold">成员</h3>
             <button
               type="button"
               className="flex items-center gap-2 text-custom-primary outline-none"
               onClick={() => setInviteModal(true)}
             >
               <PlusIcon className="h-4 w-4" />
-              Add Member
+              添加成员
             </button>
           </div>
           {!workspaceMembers || !workspaceInvitations ? (
@@ -254,12 +254,12 @@ const MembersSettings: NextPage = () => {
                       <div className="flex items-center gap-2 text-xs">
                         {!member?.status && (
                           <div className="mr-2 flex items-center justify-center rounded-full bg-yellow-500/20 px-2 py-1 text-center text-xs text-yellow-500">
-                            <p>Pending</p>
+                            <p>待定</p>
                           </div>
                         )}
                         {member?.status && !member?.accountCreated && (
                           <div className="mr-2 flex items-center justify-center rounded-full bg-blue-500/20 px-2 py-1 text-center text-xs text-blue-500">
-                            <p>Account not created</p>
+                            <p>未创建账户</p>
                           </div>
                         )}
                         <CustomSelect
@@ -323,7 +323,7 @@ const MembersSettings: NextPage = () => {
                               }
                             }}
                           >
-                            {user?.id === member.memberId ? "Leave" : "Remove member"}
+                            删除成员
                           </CustomMenu.MenuItem>
                         </CustomMenu>
                       </div>

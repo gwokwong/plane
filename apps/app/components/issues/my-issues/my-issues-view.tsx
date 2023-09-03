@@ -266,16 +266,16 @@ export const MyIssuesView: React.FC<Props> = ({
         dragDisabled={groupBy !== "priority"}
         emptyState={{
           title: filters.assignees
-            ? "You don't have any issue assigned to you yet"
+            ? "您尚未分配到任何任务"
             : filters.created_by
-            ? "You have not created any issue yet."
-            : "You have not subscribed to any issue yet.",
-          description: "Keep track of your work in a single place.",
+            ? "您尚未创建任何任务"
+            : "您尚未订阅",
+          description: "在一个地方跟踪您的工作",
           primaryButton: filters.subscriber
             ? undefined
             : {
                 icon: <PlusIcon className="h-4 w-4" />,
-                text: "New Issue",
+                text: "添加任务",
                 onClick: () => {
                   const e = new KeyboardEvent("keydown", {
                     key: "c",

@@ -280,10 +280,10 @@ export const ProfileIssuesView = () => {
         dragDisabled={groupByProperty !== "priority"}
         emptyState={{
           title: router.pathname.includes("assigned")
-            ? `Issues assigned to ${profileData?.user_data.display_name} will appear here`
+            ? `分配给${profileData?.user_data.display_name}的任务将显示在此处`
             : router.pathname.includes("created")
-            ? `Issues created by ${profileData?.user_data.display_name} will appear here`
-            : `Issues subscribed by ${profileData?.user_data.display_name} will appear here`,
+            ? ` ${profileData?.user_data.display_name}创建的任务将显示在此处`
+            : ` ${profileData?.user_data.display_name}订阅的任务将显示在此处`,
         }}
         handleOnDragEnd={handleOnDragEnd}
         handleIssueAction={handleIssueAction}

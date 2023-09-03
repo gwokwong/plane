@@ -55,10 +55,10 @@ const SettingsNavbar: React.FC<Props> = ({ profilePage = false }) => {
       label: "成员",
       href: `/${workspaceSlug}/projects/${projectId}/settings/members`,
     },
-    {
-      label: "功能",
-      href: `/${workspaceSlug}/projects/${projectId}/settings/features`,
-    },
+    // {
+    //   label: "功能",
+    //   href: `/${workspaceSlug}/projects/${projectId}/settings/features`,
+    // },
     {
       label: "状态",
       href: `/${workspaceSlug}/projects/${projectId}/settings/states`,
@@ -76,7 +76,7 @@ const SettingsNavbar: React.FC<Props> = ({ profilePage = false }) => {
     //   href: `/${workspaceSlug}/projects/${projectId}/settings/estimates`,
     // },
     {
-      label: "Automations",
+      label: "自动化",
       href: `/${workspaceSlug}/projects/${projectId}/settings/automations`,
     },
   ];

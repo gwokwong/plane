@@ -66,7 +66,7 @@ const activityDetails: {
       if (activity.old_value === "")
         return (
           <>
-            added a new assignee <UserLink activity={activity} />
+            新增负责人 <UserLink activity={activity} />
             {showIssue && (
               <>
                 {" "}
@@ -79,7 +79,7 @@ const activityDetails: {
       else
         return (
           <>
-            removed the assignee <UserLink activity={activity} />
+            移除负责人 <UserLink activity={activity} />
             {showIssue && (
               <>
                 {" "}
@@ -104,14 +104,14 @@ const activityDetails: {
       if (activity.verb === "created")
         return (
           <>
-            uploaded a new{" "}
+            上传了新的{" "}
             <a
               href={`${activity.new_value}`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-custom-text-100 inline-flex items-center gap-1 hover:underline"
             >
-              attachment
+              附件
               <Icon iconName="launch" className="!text-xs" />
             </a>
             {showIssue && (
@@ -125,7 +125,7 @@ const activityDetails: {
       else
         return (
           <>
-            removed an attachment
+            删除了一个附件
             {showIssue && (
               <>
                 {" "}
@@ -143,14 +143,14 @@ const activityDetails: {
       if (activity.old_value === "")
         return (
           <>
-            marked this issue is blocking issue{" "}
+            标记此任务为阻塞任务{" "}
             <span className="font-medium text-custom-text-100">{activity.new_value}</span>.
           </>
         );
       else
         return (
           <>
-            removed the blocking issue{" "}
+            移除了阻塞任务{" "}
             <span className="font-medium text-custom-text-100">{activity.old_value}</span>.
           </>
         );
@@ -162,14 +162,14 @@ const activityDetails: {
       if (activity.old_value === "")
         return (
           <>
-            marked this issue is being blocked by{" "}
+           标明这一任务被以下因素所阻挡{" "}
             <span className="font-medium text-custom-text-100">{activity.new_value}</span>.
           </>
         );
       else
         return (
           <>
-            removed this issue being blocked by issue{" "}
+            删除被任务阻止的此任务{" "}
             <span className="font-medium text-custom-text-100">{activity.old_value}</span>.
           </>
         );
@@ -181,7 +181,7 @@ const activityDetails: {
       if (activity.verb === "created")
         return (
           <>
-            added this issue to the cycle{" "}
+            将此任务加入周期{" "}
             <a
               href={`/${workspaceSlug}/projects/${activity.project}/cycles/${activity.new_identifier}`}
               target="_blank"
@@ -229,7 +229,7 @@ const activityDetails: {
   description: {
     message: (activity, showIssue) => (
       <>
-        updated the description
+        更新了说明
         {showIssue && (
           <>
             {" "}
@@ -275,8 +275,8 @@ const activityDetails: {
   },
   issue: {
     message: (activity) => {
-      if (activity.verb === "created") return "created the issue.";
-      else return "deleted an issue.";
+      if (activity.verb === "created") return "创建任务";
+      else return "删除了一个任务";
     },
     icon: <Icon iconName="stack" className="!text-sm" aria-hidden="true" />,
   },
@@ -285,7 +285,7 @@ const activityDetails: {
       if (activity.old_value === "")
         return (
           <>
-            added a new label{" "}
+            新增标签{" "}
             <span className="inline-flex items-center gap-3 rounded-full border border-custom-border-300 px-2 py-0.5 text-xs">
               <span
                 className="h-1.5 w-1.5 rounded-full"
@@ -307,7 +307,7 @@ const activityDetails: {
       else
         return (
           <>
-            removed the label{" "}
+            移除标签{" "}
             <span className="inline-flex items-center gap-3 rounded-full border border-custom-border-300 px-2 py-0.5 text-xs">
               <span
                 className="h-1.5 w-1.5 rounded-full"
@@ -334,14 +334,14 @@ const activityDetails: {
       if (activity.verb === "created")
         return (
           <>
-            added this{" "}
+            添加了{" "}
             <a
               href={`${activity.new_value}`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-custom-text-100 inline-flex items-center gap-1 hover:underline"
             >
-              link
+              链接
               <Icon iconName="launch" className="!text-xs" />
             </a>
             {showIssue && (
@@ -356,14 +356,14 @@ const activityDetails: {
       else
         return (
           <>
-            removed this{" "}
+            删除了此{" "}
             <a
               href={`${activity.old_value}`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-custom-text-100 inline-flex items-center gap-1 hover:underline"
             >
-              link
+              链接
               <Icon iconName="launch" className="!text-xs" />
             </a>
             {showIssue && (
@@ -431,7 +431,7 @@ const activityDetails: {
   name: {
     message: (activity, showIssue) => (
       <>
-        set the name to {activity.new_value}
+        将名称设为 {activity.new_value}
         {showIssue && (
           <>
             {" "}
@@ -448,7 +448,7 @@ const activityDetails: {
       if (!activity.new_value)
         return (
           <>
-            removed the parent{" "}
+            移除了父任务{" "}
             <span className="font-medium text-custom-text-100">{activity.old_value}</span>
             {showIssue && (
               <>
@@ -462,7 +462,7 @@ const activityDetails: {
       else
         return (
           <>
-            set the parent to{" "}
+            设置父任务为{" "}
             <span className="font-medium text-custom-text-100">{activity.new_value}</span>
             {showIssue && (
               <>
@@ -479,7 +479,7 @@ const activityDetails: {
   priority: {
     message: (activity, showIssue) => (
       <>
-        set the priority to{" "}
+        将优先级设为{" "}
         <span className="font-medium text-custom-text-100">
           {activity.new_value ? capitalizeFirstLetter(activity.new_value) : "None"}
         </span>
@@ -499,7 +499,7 @@ const activityDetails: {
       if (!activity.new_value)
         return (
           <>
-            removed the start date
+            删除了开始日期
             {showIssue && (
               <>
                 {" "}
@@ -512,7 +512,7 @@ const activityDetails: {
       else
         return (
           <>
-            set the start date to{" "}
+            将开始日期设为{" "}
             <span className="font-medium text-custom-text-100">
               {renderShortDateWithYearFormat(activity.new_value)}
             </span>
@@ -531,7 +531,7 @@ const activityDetails: {
   state: {
     message: (activity, showIssue) => (
       <>
-        set the state to{" "}
+        将状态设为{" "}
         <span className="font-medium text-custom-text-100">{activity.new_value}</span>
         {showIssue && (
           <>
@@ -549,7 +549,7 @@ const activityDetails: {
       if (!activity.new_value)
         return (
           <>
-            removed the due date
+            删除了到期时间
             {showIssue && (
               <>
                 {" "}
@@ -562,7 +562,7 @@ const activityDetails: {
       else
         return (
           <>
-            set the due date to{" "}
+            将到期时间定为{" "}
             <span className="font-medium text-custom-text-100">
               {renderShortDateWithYearFormat(activity.new_value)}
             </span>

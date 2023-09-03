@@ -16,7 +16,7 @@ export const ProfileAuthWrapper = (props: Props) => (
   <WorkspaceAuthorizationLayout
     breadcrumbs={
       <Breadcrumbs>
-        <BreadcrumbItem title="User Profile" />
+        <BreadcrumbItem title="用户资料" />
       </Breadcrumbs>
     }
   >

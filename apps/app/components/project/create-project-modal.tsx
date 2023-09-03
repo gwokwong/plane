@@ -288,15 +288,15 @@ export const CreateProjectModal: React.FC<Props> = ({
                           id="name"
                           name="name"
                           type="name"
-                          placeholder="Project Title"
+                          placeholder="项目标题"
                           onChange={changeIdentifierOnNameChange}
                           error={errors.name}
                           register={register}
                           validations={{
-                            required: "Title is required",
+                            required: "名称是必填项",
                             maxLength: {
                               value: 255,
-                              message: "Title should be less than 255 characters",
+                              message: "名称应少于 255 个字符",
                             },
                           }}
                           autoComplete="off"
@@ -309,22 +309,22 @@ export const CreateProjectModal: React.FC<Props> = ({
                           name="identifier"
                           type="text"
                           className="text-sm"
-                          placeholder="Identifier"
+                          placeholder="标识符"
                           error={errors.identifier}
                           register={register}
                           onChange={handleIdentifierChange}
                           validations={{
-                            required: "Identifier is required",
+                            required: "标识符为必填项",
                             validate: (value) =>
                               /^[A-Z0-9]+$/.test(value.toUpperCase()) ||
-                              "Identifier must be in uppercase.",
+                              "标识符必须是大写字母",
                             minLength: {
                               value: 1,
-                              message: "Identifier must at least be of 1 character",
+                              message: "标识符必须至少为 1 个字符",
                             },
                             maxLength: {
                               value: 12,
-                              message: "Identifier must at most be of 12 characters",
+                              message: "标识符最多只能有 12 个字符",
                             },
                           }}
                         />
@@ -429,9 +429,9 @@ export const CreateProjectModal: React.FC<Props> = ({
                   </div>
 
                   <div className="flex justify-end gap-2 pt-5">
-                    <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
+                    <SecondaryButton onClick={handleClose}>取消</SecondaryButton>
                     <PrimaryButton type="submit" size="sm" loading={isSubmitting}>
-                      {isSubmitting ? "Creating..." : "Create Project"}
+                      {isSubmitting ? "添加项目中..." : "添加项目"}
                     </PrimaryButton>
                   </div>
                 </form>

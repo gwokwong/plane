@@ -1,26 +1,26 @@
 export const snoozeOptions = [
   {
-    label: "1 day",
+    label: "1天",
     value: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
   },
   {
-    label: "3 days",
+    label: "3天",
     value: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000),
   },
   {
-    label: "5 days",
+    label: "5天",
     value: new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000),
   },
   {
-    label: "1 week",
+    label: "1周",
     value: new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
   },
   {
-    label: "2 weeks",
+    label: "2周",
     value: new Date(new Date().getTime() + 14 * 24 * 60 * 60 * 1000),
   },
   {
-    label: "Custom",
+    label: "自定义",
     value: null,
   },
 ];

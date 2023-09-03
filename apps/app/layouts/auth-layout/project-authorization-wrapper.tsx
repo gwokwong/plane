@@ -68,8 +68,8 @@ const ProjectAuthorizationWrapped: React.FC<Props> = ({
         ) : error?.status === 404 ? (
           <div className="container grid h-screen place-items-center bg-custom-background-100">
             <EmptyState
-              title="No such project exists"
-              description="Try creating a new project"
+              title="没有此类项目"
+              description="尝试创建一个新项目"
               image={emptyProject}
               primaryButton={{
                 text: "创建项目",

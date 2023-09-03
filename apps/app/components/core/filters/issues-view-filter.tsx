@@ -217,7 +217,7 @@ export const IssuesFilterView: React.FC = () => {
                           <CustomMenu
                             label={
                               ORDER_BY_OPTIONS.find((option) => option.key === orderBy)?.name ??
-                              "Select"
+                              "选择"
                             }
                             className="!w-full"
                             buttonClassName="w-full"
@@ -244,7 +244,7 @@ export const IssuesFilterView: React.FC = () => {
                         <CustomMenu
                           label={
                             FILTER_ISSUE_OPTIONS.find((option) => option.key === filters.type)
-                              ?.name ?? "Select"
+                              ?.name ?? "选择"
                           }
                           className="!w-full"
                           buttonClassName="w-full"
@@ -264,23 +264,11 @@ export const IssuesFilterView: React.FC = () => {
                         </CustomMenu>
                       </div>
                     </div>
-
-                    {issueView !== "calendar" && issueView !== "spreadsheet" && (
-                      <div className="flex items-center justify-between">
-                        <h4 className="text-custom-text-200">显示空状态</h4>
-                        <div className="w-28">
-                          <ToggleSwitch
-                            value={showSubIssues}
-                            onChange={() => setShowSubIssues(!showSubIssues)}
-                          />
-                        </div>
-                      </div>
-                    )}
                     {issueView !== "calendar" &&
                       issueView !== "spreadsheet" &&
                       issueView !== "gantt_chart" && (
                         <div className="flex items-center justify-between">
-                          <h4 className="text-custom-text-200">Show empty states</h4>
+                          <h4 className="text-custom-text-200">显示空状态</h4>
                           <div className="w-28">
                             <ToggleSwitch
                               value={showEmptyGroups}
@@ -349,6 +337,9 @@ export const IssuesFilterView: React.FC = () => {
                               {key === "sub_issue_count" && <div>子任务数</div>}
                               {key === "attachment_count" && <div>附件数</div>}
                               {key === "link" && <div>链接</div>}
+                              {key === "estimate" && <div>估算点</div>}
+                              {key === "start_date" && <div>开始时间</div>}
+
                             </button>
                           );
                         })}

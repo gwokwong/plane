@@ -129,12 +129,12 @@ export const DeleteProjectModal: React.FC<TConfirmProjectDeletionProps> = ({
                       />
                     </span>
                     <span className="flex items-center justify-start">
-                      <h3 className="text-xl font-medium 2xl:text-2xl">Delete Project</h3>
+                      <h3 className="text-xl font-medium 2xl:text-2xl">删除项目</h3>
                     </span>
                   </div>
                   <span>
                     <p className="text-sm leading-7 text-custom-text-200">
-                      Are you sure you want to delete project{" "}
+                      您确定要删除项目{" "}
                       <span className="break-words font-semibold">{data?.name}</span>? All of the
                       data related to the project will be permanently removed. This action cannot be
                       undone
@@ -183,7 +183,7 @@ export const DeleteProjectModal: React.FC<TConfirmProjectDeletionProps> = ({
                   <div className="flex justify-end gap-2">
                     <SecondaryButton onClick={handleClose}>Cancel</SecondaryButton>
                     <DangerButton type="submit" disabled={!canDelete} loading={isSubmitting}>
-                      {isSubmitting ? "Deleting..." : "Delete Project"}
+                      {isSubmitting ? "删除中..." : "删除项目"}
                     </DangerButton>
                   </div>
                 </form>

@@ -203,7 +203,7 @@ export const SingleProjectCard: React.FC<ProjectCardProps> = ({
                     <CustomMenu.MenuItem onClick={() => setDeleteProject(project.id)}>
                       <span className="flex items-center justify-start gap-2">
                         <TrashIcon className="h-4 w-4" />
-                        <span>Delete project</span>
+                        <span>删除项目</span>
                       </span>
                     </CustomMenu.MenuItem>
                   )}
@@ -218,14 +218,14 @@ export const SingleProjectCard: React.FC<ProjectCardProps> = ({
                     <CustomMenu.MenuItem onClick={handleAddToFavorites}>
                       <span className="flex items-center justify-start gap-2">
                         <StarIcon className="h-4 w-4" />
-                        <span>Add to favorites</span>
+                        <span>添加到收藏夹</span>
                       </span>
                     </CustomMenu.MenuItem>
                   )}
                   <CustomMenu.MenuItem onClick={handleCopyText}>
                     <span className="flex items-center justify-start gap-2">
                       <LinkIcon className="h-4 w-4" />
-                      <span>Copy project link</span>
+                      <span>复制项目链接</span>
                     </span>
                   </CustomMenu.MenuItem>
                 </CustomMenu>

@@ -57,7 +57,7 @@ export const SidebarMembersSelect: React.FC<Props> = ({ value, onChange }) => {
                   <span className="text-custom-text-200">{value.length} Assignees</span>
                 </div>
               ) : (
-                "No members"
+                "无成员"
               )}
             </div>
           }

@@ -15,7 +15,7 @@ type Props = {
 const viewerTabs = [
   {
     route: "",
-    label: "Overview",
+    label: "概述",
     selected: "/[workspaceSlug]/profile/[userId]",
   },
 ];
@@ -23,17 +23,17 @@ const viewerTabs = [
 const adminTabs = [
   {
     route: "assigned",
-    label: "Assigned",
+    label: "负责",
     selected: "/[workspaceSlug]/profile/[userId]/assigned",
   },
   {
     route: "created",
-    label: "Created",
+    label: "创建",
     selected: "/[workspaceSlug]/profile/[userId]/created",
   },
   {
     route: "subscribed",
-    label: "Subscribed",
+    label: "订阅",
     selected: "/[workspaceSlug]/profile/[userId]/subscribed",
   },
 ];

@@ -101,7 +101,7 @@ export const SpreadsheetView: React.FC<Props> = ({
                   }}
                 >
                   <PlusIcon className="h-4 w-4" />
-                  Add Issue
+                  添加任务
                 </button>
               ) : (
                 !disableUserActions && (
@@ -113,7 +113,7 @@ export const SpreadsheetView: React.FC<Props> = ({
                         type="button"
                       >
                         <PlusIcon className="h-4 w-4" />
-                        Add Issue
+                        添加任务
                       </button>
                     }
                     position="left"

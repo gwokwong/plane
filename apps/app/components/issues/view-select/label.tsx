@@ -79,7 +79,7 @@ export const ViewLabelSelect: React.FC<Props> = ({
                 return label?.name ?? "";
               })
               .join(", ")
-          : "No label"
+          : "无标签"
       }
     >
       <div

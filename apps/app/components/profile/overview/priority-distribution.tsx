@@ -13,7 +13,7 @@ type Props = {
 
 export const ProfilePriorityDistribution: React.FC<Props> = ({ userProfile }) => (
   <div className="flex flex-col space-y-2">
-    <h3 className="text-lg font-medium">Issues by Priority</h3>
+    <h3 className="text-lg font-medium">按优先顺序排列的任务</h3>
     {userProfile ? (
       <div className="flex-grow border border-custom-border-100 rounded">
         {userProfile.priority_distribution.length > 0 ? (
@@ -65,8 +65,8 @@ export const ProfilePriorityDistribution: React.FC<Props> = ({ userProfile }) =>
         ) : (
           <div className="flex-grow p-7">
             <ProfileEmptyState
-              title="No Data yet"
-              description="Create issues to view the them by priority in the graph for better analysis."
+              title="暂无数据"
+              description="创建任务后，可在图表中按优先级查看任务，以便更好地进行分析。"
               image={emptyBarGraph}
             />
           </div>

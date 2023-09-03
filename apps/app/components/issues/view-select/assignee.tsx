@@ -63,7 +63,7 @@ export const ViewAssigneeSelect: React.FC<Props> = ({
       tooltipContent={
         issue.assignee_details.length > 0
           ? issue.assignee_details.map((assignee) => assignee?.display_name).join(", ")
-          : "No Assignee"
+          : "无负责人"
       }
     >
       <div

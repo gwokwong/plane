@@ -142,7 +142,7 @@ export const MyIssuesSelectFilters: React.FC<Props> = ({
           },
           {
             id: "start_date",
-            label: "Start date",
+            label: "开始时间",
             value: DATE_FILTER_OPTIONS,
             hasChildren: true,
             children: [
@@ -157,7 +157,7 @@ export const MyIssuesSelectFilters: React.FC<Props> = ({
               })) ?? []),
               {
                 id: "custom",
-                label: "Custom",
+                label: "自定义",
                 value: "custom",
                 element: (
                   <button
@@ -178,7 +178,7 @@ export const MyIssuesSelectFilters: React.FC<Props> = ({
           },
           {
             id: "target_date",
-            label: "Due date",
+            label: "到期时间",
             value: DATE_FILTER_OPTIONS,
             hasChildren: true,
             children: [
@@ -193,7 +193,7 @@ export const MyIssuesSelectFilters: React.FC<Props> = ({
               })) ?? []),
               {
                 id: "custom",
-                label: "Custom",
+                label: "自定义",
                 value: "custom",
                 element: (
                   <button

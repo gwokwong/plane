@@ -83,7 +83,7 @@ export const SelectFilters: React.FC<Props> = ({
         />
       )}
       <MultiLevelDropdown
-        label="Filters"
+        label="过滤器"
         onSelect={onSelect}
         direction={direction}
         height={height}
@@ -109,7 +109,7 @@ export const SelectFilters: React.FC<Props> = ({
           },
           {
             id: "state",
-            label: "State",
+            label: "状态",
             value: statesList,
             hasChildren: true,
             children: statesList?.map((state) => ({
@@ -193,7 +193,7 @@ export const SelectFilters: React.FC<Props> = ({
           },
           {
             id: "start_date",
-            label: "Start date",
+            label: "开始时间",
             value: DATE_FILTER_OPTIONS,
             hasChildren: true,
             children: [
@@ -208,14 +208,14 @@ export const SelectFilters: React.FC<Props> = ({
               })),
               {
                 id: "custom",
-                label: "Custom",
+                label: "自定义",
                 value: "custom",
                 element: (
                   <button
                     onClick={() => {
                       setIsDateFilterModalOpen(true);
                       setDateFilterType({
-                        title: "Start date",
+                        title: "开始时间",
                         type: "start_date",
                       });
                     }}

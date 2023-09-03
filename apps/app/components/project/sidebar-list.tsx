@@ -248,7 +248,7 @@ export const ProjectSidebarList: FC = () => {
                               type="button"
                               className="flex items-center gap-1 font-semibold text-left whitespace-nowrap"
                             >
-                              Projects
+                              项目
                               <Icon
                                 iconName={open ? "arrow_drop_down" : "arrow_right"}
                                 className="group-hover:opacity-100 opacity-0 !text-lg"
@@ -315,7 +315,7 @@ export const ProjectSidebarList: FC = () => {
             }}
           >
             <PlusIcon className="h-5 w-5" />
-            {!store?.theme?.sidebarCollapsed && "新增项目t"}
+            {!store?.theme?.sidebarCollapsed && "创建项目"}
           </button>
         )}
       </div>

@@ -29,7 +29,7 @@ const MyIssuesPage: NextPage = () => {
   const tabsList = [
     {
       key: "assigned",
-      label: "Assigned",
+      label: "负责",
       selected: (filters?.assignees ?? []).length > 0,
       onClick: () => {
         setFilters({
@@ -41,7 +41,7 @@ const MyIssuesPage: NextPage = () => {
     },
     {
       key: "created",
-      label: "Created",
+      label: "创建",
       selected: (filters?.created_by ?? []).length > 0,
       onClick: () => {
         setFilters({
@@ -53,7 +53,7 @@ const MyIssuesPage: NextPage = () => {
     },
     {
       key: "subscribed",
-      label: "Subscribed",
+      label: "订阅",
       selected: (filters?.subscriber ?? []).length > 0,
       onClick: () => {
         setFilters({

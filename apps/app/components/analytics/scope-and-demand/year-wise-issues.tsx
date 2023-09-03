@@ -53,7 +53,7 @@ export const AnalyticsYearWiseIssues: React.FC<Props> = ({ defaultAnalytics }) =
       <div className="px-7 py-4">
         <ProfileEmptyState
           title="暂无数据"
-          description="Close issues to view analysis of the same in the form of a graph."
+          description="已完成任务，查看图表形式的分析"
           image={emptyGraph}
         />
       </div>

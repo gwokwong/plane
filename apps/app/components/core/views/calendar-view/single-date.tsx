@@ -96,7 +96,7 @@ export const SingleCalendarDate: React.FC<Props> = ({
               onClick={() => addIssueToDate(date.date)}
             >
               <PlusSmallIcon className="h-4 w-4 text-custom-text-200" />
-              Add issue
+              添加任务
             </button>
           </div>
 

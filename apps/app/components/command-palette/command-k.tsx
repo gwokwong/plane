@@ -471,7 +471,7 @@ export const CommandK: React.FC<Props> = ({ deleteIssue, isPaletteOpen, setIsPal
                         >
                           <div className="flex items-center gap-2 text-custom-text-200">
                             <Icon iconName="stack" />
-                            Create new issue
+                            创建新任务
                           </div>
                           <kbd>C</kbd>
                         </Command.Item>

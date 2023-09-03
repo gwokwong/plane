@@ -183,8 +183,8 @@ const LabelsSettings: NextPage = () => {
                     })
                   ) : (
                     <EmptyState
-                      title="No labels yet"
-                      description="Create labels to help organize and filter issues in you project"
+                      title="尚无标签"
+                      description="创建标签，帮助整理和过滤项目中的任务"
                       image={emptyLabel}
                       primaryButton={{
                         text: "添加标签",

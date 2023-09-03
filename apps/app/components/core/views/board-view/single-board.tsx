@@ -157,7 +157,7 @@ export const SingleBoard: React.FC<Props> = ({
                       onClick={addIssueToGroup}
                     >
                       <PlusIcon className="h-4 w-4" />
-                      Add Issue
+                       添加任务
                     </button>
                   ) : (
                     !disableUserActions && (
@@ -168,7 +168,7 @@ export const SingleBoard: React.FC<Props> = ({
                             className="flex items-center gap-2 font-medium text-custom-primary outline-none whitespace-nowrap"
                           >
                             <PlusIcon className="h-4 w-4" />
-                            Add Issue
+                            添加任务
                           </button>
                         }
                         position="left"
