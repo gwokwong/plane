@@ -59,7 +59,8 @@ export const IssueGanttSidebarBlock = ({ data }: { data: IIssue }) => {
       <div className="flex items-center justify-between gap-2 w-full flex-grow truncate">
         <h6 className="text-sm font-medium flex-grow truncate">{data?.name}</h6>
         <span className="flex-shrink-0 text-sm text-custom-text-200">
-          {duration} day{duration > 1 ? "s" : ""}
+          {/*{duration} day{duration > 1 ? "s" : ""}*/}
+          {duration} 天
         </span>
       </div>
     </div>

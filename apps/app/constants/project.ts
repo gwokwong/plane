@@ -19,7 +19,7 @@ export const GROUP_CHOICES = {
   cancelled: "Cancelled",
 };
 
-export const PRIORITIES = ["urgent", "high", "medium", "low", null];
+export const PRIORITIES = ["急", "高", "中", "低", null];
 
 export const MONTHS = [
   "1月",
@@ -36,7 +36,7 @@ export const MONTHS = [
   "12月",
 ];
 
-export const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+export const DAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
 export const PROJECT_AUTOMATION_MONTHS = [
   { label: "1 个月", value: 1 },

@@ -30,7 +30,7 @@ const generateMonthDataByMonthAndYearInMonthView = (month: number, year: number)
         today: today >= weekData.startDate && today <= weekData.endDate ? true : false,
       };
     }),
-    title: `${months[currentMonth].title} ${currentYear}`,
+    title: `${currentYear}年${months[currentMonth].title} `,
   };
 
   return weekPayload;

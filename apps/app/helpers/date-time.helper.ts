@@ -62,33 +62,33 @@ export const timeAgo = (time: any) => {
   }
 
   var time_formats = [
-    [60, "seconds", 1], // 60
-    [120, "1 minute ago", "1 minute from now"], // 60*2
-    [3600, "minutes", 60], // 60*60, 60
-    [7200, "1 hour ago", "1 hour from now"], // 60*60*2
-    [86400, "hours", 3600], // 60*60*24, 60*60
-    [172800, "Yesterday", "Tomorrow"], // 60*60*24*2
-    [604800, "days", 86400], // 60*60*24*7, 60*60*24
-    [1209600, "Last week", "Next week"], // 60*60*24*7*4*2
-    [2419200, "weeks", 604800], // 60*60*24*7*4, 60*60*24*7
-    [4838400, "Last month", "Next month"], // 60*60*24*7*4*2
-    [29030400, "months", 2419200], // 60*60*24*7*4*12, 60*60*24*7*4
-    [58060800, "Last year", "Next year"], // 60*60*24*7*4*12*2
-    [2903040000, "years", 29030400], // 60*60*24*7*4*12*100, 60*60*24*7*4*12
-    [5806080000, "Last century", "Next century"], // 60*60*24*7*4*12*100*2
-    [58060800000, "centuries", 2903040000], // 60*60*24*7*4*12*100*20, 60*60*24*7*4*12*100
+    [60, "秒", 1], // 60
+    [120, "1 分钟前", "1 分钟后"], // 60*2
+    [3600, "分钟", 60], // 60*60, 60
+    [7200, "1 小时前", "1 小时后"], // 60*60*2
+    [86400, "小时", 3600], // 60*60*24, 60*60
+    [172800, "昨天", "明天"], // 60*60*24*2
+    [604800, "天", 86400], // 60*60*24*7, 60*60*24
+    [1209600, "上周", "下周"], // 60*60*24*7*4*2
+    [2419200, "周数", 604800], // 60*60*24*7*4, 60*60*24*7
+    [4838400, "上个月", "下个月"], // 60*60*24*7*4*2
+    [29030400, "月数", 2419200], // 60*60*24*7*4*12, 60*60*24*7*4
+    [58060800, "去年", "下一年"], // 60*60*24*7*4*12*2
+    [2903040000, "年数", 29030400], // 60*60*24*7*4*12*100, 60*60*24*7*4*12
+    [5806080000, "上世纪", "下一世纪"], // 60*60*24*7*4*12*100*2
+    [58060800000, "世纪", 2903040000], // 60*60*24*7*4*12*100*20, 60*60*24*7*4*12*100
   ];
 
   var seconds = (+new Date() - time) / 1000,
-    token = "ago",
+    token = "前",
     list_choice = 1;
 
   if (seconds == 0) {
-    return "Just now";
+    return "现在";
   }
   if (seconds < 0) {
     seconds = Math.abs(seconds);
-    token = "from now";
+    token = "从现在起";
     list_choice = 2;
   }
   var i = 0,
@@ -156,24 +156,24 @@ export const renderShortDateWithYearFormat = (date: string | Date, placeholder?:
   date = new Date(date);
 
   const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
   ];
   const day = date.getDate();
   const month = months[date.getMonth()];
   const year = date.getFullYear();
 
-  return isNaN(date.getTime()) ? placeholder ?? "N/A" : ` ${month} ${day}, ${year}`;
+  return isNaN(date.getTime()) ? placeholder ?? "N/A" : ` ${year}-${month}-${day}`;
 };
 
 export const renderShortDate = (date: string | Date, placeholder?: string) => {
@@ -248,18 +248,18 @@ export const renderLongDateFormat = (dateString: string | Date) => {
   const day = date.getDate();
   const year = date.getFullYear();
   const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "1月",
+    "2月",
+    "3月",
+    "4月",
+    "5月",
+    "6月",
+    "7月",
+    "8月",
+    "9月",
+    "10月",
+    "11月",
+    "12月",
   ];
   const monthIndex = date.getMonth();
   const monthName = monthNames[monthIndex];

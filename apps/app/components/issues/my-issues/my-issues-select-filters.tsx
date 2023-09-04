@@ -170,7 +170,7 @@ export const MyIssuesSelectFilters: React.FC<Props> = ({
                     }}
                     className="w-full rounded px-1 py-1.5 text-left text-custom-text-200 hover:bg-custom-background-80"
                   >
-                    Custom
+                    自定义
                   </button>
                 ),
               },
@@ -206,7 +206,7 @@ export const MyIssuesSelectFilters: React.FC<Props> = ({
                     }}
                     className="w-full rounded px-1 py-1.5 text-left text-custom-text-200 hover:bg-custom-background-80"
                   >
-                    Custom
+                    自定义
                   </button>
                 ),
               },

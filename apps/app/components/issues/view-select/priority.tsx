@@ -109,7 +109,7 @@ export const ViewPrioritySelect: React.FC<Props> = ({
         <CustomSelect.Option key={priority} value={priority} className="capitalize">
           <>
             {getPriorityIcon(priority, "text-sm")}
-            {priority ?? "None"}
+            {priority ?? "无"}
           </>
         </CustomSelect.Option>
       ))}

@@ -145,11 +145,11 @@ export const SingleProjectCard: React.FC<ProjectCardProps> = ({
                     className="flex cursor-pointer items-center gap-1 rounded bg-green-600 px-2 py-1 text-xs"
                   >
                     <PlusIcon className="h-3 w-3" />
-                    <span>Select to Join</span>
+                    <span>选择加入</span>
                   </button>
                 ) : (
                   <span className="cursor-default rounded bg-green-600 px-2 py-1 text-xs">
-                    Member
+                    成员
                   </span>
                 )}
                 {project.is_favorite && (
@@ -181,7 +181,7 @@ export const SingleProjectCard: React.FC<ProjectCardProps> = ({
           </Link>
           <div className="flex h-full items-end justify-between">
             <Tooltip
-              tooltipContent={`Created at ${renderShortDateWithYearFormat(project.created_at)}`}
+              tooltipContent={`创建于 ${renderShortDateWithYearFormat(project.created_at)}`}
               position="bottom"
             >
               <div className="flex cursor-default items-center gap-1.5 text-xs">

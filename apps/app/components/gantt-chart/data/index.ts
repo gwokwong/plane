@@ -3,28 +3,28 @@ import { WeekMonthDataType, ChartDataType } from "../types";
 
 // constants
 export const weeks: WeekMonthDataType[] = [
-  { key: 0, shortTitle: "sun", title: "sunday" },
-  { key: 1, shortTitle: "mon", title: "monday" },
-  { key: 2, shortTitle: "tue", title: "tuesday" },
-  { key: 3, shortTitle: "wed", title: "wednesday" },
-  { key: 4, shortTitle: "thurs", title: "thursday" },
-  { key: 5, shortTitle: "fri", title: "friday" },
-  { key: 6, shortTitle: "sat", title: "saturday" },
+  { key: 0, shortTitle: "sun", title: "星期日" },
+  { key: 1, shortTitle: "mon", title: "星期一" },
+  { key: 2, shortTitle: "tue", title: "星期二" },
+  { key: 3, shortTitle: "wed", title: "星期三" },
+  { key: 4, shortTitle: "thurs", title: "星期四" },
+  { key: 5, shortTitle: "fri", title: "星期五" },
+  { key: 6, shortTitle: "sat", title: "星期六" },
 ];
 
 export const months: WeekMonthDataType[] = [
-  { key: 0, shortTitle: "jan", title: "january" },
-  { key: 1, shortTitle: "feb", title: "february" },
-  { key: 2, shortTitle: "mar", title: "march" },
-  { key: 3, shortTitle: "apr", title: "april" },
-  { key: 4, shortTitle: "may", title: "may" },
-  { key: 5, shortTitle: "jun", title: "june" },
-  { key: 6, shortTitle: "jul", title: "july" },
-  { key: 7, shortTitle: "aug", title: "august" },
-  { key: 8, shortTitle: "sept", title: "september" },
-  { key: 9, shortTitle: "oct", title: "october" },
-  { key: 10, shortTitle: "nov", title: "november" },
-  { key: 11, shortTitle: "dec", title: "december" },
+  { key: 0, shortTitle: "jan", title: "1月" },
+  { key: 1, shortTitle: "feb", title: "2月" },
+  { key: 2, shortTitle: "mar", title: "3月" },
+  { key: 3, shortTitle: "apr", title: "4月" },
+  { key: 4, shortTitle: "may", title: "5月" },
+  { key: 5, shortTitle: "jun", title: "6月" },
+  { key: 6, shortTitle: "jul", title: "7月" },
+  { key: 7, shortTitle: "aug", title: "8月" },
+  { key: 8, shortTitle: "sept", title: "9月" },
+  { key: 9, shortTitle: "oct", title: "10月" },
+  { key: 10, shortTitle: "nov", title: "11月" },
+  { key: 11, shortTitle: "dec", title: "12月" },
 ];
 
 export const charCapitalize = (word: string) =>

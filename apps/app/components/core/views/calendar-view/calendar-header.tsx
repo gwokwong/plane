@@ -63,8 +63,8 @@ export const CalendarHeader: React.FC<Props> = ({
             <>
               <Popover.Button>
                 <div className="flex items-center justify-center gap-2 text-2xl font-semibold text-custom-text-100">
+                  <span>{formatDate(currentDate, "yyyy")}年</span>
                   <span>{formatDate(currentDate, "Month")}</span>{" "}
-                  <span>{formatDate(currentDate, "yyyy")}</span>
                 </div>
               </Popover.Button>
 
@@ -165,13 +165,13 @@ export const CalendarHeader: React.FC<Props> = ({
             }
           }}
         >
-          Today
+          今天
         </button>
 
         <CustomMenu
           customButton={
             <div className="group flex cursor-pointer items-center gap-2 rounded-md border border-custom-border-200 px-3 py-1 text-sm hover:bg-custom-background-80 hover:text-custom-text-100 focus:outline-none ">
-              {isMonthlyView ? "Monthly" : "Weekly"}
+              {isMonthlyView ? "每月" : "每周"}
               <ChevronDownIcon className="h-3 w-3" aria-hidden="true" />
             </div>
           }
@@ -184,7 +184,7 @@ export const CalendarHeader: React.FC<Props> = ({
             className="w-52 text-sm text-custom-text-200"
           >
             <div className="flex w-full max-w-[260px] items-center justify-between gap-2">
-              <span className="flex items-center gap-2">Monthly View</span>
+              <span className="flex items-center gap-2">月视图</span>
               <CheckIcon
                 className={`h-4 w-4 flex-shrink-0 ${isMonthlyView ? "opacity-100" : "opacity-0"}`}
               />
@@ -201,14 +201,14 @@ export const CalendarHeader: React.FC<Props> = ({
             className="w-52 text-sm text-custom-text-200"
           >
             <div className="flex w-full items-center justify-between gap-2">
-              <span className="flex items-center gap-2">Weekly View</span>
+              <span className="flex items-center gap-2">周视图</span>
               <CheckIcon
                 className={`h-4 w-4 flex-shrink-0 ${isMonthlyView ? "opacity-0" : "opacity-100"}`}
               />
             </div>
           </CustomMenu.MenuItem>
           <div className="mt-1 flex w-52 items-center justify-between border-t border-custom-border-200 py-2 px-1  text-sm text-custom-text-200">
-            <h4>Show weekends</h4>
+            <h4>显示周末</h4>
             <ToggleSwitch value={showWeekEnds} onChange={() => setShowWeekEnds(!showWeekEnds)} />
           </div>
         </CustomMenu>

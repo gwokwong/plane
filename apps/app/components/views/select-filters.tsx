@@ -97,7 +97,7 @@ export const SelectFilters: React.FC<Props> = ({
               id: priority === null ? "null" : priority,
               label: (
                 <div className="flex items-center gap-2 capitalize">
-                  {getPriorityIcon(priority)} {priority ?? "None"}
+                  {getPriorityIcon(priority)} {priority ?? "无"}
                 </div>
               ),
               value: {
@@ -221,7 +221,7 @@ export const SelectFilters: React.FC<Props> = ({
                     }}
                     className="w-full rounded px-1 py-1.5 text-left text-custom-text-200 hover:bg-custom-background-80"
                   >
-                    Custom
+                    自定义
                   </button>
                 ),
               },

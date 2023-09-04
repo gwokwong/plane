@@ -49,7 +49,8 @@ export const SpreadsheetColumns: React.FC<Props> = ({ columnData, gridTemplateCo
                 <div
                   className={`flex items-center justify-start gap-1.5 cursor-default text-sm text-custom-text-200 text-current w-full py-2.5 px-2`}
                 >
-                  {col.colName}
+                  {/*{col.colName}*/}
+                  标题
                 </div>
               ) : (
                 <CustomMenu
@@ -85,8 +86,17 @@ export const SpreadsheetColumns: React.FC<Props> = ({ columnData, gridTemplateCo
                       ) : (
                         ""
                       )}
+                      {/*{col.colName}*/}
 
-                      {col.colName}
+                      {col.colName === "State" && <span>状态</span>}
+                      {col.colName === "Priority" && <span>优先级</span>}
+                      {col.colName === "Assignees" && <span>负责人</span>}
+                      {col.colName === "Labels" && <span>标签</span>}
+                      {col.colName === "Start Date" && <span>开始时间</span>}
+                      {col.colName === "Due Date" && <span>结束时间</span>}
+                      {col.colName === "Created On" && <span>创建时间</span>}
+                      {col.colName === "Updated On" && <span>更新时间</span>}
+
                       <ChevronDownIcon className="h-3 w-3" aria-hidden="true" />
                     </div>
                   }
@@ -129,9 +139,9 @@ export const SpreadsheetColumns: React.FC<Props> = ({ columnData, gridTemplateCo
                               />
                               <Icon iconName="sort" className="absolute right-0 text-sm" />
                             </span>
-                            <span>New</span>
+                            <span>新</span>
                             <Icon iconName="east" className="text-sm" />
-                            <span>Old</span>
+                            <span>旧</span>
                           </>
                         ) : (
                           <>
@@ -258,7 +268,7 @@ export const SpreadsheetColumns: React.FC<Props> = ({ columnData, gridTemplateCo
                               <Icon iconName="ink_eraser" className="text-sm" />
                             </span>
 
-                            <span>Clear sorting</span>
+                            <span>清除排序</span>
                           </div>
                         </div>
                       </CustomMenu.MenuItem>

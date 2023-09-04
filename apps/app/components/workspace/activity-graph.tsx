@@ -84,7 +84,8 @@ export const ActivityGraph: React.FC<Props> = ({ activities }) => {
         <div className="flex flex-col gap-2 pt-6">
           {DAYS.map((day, index) => (
             <h6 key={day} className="h-4 text-xs">
-              {index % 2 === 0 && day.substring(0, 3)}
+              {/*{index % 2 === 0 && day.substring(0, 3)}*/}
+              {index % 2 === 0 && day}
             </h6>
           ))}
         </div>
@@ -109,7 +110,7 @@ export const ActivityGraph: React.FC<Props> = ({ activities }) => {
                   key={`${date}-${index}`}
                   tooltipContent={`${
                     isActive ? isActive.activity_count : 0
-                  } activities on ${renderShortDateWithYearFormat(date)}`}
+                  }个活动于 ${renderShortDateWithYearFormat(date)}`}
                 >
                   <div
                     className={`${

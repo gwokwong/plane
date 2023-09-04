@@ -4,15 +4,15 @@ export const getPriorityIcon = (priority: string | null, className?: string) => 
   priority = priority?.toLowerCase() ?? null;
 
   switch (priority) {
-    case "urgent":
+    case "急":
       return <span className={`material-symbols-rounded ${className}`}>error</span>;
-    case "high":
+    case "高":
       return <span className={`material-symbols-rounded ${className}`}>signal_cellular_alt</span>;
-    case "medium":
+    case "中":
       return (
         <span className={`material-symbols-rounded ${className}`}>signal_cellular_alt_2_bar</span>
       );
-    case "low":
+    case "低":
       return (
         <span className={`material-symbols-rounded ${className}`}>signal_cellular_alt_1_bar</span>
       );

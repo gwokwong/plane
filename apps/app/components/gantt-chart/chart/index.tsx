@@ -229,7 +229,11 @@ export const ChartViewRoot: FC<ChartViewRootProps> = ({
       <div className="flex w-full flex-shrink-0 flex-wrap items-center gap-2 whitespace-nowrap px-2.5 py-2">
         {title && (
           <div className="text-lg font-medium flex gap-2 items-center">
-            <div>{title}</div>
+            <div>
+              {/*{title}*/}
+
+              {title === "Issues" && <span> 任务</span>}
+            </div>
             {/* <div className="text-xs rounded-full px-2 py-1 font-bold border border-custom-primary/75 bg-custom-primary/5 text-custom-text-100">
               Gantt View Beta
             </div> */}
@@ -238,10 +242,12 @@ export const ChartViewRoot: FC<ChartViewRootProps> = ({
 
         <div className="ml-auto">
           {blocks === null ? (
-            <div className="text-sm font-medium ml-auto">Loading...</div>
+            <div className="text-sm font-medium ml-auto">正在加载...</div>
           ) : (
             <div className="text-sm font-medium ml-auto">
-              {blocks.length} {loaderTitle}
+              {blocks.length}
+              {/*{loaderTitle}*/}
+              {loaderTitle === "Issues" && <span> 任务</span>}
             </div>
           )}
         </div>
@@ -259,7 +265,9 @@ export const ChartViewRoot: FC<ChartViewRootProps> = ({
                 }`}
                 onClick={() => handleChartView(_chatView?.key)}
               >
-                {_chatView?.title}
+                {/*{_chatView?.title}*/}
+
+                {_chatView?.title === "Month" && <span>月</span>}
               </div>
             ))}
         </div>
@@ -269,7 +277,7 @@ export const ChartViewRoot: FC<ChartViewRootProps> = ({
             className="cursor-pointer rounded-sm p-1 px-2 text-xs hover:bg-custom-background-80"
             onClick={handleToday}
           >
-            Today
+            今日
           </div>
         </div>
 

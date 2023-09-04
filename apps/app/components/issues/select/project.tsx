@@ -20,7 +20,7 @@ export const IssueProjectSelect: React.FC<IssueProjectSelectProps> = ({ value, o
         <>
           <ClipboardDocumentListIcon className="h-3 w-3" />
           <span className="block truncate">
-            {projects?.find((i) => i.id === value)?.identifier ?? "Project"}
+            {projects?.find((i) => i.id === value)?.identifier ?? "项目"}
           </span>
         </>
       }

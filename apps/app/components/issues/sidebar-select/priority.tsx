@@ -45,7 +45,7 @@ export const SidebarPrioritySelect: React.FC<Props> = ({ value, onChange, disabl
       <CustomSelect.Option key={option} value={option} className="capitalize">
         <>
           {getPriorityIcon(option, "text-sm")}
-          {option ?? "None"}
+          {option ?? "无"}
         </>
       </CustomSelect.Option>
     ))}

@@ -69,7 +69,7 @@ export const ChangeIssuePriority: React.FC<Props> = ({ setIsPaletteOpen, issue, 
         >
           <div className="flex items-center space-x-3">
             {getPriorityIcon(priority)}
-            <span className="capitalize">{priority ?? "None"}</span>
+            <span className="capitalize">{priority ?? "无"}</span>
           </div>
           <div>{priority === issue.priority && <CheckIcon className="h-3 w-3" />}</div>
         </Command.Item>

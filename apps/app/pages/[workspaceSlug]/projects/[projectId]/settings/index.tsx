@@ -245,7 +245,7 @@ const GeneralSettings: NextPage = () => {
                   name="description"
                   error={errors.description}
                   register={register}
-                  placeholder="Enter project description"
+                  placeholder="输入项目说明"
                   validations={{}}
                   className="min-h-[46px] text-sm"
                 />

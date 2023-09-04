@@ -88,7 +88,7 @@ export const generateMonthDataByMonth = (month: number, year: number) => {
     month: currentMonth,
     monthData: months[currentMonth],
     children: getAllDaysInMonth(currentMonth, currentYear),
-    title: `${months[currentMonth].title} ${currentYear}`,
+    title: `${currentYear}年${months[currentMonth].title} `,
   };
 
   return monthPayload;

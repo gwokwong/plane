@@ -63,12 +63,12 @@ export const LinksList: React.FC<Props> = ({
             <div>
               <h5 className="w-4/5 break-words">{link.title ?? link.url}</h5>
               <p className="mt-0.5 text-custom-text-200">
-                Added {timeAgo(link.created_at)}
-                <br />
-                by{" "}
+                {/*Added {timeAgo(link.created_at)}*/}
+                {/*<br />*/}
+                {/*by{" "}*/}
                 {link.created_by_detail.is_bot
                   ? link.created_by_detail.first_name + " Bot"
-                  : link.created_by_detail.display_name}
+                  : link.created_by_detail.display_name} 添加于{timeAgo(link.created_at)}
               </p>
             </div>
           </a>

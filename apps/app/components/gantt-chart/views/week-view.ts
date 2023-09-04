@@ -54,7 +54,7 @@ const generateMonthDataByMonthAndYearInMonthView = (month: number, year: number)
     month: currentMonth,
     monthData: months[currentMonth],
     children: getAllDaysInMonthInMonthView(currentMonth, currentYear),
-    title: `${months[currentMonth].title} ${currentYear}`,
+    title: `${currentYear}年${months[currentMonth].title} `,
   };
 
   return monthPayload;
