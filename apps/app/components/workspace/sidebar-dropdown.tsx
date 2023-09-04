@@ -44,12 +44,12 @@ const userLinks = (workspaceSlug: string, userId: string) => [
 
 const profileLinks = (workspaceSlug: string, userId: string) => [
   {
-    name: "View profile",
+    name: "查看资料",
     icon: "account_circle",
     link: `/${workspaceSlug}/profile/${userId}`,
   },
   {
-    name: "Settings",
+    name: "设置",
     icon: "settings",
     link: `/${workspaceSlug}/me/profile`,
   },

@@ -103,13 +103,13 @@ export const LinkModal: React.FC<Props> = ({
                         as="h3"
                         className="text-lg font-medium leading-6 text-custom-text-100"
                       >
-                        {status ? "Update Link" : "Add Link"}
+                        {status ? "更新链接" : "添加链接"}
                       </Dialog.Title>
                       <div className="mt-2 space-y-3">
                         <div>
                           <Input
                             id="url"
-                            label="URL"
+                            label="网址"
                             name="url"
                             type="url"
                             placeholder="https://..."
@@ -117,17 +117,17 @@ export const LinkModal: React.FC<Props> = ({
                             error={errors.url}
                             register={register}
                             validations={{
-                              required: "URL is required",
+                              required: "网址是必填项",
                             }}
                           />
                         </div>
                         <div>
                           <Input
                             id="title"
-                            label="Title (optional)"
+                            label="标题（可选）"
                             name="title"
                             type="text"
-                            placeholder="Enter title"
+                            placeholder="输入标题"
                             autoComplete="off"
                             error={errors.title}
                             register={register}
@@ -137,15 +137,15 @@ export const LinkModal: React.FC<Props> = ({
                     </div>
                   </div>
                   <div className="mt-5 flex justify-end gap-2">
-                    <SecondaryButton onClick={onClose}>Cancel</SecondaryButton>
+                    <SecondaryButton onClick={onClose}>取消</SecondaryButton>
                     <PrimaryButton type="submit" loading={isSubmitting}>
                       {status
                         ? isSubmitting
-                          ? "Updating Link..."
-                          : "Update Link"
+                          ? "更新链接..."
+                          : "更新链接"
                         : isSubmitting
-                        ? "Adding Link..."
-                        : "Add Link"}
+                        ? "添加链接..."
+                        : "添加链接"}
                     </PrimaryButton>
                   </div>
                 </form>

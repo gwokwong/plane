@@ -105,7 +105,7 @@ export const TiptapExtensions = (workspaceSlug: string, setIsSubmitting?: (isSub
         return `Heading ${node.attrs.level}`;
       }
 
-      return "Press '/' for commands...";
+      return "按 '/' 执行命令...";
     },
     includeChildren: true,
   }),

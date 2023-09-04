@@ -118,8 +118,8 @@ const ControlSettings: NextPage = () => {
         <div className="space-y-8 sm:space-y-12">
           <div className="grid grid-cols-12 items-start gap-4 sm:gap-16">
             <div className="col-span-12 sm:col-span-6">
-              <h4 className="text-lg font-semibold">Project Lead</h4>
-              <p className="text-sm text-custom-text-200">Select the project leader.</p>
+              <h4 className="text-lg font-semibold">项目主管</h4>
+              <p className="text-sm text-custom-text-200">选择项目主管</p>
             </div>
             <div className="col-span-12 sm:col-span-6">
               {projectDetails ? (
@@ -131,7 +131,7 @@ const ControlSettings: NextPage = () => {
                       {...field}
                       label={
                         people?.find((person) => person.member.id === field.value)?.member
-                          .display_name ?? <span className="text-custom-text-200">Select lead</span>
+                          .display_name ?? <span className="text-custom-text-200">选择主管</span>
                       }
                       width="w-full"
                       input
@@ -187,7 +187,7 @@ const ControlSettings: NextPage = () => {
                       {...field}
                       label={
                         people?.find((p) => p.member.id === field.value)?.member.display_name ?? (
-                          <span className="text-custom-text-200">Select default assignee</span>
+                          <span className="text-custom-text-200">选择默认负责人</span>
                         )
                       }
                       width="w-full"

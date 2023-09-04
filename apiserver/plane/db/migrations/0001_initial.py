@@ -99,7 +99,7 @@ class Migration(migrations.Migration):
                 ('id', models.UUIDField(db_index=True, default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
                 ('name', models.CharField(max_length=255, verbose_name='Issue Name')),
                 ('description', models.JSONField(blank=True, verbose_name='Issue Description')),
-                ('priority', models.CharField(blank=True, choices=[('urgent', 'Urgent'), ('high', 'High'), ('medium', 'Medium'), ('low', 'Low')], max_length=30, null=True, verbose_name='Issue Priority')),
+                ('priority', models.CharField(blank=True, choices=[('urgent', 'Urgent'), ('high', 'High'), ('medium', 'Medium'), ('low', 'Low')], max_length=30, null=True, verbose_name='Issue Priority')), # 初始化优先级
                 ('start_date', models.DateField(blank=True, null=True)),
                 ('target_date', models.DateField(blank=True, null=True)),
                 ('sequence_id', models.IntegerField(default=1, verbose_name='Issue Sequence ID')),

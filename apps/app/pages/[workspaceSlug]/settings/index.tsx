@@ -154,7 +154,7 @@ const WorkspaceSettings: NextPage = () => {
       breadcrumbs={
         <Breadcrumbs>
           <BreadcrumbItem
-            title={`${truncateText(activeWorkspace?.name ?? "Workspace", 32)} Settings`}
+            title={`${truncateText(activeWorkspace?.name ?? "Workspace", 32)} 设置`}
           />
         </Breadcrumbs>
       }

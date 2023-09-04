@@ -41,9 +41,9 @@ export const SidebarBlockedSelect: React.FC<Props> = ({
   const onSubmit = async (data: ISearchIssueResponse[]) => {
     if (data.length === 0) {
       setToastAlert({
-        title: "Error",
+        title: "错误",
         type: "error",
-        message: "Please select at least one issue",
+        message: "请至少选择一个任务",
       });
 
       return;
@@ -83,7 +83,7 @@ export const SidebarBlockedSelect: React.FC<Props> = ({
       <div className="flex flex-wrap items-start py-2">
         <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
           <BlockedIcon height={16} width={16} />
-          <p>Blocked by</p>
+          <p>受阻于</p>
         </div>
         <div className="space-y-1 sm:basis-1/2">
           <div className="flex flex-wrap gap-1">
@@ -130,7 +130,7 @@ export const SidebarBlockedSelect: React.FC<Props> = ({
             onClick={() => setIsBlockedModalOpen(true)}
             disabled={disabled}
           >
-            Select issues
+            选择任务
           </button>
         </div>
       </div>

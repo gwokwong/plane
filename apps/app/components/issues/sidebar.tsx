@@ -350,7 +350,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                       <Squares2X2Icon className="h-4 w-4 flex-shrink-0" />
-                      <p>State</p>
+                      <p>状态</p>
                     </div>
                     <div className="sm:basis-1/2">
                       <Controller
@@ -371,7 +371,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                       <UserGroupIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>Assignees</p>
+                      <p>负责人</p>
                     </div>
                     <div className="sm:basis-1/2">
                       <Controller
@@ -392,7 +392,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                       <ChartBarIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>Priority</p>
+                      <p>优先级</p>
                     </div>
                     <div className="sm:basis-1/2">
                       <Controller
@@ -414,7 +414,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                     <div className="flex flex-wrap items-center py-2">
                       <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                         <PlayIcon className="h-4 w-4 flex-shrink-0 -rotate-90" />
-                        <p>Estimate</p>
+                        <p>估算点</p>
                       </div>
                       <div className="sm:basis-1/2">
                         <Controller
@@ -441,7 +441,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                       <UserIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>Parent</p>
+                      <p>父任务</p>
                     </div>
                     <div className="sm:basis-1/2">
                       <Controller
@@ -481,7 +481,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                       <CalendarDaysIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>Start date</p>
+                      <p>开始时间</p>
                     </div>
                     <div className="sm:basis-1/2">
                       <Controller
@@ -489,7 +489,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                         name="start_date"
                         render={({ field: { value } }) => (
                           <CustomDatePicker
-                            placeholder="Start date"
+                            placeholder="开始时间"
                             value={value}
                             onChange={(val) =>
                               submitChanges({
@@ -509,7 +509,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                       <CalendarDaysIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>Due date</p>
+                      <p>结束时间</p>
                     </div>
                     <div className="sm:basis-1/2">
                       <Controller
@@ -517,7 +517,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                         name="target_date"
                         render={({ field: { value } }) => (
                           <CustomDatePicker
-                            placeholder="Due date"
+                            placeholder="结束时间"
                             value={value}
                             onChange={(val) =>
                               submitChanges({
@@ -537,36 +537,36 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
             )}
             {showThirdSection && (
               <div className="py-1">
-                {(fieldsToShow.includes("all") || fieldsToShow.includes("cycle")) && (
-                  <div className="flex flex-wrap items-center py-2">
-                    <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:w-1/2">
-                      <ContrastIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>Cycle</p>
-                    </div>
-                    <div className="space-y-1 sm:w-1/2">
-                      <SidebarCycleSelect
-                        issueDetail={issueDetail}
-                        handleCycleChange={handleCycleChange}
-                        disabled={memberRole.isGuest || memberRole.isViewer || uneditable}
-                      />
-                    </div>
-                  </div>
-                )}
-                {(fieldsToShow.includes("all") || fieldsToShow.includes("module")) && (
-                  <div className="flex flex-wrap items-center py-2">
-                    <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:w-1/2">
-                      <RectangleGroupIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>Module</p>
-                    </div>
-                    <div className="space-y-1 sm:w-1/2">
-                      <SidebarModuleSelect
-                        issueDetail={issueDetail}
-                        handleModuleChange={handleModuleChange}
-                        disabled={memberRole.isGuest || memberRole.isViewer || uneditable}
-                      />
-                    </div>
-                  </div>
-                )}
+                {/*{(fieldsToShow.includes("all") || fieldsToShow.includes("cycle")) && (*/}
+                {/*  <div className="flex flex-wrap items-center py-2">*/}
+                {/*    <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:w-1/2">*/}
+                {/*      <ContrastIcon className="h-4 w-4 flex-shrink-0" />*/}
+                {/*      <p>Cycle</p>*/}
+                {/*    </div>*/}
+                {/*    <div className="space-y-1 sm:w-1/2">*/}
+                {/*      <SidebarCycleSelect*/}
+                {/*        issueDetail={issueDetail}*/}
+                {/*        handleCycleChange={handleCycleChange}*/}
+                {/*        disabled={memberRole.isGuest || memberRole.isViewer || uneditable}*/}
+                {/*      />*/}
+                {/*    </div>*/}
+                {/*  </div>*/}
+                {/*)}*/}
+                {/*{(fieldsToShow.includes("all") || fieldsToShow.includes("module")) && (*/}
+                {/*  <div className="flex flex-wrap items-center py-2">*/}
+                {/*    <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:w-1/2">*/}
+                {/*      <RectangleGroupIcon className="h-4 w-4 flex-shrink-0" />*/}
+                {/*      <p>模块</p>*/}
+                {/*    </div>*/}
+                {/*    <div className="space-y-1 sm:w-1/2">*/}
+                {/*      <SidebarModuleSelect*/}
+                {/*        issueDetail={issueDetail}*/}
+                {/*        handleModuleChange={handleModuleChange}*/}
+                {/*        disabled={memberRole.isGuest || memberRole.isViewer || uneditable}*/}
+                {/*      />*/}
+                {/*    </div>*/}
+                {/*  </div>*/}
+                {/*)}*/}
               </div>
             )}
           </div>

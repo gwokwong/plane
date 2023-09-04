@@ -99,7 +99,7 @@ export const SidebarLabelSelect: React.FC<Props> = ({
       <div className="flex items-start justify-between">
         <div className="flex basis-1/2 items-center gap-x-2 text-sm text-custom-text-200">
           <TagIcon className="h-4 w-4" />
-          <p>Label</p>
+          <p>标签</p>
         </div>
         <div className="basis-1/2">
           <div className="flex flex-wrap gap-1">
@@ -150,7 +150,7 @@ export const SidebarLabelSelect: React.FC<Props> = ({
                             : "cursor-pointer hover:bg-custom-background-90"
                         } items-center gap-2 rounded-2xl border border-custom-border-100 px-2 py-0.5 text-xs text-custom-text-200`}
                       >
-                        Select Label
+                        选择标签
                       </Listbox.Button>
 
                       <Transition
@@ -231,7 +231,7 @@ export const SidebarLabelSelect: React.FC<Props> = ({
                                     );
                                 })
                               ) : (
-                                <div className="text-center">No labels found</div>
+                                <div className="text-center">未找到标签</div>
                               )
                             ) : (
                               <Spinner />
@@ -257,11 +257,11 @@ export const SidebarLabelSelect: React.FC<Props> = ({
               >
                 {createLabelForm ? (
                   <>
-                    <XMarkIcon className="h-3 w-3" /> Cancel
+                    <XMarkIcon className="h-3 w-3" /> 取消
                   </>
                 ) : (
                   <>
-                    <PlusIcon className="h-3 w-3" /> New
+                    <PlusIcon className="h-3 w-3" /> 新建
                   </>
                 )}
               </button>
@@ -312,10 +312,10 @@ export const SidebarLabelSelect: React.FC<Props> = ({
           <Input
             id="name"
             name="name"
-            placeholder="Title"
+            placeholder="标题"
             register={register}
             validations={{
-              required: "This is required",
+              required: "这是必填项",
             }}
             autoComplete="off"
           />

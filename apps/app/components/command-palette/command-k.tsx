@@ -277,14 +277,14 @@ export const CommandK: React.FC<Props> = ({ deleteIssue, isPaletteOpen, setIsPal
                     </div>
                   )}
                   {projectId && (
-                    <Tooltip tooltipContent="Toggle workspace level search">
+                    <Tooltip tooltipContent="切换工作区级搜索">
                       <div className="flex-shrink-0 self-end sm:self-center flex items-center gap-1 text-xs cursor-pointer">
                         <button
                           type="button"
                           onClick={() => setIsWorkspaceLevel((prevData) => !prevData)}
                           className="flex-shrink-0"
                         >
-                          Workspace Level
+                          工作区级
                         </button>
                         <ToggleSwitch
                           value={isWorkspaceLevel}

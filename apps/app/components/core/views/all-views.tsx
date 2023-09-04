@@ -171,7 +171,7 @@ export const AllViews: React.FC<Props> = ({
             description="All the issues that have been in the completed or canceled groups for the configured period of time can be viewed here."
             image={emptyIssueArchive}
             primaryButton={{
-              text: "Go to Automation Settings",
+              text: "转到自动化设置",
               onClick: () => {
                 router.push(`/${workspaceSlug}/projects/${projectId}/settings/automations`);
               },

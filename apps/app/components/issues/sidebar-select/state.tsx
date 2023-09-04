@@ -56,7 +56,7 @@ export const SidebarStateSelect: React.FC<Props> = ({ value, onChange, disabled 
               Triage
             </div>
           ) : (
-            "None"
+            "无"
           )}
         </button>
       }

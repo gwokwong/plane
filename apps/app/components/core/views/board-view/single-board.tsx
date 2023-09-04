@@ -175,7 +175,7 @@ export const SingleBoard: React.FC<Props> = ({
                         noBorder
                       >
                         <CustomMenu.MenuItem onClick={addIssueToGroup}>
-                          Create new
+
                         </CustomMenu.MenuItem>
                         {openIssuesListModal && (
                           <CustomMenu.MenuItem onClick={openIssuesListModal}>

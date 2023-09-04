@@ -79,10 +79,9 @@ export const AutoCloseAutomation: React.FC<Props> = ({ projectDetails, handleCha
       <div className="flex flex-col gap-7 px-6 py-5 rounded-[10px] border border-custom-border-300 bg-custom-background-90">
         <div className="flex items-center justify-between gap-x-8 gap-y-2 ">
           <div className="flex flex-col gap-2.5">
-            <h4 className="text-lg font-semibold">Auto-close inactive issues</h4>
+            <h4 className="text-lg font-semibold">自动关闭不活动任务</h4>
             <p className="text-sm text-custom-text-200">
-              Plane will automatically close the issues that have not been updated for the
-              configured time period.
+              Mission Plan 会自动关闭在配置的时间段内未更新的任务。
             </p>
           </div>
           <ToggleSwitch
@@ -99,7 +98,7 @@ export const AutoCloseAutomation: React.FC<Props> = ({ projectDetails, handleCha
           <div className="flex flex-col gap-4 w-full">
             <div className="flex items-center justify-between gap-2 w-full">
               <div className="w-1/2 text-base font-medium">
-                Auto-close issues that are inactive for
+                自动关闭不活动的任务
               </div>
               <div className="w-1/2">
                 <CustomSelect
@@ -124,14 +123,14 @@ export const AutoCloseAutomation: React.FC<Props> = ({ projectDetails, handleCha
                       className="flex w-full select-none items-center rounded px-1 py-1.5 text-custom-text-200 hover:bg-custom-background-80"
                       onClick={() => setmonthModal(true)}
                     >
-                      Customize Time Range
+                      自定义时间范围
                     </button>
                   </>
                 </CustomSelect>
               </div>
             </div>
             <div className="flex items-center justify-between gap-2 w-full">
-              <div className="w-1/2 text-base font-medium">Auto-close Status</div>
+              <div className="w-1/2 text-base font-medium">自动关闭状态</div>
               <div className="w-1/2 ">
                 <CustomSearchSelect
                   value={

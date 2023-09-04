@@ -49,7 +49,7 @@ export const SidebarParentSelect: React.FC<Props> = ({
         ) : !selectedParentIssue && issueDetails?.parent ? (
           `${issueDetails.parent_detail?.project_detail.identifier}-${issueDetails.parent_detail?.sequence_id}`
         ) : (
-          <span className="text-custom-text-200">Select issue</span>
+          <span className="text-custom-text-200">选择任务</span>
         )}
       </button>
     </>

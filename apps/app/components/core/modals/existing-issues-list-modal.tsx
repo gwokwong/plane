@@ -197,7 +197,7 @@ export const ExistingIssuesListModal: React.FC<Props> = ({
                       </div>
                     )}
                     {workspaceLevelToggle && (
-                      <Tooltip tooltipContent="Toggle workspace level search">
+                      <Tooltip tooltipContent="切换工作区级搜索">
                         <div
                           className={`flex-shrink-0 flex items-center gap-1 text-xs cursor-pointer ${
                             isWorkspaceLevel ? "text-custom-text-100" : "text-custom-text-200"
@@ -212,7 +212,7 @@ export const ExistingIssuesListModal: React.FC<Props> = ({
                             onClick={() => setIsWorkspaceLevel((prevData) => !prevData)}
                             className="flex-shrink-0"
                           >
-                            workspace level
+                            工作区级
                           </button>
                         </div>
                       </Tooltip>
@@ -222,13 +222,12 @@ export const ExistingIssuesListModal: React.FC<Props> = ({
                   <Combobox.Options static className="max-h-80 scroll-py-2 overflow-y-auto">
                     {searchTerm !== "" && (
                       <h5 className="text-[0.825rem] text-custom-text-200 mx-2">
-                        Search results for{" "}
+                        项目中{" "}
                         <span className="text-custom-text-100">
                           {'"'}
                           {searchTerm}
                           {'"'}
-                        </span>{" "}
-                        in project:
+                        </span>{" "}的搜索结果:
                       </h5>
                     )}
 

@@ -71,7 +71,7 @@ const AutomationsSettings: NextPage = () => {
             link={`/${workspaceSlug}/projects/${projectDetails?.id}/issues`}
             linkTruncate
           />
-          <BreadcrumbItem title="Automations Settings" unshrinkTitle />
+          <BreadcrumbItem title="自动化设置" unshrinkTitle />
         </Breadcrumbs>
       }
     >

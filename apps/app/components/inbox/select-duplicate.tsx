@@ -129,7 +129,7 @@ export const SelectDuplicateInboxIssueModal: React.FC<Props> = (props) => {
                         <li className="p-2">
                           {query === "" && (
                             <h2 className="mt-4 mb-2 px-3 text-xs font-semibold text-custom-text-100">
-                              Select issue
+                              选择任务
                             </h2>
                           )}
                           <ul className="text-sm text-custom-text-100">

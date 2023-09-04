@@ -86,7 +86,7 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
         <div className="flex items-center gap-2 text-sm">
           <div className="flex-shrink-0 w-1/4 flex items-center gap-2 font-medium">
             <Icon iconName="radio_button_checked" className="!text-base flex-shrink-0" />
-            <span className="flex-grow truncate">State</span>
+            <span className="flex-grow truncate">状态</span>
           </div>
           <div className="w-3/4">
             <SidebarStateSelect
@@ -99,7 +99,7 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
         <div className="flex items-center gap-2 text-sm">
           <div className="flex-shrink-0 w-1/4 flex items-center gap-2 font-medium">
             <Icon iconName="group" className="!text-base flex-shrink-0" />
-            <span className="flex-grow truncate">Assignees</span>
+            <span className="flex-grow truncate">负责人</span>
           </div>
           <div className="w-3/4">
             <SidebarAssigneeSelect
@@ -112,7 +112,7 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
         <div className="flex items-center gap-2 text-sm">
           <div className="flex-shrink-0 w-1/4 flex items-center gap-2 font-medium">
             <Icon iconName="signal_cellular_alt" className="!text-base flex-shrink-0" />
-            <span className="flex-grow truncate">Priority</span>
+            <span className="flex-grow truncate">优先级</span>
           </div>
           <div className="w-3/4">
             <SidebarPrioritySelect
@@ -125,12 +125,12 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
         <div className="flex items-center gap-2 text-sm">
           <div className="flex-shrink-0 w-1/4 flex items-center gap-2 font-medium">
             <Icon iconName="calendar_today" className="!text-base flex-shrink-0" />
-            <span className="flex-grow truncate">Start date</span>
+            <span className="flex-grow truncate">开始时间</span>
           </div>
           <div>
             {issue.start_date ? (
               <CustomDatePicker
-                placeholder="Start date"
+                placeholder="开始时间"
                 value={issue.start_date}
                 onChange={(val) =>
                   handleUpdateIssue({
@@ -150,7 +150,7 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
         <div className="flex items-center gap-2 text-sm">
           <div className="flex-shrink-0 w-1/4 flex items-center gap-2 font-medium">
             <Icon iconName="calendar_today" className="!text-base flex-shrink-0" />
-            <span className="flex-grow truncate">Due date</span>
+            <span className="flex-grow truncate">到期时间</span>
           </div>
           <div>
             {issue.target_date ? (
@@ -168,7 +168,7 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
                 disabled={readOnly}
               />
             ) : (
-              <span className="text-custom-text-200">Empty</span>
+              <span className="text-custom-text-200">空</span>
             )}
           </div>
         </div>

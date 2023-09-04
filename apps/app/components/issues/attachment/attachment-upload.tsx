@@ -101,9 +101,9 @@ export const IssueAttachmentUpload: React.FC<Props> = ({ disabled = false }) => 
         ) : fileError ? (
           <p className="text-center text-red-500">{fileError}</p>
         ) : isLoading ? (
-          <p className="text-center">Uploading...</p>
+          <p className="text-center">上传...</p>
         ) : (
-          <p className="text-center">Click or drag a file here</p>
+          <p className="text-center">单击或拖动文件到此处</p>
         )}
       </span>
     </div>

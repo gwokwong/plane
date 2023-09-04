@@ -48,11 +48,11 @@ export const SidebarAssigneeSelect: React.FC<Props> = ({ value, onChange, disabl
           {value && value.length > 0 && Array.isArray(value) ? (
             <div className="-my-0.5 flex items-center gap-2">
               <AssigneesList userIds={value} length={3} showLength={false} />
-              <span className="text-custom-text-100 text-xs">{value.length} Assignees</span>
+              <span className="text-custom-text-100 text-xs">{value.length} 负责人</span>
             </div>
           ) : (
             <button type="button" className="bg-custom-background-80 px-2.5 py-0.5 text-xs rounded">
-              No assignees
+              无负责人
             </button>
           )}
         </>

@@ -42,8 +42,8 @@ export const SidebarBlockerSelect: React.FC<Props> = ({
     if (data.length === 0) {
       setToastAlert({
         type: "error",
-        title: "Error!",
-        message: "Please select at least one issue.",
+        title: "错误!",
+        message: "请至少选择一个任务",
       });
 
       return;
@@ -83,7 +83,7 @@ export const SidebarBlockerSelect: React.FC<Props> = ({
       <div className="flex flex-wrap items-start py-2">
         <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
           <BlockerIcon height={16} width={16} />
-          <p>Blocking</p>
+          <p>阻塞</p>
         </div>
         <div className="space-y-1 sm:basis-1/2">
           <div className="flex flex-wrap gap-1">
@@ -132,7 +132,7 @@ export const SidebarBlockerSelect: React.FC<Props> = ({
             onClick={() => setIsBlockerModalOpen(true)}
             disabled={disabled}
           >
-            Select issues
+            选择任务
           </button>
         </div>
       </div>

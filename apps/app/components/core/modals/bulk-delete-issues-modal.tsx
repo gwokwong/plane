@@ -207,7 +207,7 @@ export const BulkDeleteIssuesModal: React.FC<Props> = ({ isOpen, setIsOpen, user
                       <li className="p-2">
                         {query === "" && (
                           <h2 className="mt-4 mb-2 px-3 text-xs font-semibold text-custom-text-100">
-                            Select issues to delete
+                            选择要删除的任务
                           </h2>
                         )}
                         <ul className="text-sm text-custom-text-200">

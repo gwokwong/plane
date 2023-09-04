@@ -162,7 +162,7 @@ export const SnoozeNotificationModal: React.FC<SnoozeModalProps> = (props) => {
                       as="h3"
                       className="text-lg font-medium leading-6 text-custom-text-100"
                     >
-                      Customize Snooze Time
+                      自定义打盹时间
                     </Dialog.Title>
 
                     <div>

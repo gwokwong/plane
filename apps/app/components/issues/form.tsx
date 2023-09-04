@@ -195,7 +195,7 @@ export const IssueForm: FC<IssueFormProps> = ({
             message:
               error ||
               "您已达到每个用户每月50次请求的上限",
-          });
+          }); //todo 429服务端怎么去除
         else
           setToastAlert({
             type: "error",
@@ -273,7 +273,7 @@ export const IssueForm: FC<IssueFormProps> = ({
               />
             )}
             <h3 className="text-xl font-semibold leading-6 text-custom-text-100">
-              {status ? "Update" : "Create"} Issue
+              {status ? "更新" : "创建"}任务
             </h3>
           </div>
           {watch("parent") &&
@@ -346,14 +346,14 @@ export const IssueForm: FC<IssueFormProps> = ({
                         )}
                       </button>
                     )}
-                    <button
-                      type="button"
-                      className="flex items-center gap-1 rounded px-1.5 py-1 text-xs hover:bg-custom-background-90"
-                      onClick={() => setGptAssistantModal((prevData) => !prevData)}
-                    >
-                      <SparklesIcon className="h-4 w-4" />
-                      AI
-                    </button>
+                    {/*<button*/}
+                    {/*  type="button"*/}
+                    {/*  className="flex items-center gap-1 rounded px-1.5 py-1 text-xs hover:bg-custom-background-90"*/}
+                    {/*  onClick={() => setGptAssistantModal((prevData) => !prevData)}*/}
+                    {/*>*/}
+                    {/*  <SparklesIcon className="h-4 w-4" />*/}
+                    {/*  AI*/}
+                    {/*</button>*/}
                   </div>
                   <Controller
                     name="description_html"
@@ -457,7 +457,7 @@ export const IssueForm: FC<IssueFormProps> = ({
                       name="start_date"
                       render={({ field: { value, onChange } }) => (
                         <IssueDateSelect
-                          label="Start date"
+                          label="开始时间"
                           maxDate={maxDate ?? undefined}
                           onChange={onChange}
                           value={value}
@@ -473,7 +473,7 @@ export const IssueForm: FC<IssueFormProps> = ({
                       name="target_date"
                       render={({ field: { value, onChange } }) => (
                         <IssueDateSelect
-                          label="Due date"
+                          label="结束时间"
                           minDate={minDate ?? undefined}
                           onChange={onChange}
                           value={value}
