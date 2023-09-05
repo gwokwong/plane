@@ -19,7 +19,7 @@ export const ProfilePriorityDistribution: React.FC<Props> = ({ userProfile }) =>
         {userProfile.priority_distribution.length > 0 ? (
           <BarGraph
             data={userProfile.priority_distribution.map((priority) => ({
-              priority: capitalizeFirstLetter(priority.priority ?? "None"),
+              priority: capitalizeFirstLetter(priority.priority ?? "无"),
               value: priority.priority_count,
             }))}
             height="300px"

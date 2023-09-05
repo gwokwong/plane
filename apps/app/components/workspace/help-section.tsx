@@ -82,15 +82,15 @@ export const WorkspaceHelpSection: React.FC<WorkspaceHelpSectionProps> = ({ setS
           >
             <Bolt fontSize="small" />
           </button>
-          <button
-            type="button"
-            className={`grid place-items-center rounded-md p-1.5 text-custom-text-200 hover:text-custom-text-100 hover:bg-custom-background-90 outline-none ${
-              store?.theme?.sidebarCollapsed ? "w-full" : ""
-            }`}
-            onClick={() => setIsNeedHelpOpen((prev) => !prev)}
-          >
-            <HelpOutlineOutlined fontSize="small" />
-          </button>
+          {/*<button*/}
+          {/*  type="button"*/}
+          {/*  className={`grid place-items-center rounded-md p-1.5 text-custom-text-200 hover:text-custom-text-100 hover:bg-custom-background-90 outline-none ${*/}
+          {/*    store?.theme?.sidebarCollapsed ? "w-full" : ""*/}
+          {/*  }`}*/}
+          {/*  onClick={() => setIsNeedHelpOpen((prev) => !prev)}*/}
+          {/*>*/}
+          {/*  <HelpOutlineOutlined fontSize="small" />*/}
+          {/*</button>*/}
           <button
             type="button"
             className="grid place-items-center rounded-md p-1.5 text-custom-text-200 hover:text-custom-text-100 hover:bg-custom-background-90 outline-none md:hidden"

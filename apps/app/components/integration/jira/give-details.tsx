@@ -166,7 +166,7 @@ export const JiraGetImportDetail: React.FC = () => {
                     className="flex cursor-pointer select-none items-center space-x-2 truncate rounded px-1 py-1.5 text-custom-text-200"
                   >
                     <PlusIcon className="h-4 w-4 text-custom-text-200" />
-                    <span>Create new project</span>
+                    <span>创建新项目</span>
                   </button>
                 </div>
               </CustomSelect>

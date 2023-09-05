@@ -165,12 +165,12 @@ export const SubIssuesList: FC<Props> = ({ parentIssue, user, disabled = false }
                       onClick={handleCreateIssueModal}
                     >
                       <PlusIcon className="h-3 w-3" />
-                      Create new
+                      创建新任务
                     </button>
 
                     <CustomMenu ellipsis>
                       <CustomMenu.MenuItem onClick={() => setSubIssuesListModal(true)}>
-                        Add an existing issue
+                        添加现有任务
                       </CustomMenu.MenuItem>
                     </CustomMenu>
                   </div>
@@ -239,9 +239,9 @@ export const SubIssuesList: FC<Props> = ({ parentIssue, user, disabled = false }
             noBorder
             noChevron
           >
-            <CustomMenu.MenuItem onClick={handleCreateIssueModal}>Create new</CustomMenu.MenuItem>
+            <CustomMenu.MenuItem onClick={handleCreateIssueModal}>创建新任务</CustomMenu.MenuItem>
             <CustomMenu.MenuItem onClick={() => setSubIssuesListModal(true)}>
-              Add an existing issue
+              添加现有任务
             </CustomMenu.MenuItem>
           </CustomMenu>
         )

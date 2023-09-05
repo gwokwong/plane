@@ -33,7 +33,17 @@ export const IssuePrioritySelect: React.FC<Props> = ({ value, onChange }) => (
         <div className="flex w-full justify-between gap-2 rounded">
           <div className="flex items-center justify-start gap-2">
             <span>{getPriorityIcon(priority)}</span>
-            <span className="capitalize">{priority ?? "无"}</span>
+            <span className="capitalize">
+
+                {/*{priority === "urgent" && <span>急</span>}*/}
+                {/*{priority === "high" && <span>高</span>}*/}
+                {/*{priority === "medium" && <span>中</span>}*/}
+                {/*{priority === "low" && <span>低</span>}*/}
+                {/*{priority === "None" && <span>无</span>}*/}
+
+                {priority ?? "无"}
+
+            </span>
           </div>
         </div>
       </CustomSelect.Option>

@@ -182,23 +182,23 @@ export const renderShortDate = (date: string | Date, placeholder?: string) => {
   date = new Date(date);
 
   const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
   ];
   const day = date.getDate();
   const month = months[date.getMonth()];
 
-  return isNaN(date.getTime()) ? placeholder ?? "N/A" : `${day} ${month}`;
+  return isNaN(date.getTime()) ? placeholder ?? "N/A" : `${month}/${day} `;
 };
 
 export const render12HourFormatTime = (date: string | Date): string => {

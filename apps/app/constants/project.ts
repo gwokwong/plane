@@ -19,7 +19,7 @@ export const GROUP_CHOICES = {
   cancelled: "Cancelled",
 };
 
-export const PRIORITIES = ["急", "高", "中", "低", null];
+export const PRIORITIES = ["urgent", "high", "medium", "low", null];
 
 export const MONTHS = [
   "1月",

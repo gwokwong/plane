@@ -42,7 +42,7 @@ export const FiltersDropdown: React.FC = () => {
               id: priority === null ? "null" : priority,
               label: (
                 <div className="flex items-center gap-2 capitalize">
-                  {getPriorityIcon(priority)} {priority ?? "None"}
+                  {getPriorityIcon(priority)} {priority ?? "无"}
                 </div>
               ),
               value: {

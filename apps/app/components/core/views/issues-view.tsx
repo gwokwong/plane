@@ -542,7 +542,7 @@ export const IssuesView: React.FC<Props> = ({
                 onClick={openIssuesListModal ?? (() => {})}
               >
                 <PlusIcon className="h-4 w-4" />
-                Add an existing issue
+                  添加现有任务
               </SecondaryButton>
             ) : null,
         }}

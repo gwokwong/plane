@@ -491,7 +491,7 @@ export const CommandK: React.FC<Props> = ({ deleteIssue, isPaletteOpen, setIsPal
                           >
                             <div className="flex items-center gap-2 text-custom-text-200">
                               <Icon iconName="create_new_folder" />
-                              Create new project
+                              创建新项目
                             </div>
                             <kbd>P</kbd>
                           </Command.Item>
@@ -612,7 +612,7 @@ export const CommandK: React.FC<Props> = ({ deleteIssue, isPaletteOpen, setIsPal
                         <Command.Item onSelect={createNewWorkspace} className="focus:outline-none">
                           <div className="flex items-center gap-2 text-custom-text-200">
                             <Icon iconName="create_new_folder" />
-                            Create new workspace
+                            创建新工作区
                           </div>
                         </Command.Item>
                         <Command.Item

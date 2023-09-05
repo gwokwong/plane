@@ -99,7 +99,7 @@ export const CommentCard: React.FC<Props> = ({
               : comment.actor_detail.display_name}
           </div>
           <p className="mt-0.5 text-xs text-custom-text-200">
-            Commented {timeAgo(comment.created_at)}
+            评论 {timeAgo(comment.created_at)}
           </p>
         </div>
         <div className="issue-comments-section p-0">

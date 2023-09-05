@@ -76,7 +76,7 @@ export const IssueStateSelect: React.FC<Props> = ({ setIsOpen, value, onChange, 
           onClick={() => setIsOpen(true)}
         >
           <PlusIcon className="h-4 w-4" aria-hidden="true" />
-          Create New State
+          创建新状态
         </button>
       }
       noChevron

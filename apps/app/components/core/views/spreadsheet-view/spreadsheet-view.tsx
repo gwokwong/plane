@@ -126,7 +126,7 @@ export const SpreadsheetView: React.FC<Props> = ({
                         document.dispatchEvent(e);
                       }}
                     >
-                      创建新的
+                      创建新任务
                     </CustomMenu.MenuItem>
                     {openIssuesListModal && (
                       <CustomMenu.MenuItem onClick={openIssuesListModal}>

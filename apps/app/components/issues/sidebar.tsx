@@ -509,7 +509,7 @@ export const IssueDetailsSidebar: React.FC<Props> = ({
                   <div className="flex flex-wrap items-center py-2">
                     <div className="flex items-center gap-x-2 text-sm text-custom-text-200 sm:basis-1/2">
                       <CalendarDaysIcon className="h-4 w-4 flex-shrink-0" />
-                      <p>结束时间</p>
+                      <p>到期时间</p>
                     </div>
                     <div className="sm:basis-1/2">
                       <Controller

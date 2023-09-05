@@ -179,7 +179,7 @@ export const SingleBoard: React.FC<Props> = ({
                         </CustomMenu.MenuItem>
                         {openIssuesListModal && (
                           <CustomMenu.MenuItem onClick={openIssuesListModal}>
-                            Add an existing issue
+                            添加现有任务
                           </CustomMenu.MenuItem>
                         )}
                       </CustomMenu>

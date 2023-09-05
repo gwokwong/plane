@@ -53,7 +53,7 @@ export const IssueActivitySection: React.FC<Props> = ({
           const message = activityItem.field ? (
             <ActivityMessage activity={activityItem} />
           ) : (
-            "created the issue."
+            "创建任务"
           );
 
           if ("field" in activityItem && activityItem.field !== "updated_by") {

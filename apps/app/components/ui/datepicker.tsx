@@ -4,6 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 // helpers
 import { renderDateFormat } from "helpers/date-time.helper";
 
+
 type Props = {
   renderAs?: "input" | "button";
   value: Date | string | null | undefined;
@@ -28,7 +29,7 @@ export const CustomDatePicker: React.FC<Props> = ({
   onChange,
   handleOnOpen,
   handleOnClose,
-  placeholder = "Select date",
+  placeholder = "选择日期",
   displayShortForm = false,
   error = false,
   noBorder = false,
@@ -62,7 +63,7 @@ export const CustomDatePicker: React.FC<Props> = ({
     } ${
       noBorder ? "" : "border border-custom-border-200"
     } w-full rounded-md caret-transparent outline-none ${className}`}
-    dateFormat="MMM dd, yyyy"
+    dateFormat="yyyy-MM-dd"
     isClearable={isClearable}
     disabled={disabled}
     maxDate={maxDate}

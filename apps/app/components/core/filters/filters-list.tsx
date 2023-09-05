@@ -137,7 +137,7 @@ export const FiltersList: React.FC<Props> = ({
                           }`}
                         >
                           <span>{getPriorityIcon(priority)}</span>
-                          <span>{priority === "null" ? "None" : priority}</span>
+                          <span>{priority === "null" ? "无" : priority}</span>
                           <span
                             className="cursor-pointer"
                             onClick={() =>

@@ -481,7 +481,7 @@ const activityDetails: {
       <>
         将优先级设为{" "}
         <span className="font-medium text-custom-text-100">
-          {activity.new_value ? capitalizeFirstLetter(activity.new_value) : "None"}
+          {activity.new_value ? capitalizeFirstLetter(activity.new_value) : "无"}
         </span>
         {showIssue && (
           <>

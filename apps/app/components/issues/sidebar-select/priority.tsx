@@ -31,9 +31,19 @@ export const SidebarPrioritySelect: React.FC<Props> = ({ value, onChange, disabl
         }`}
       >
         <span className="grid place-items-center -my-1">
-          {getPriorityIcon(value ?? "None", "!text-sm")}
+          {getPriorityIcon(value ?? "无", "!text-sm")}
         </span>
-        <span>{value ?? "None"}</span>
+        <span>
+
+            {/*["urgent", "high", "medium", "low", None]*/}
+            {value ?? "无"}
+            {/*{value === "Urgent" && <span>急</span>}*/}
+            {/*{value === "High" && <span>高</span>}*/}
+            {/*{value === "Medium" && <span>中</span>}*/}
+            {/*{value === "Low" && <span>低</span>}*/}
+            {/*{value === "None" && <span>无</span>}*/}
+            {/*{value === "None" && <span>无</span>}*/}
+        </span>
       </button>
     }
     value={value}

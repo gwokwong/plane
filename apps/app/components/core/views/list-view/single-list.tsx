@@ -199,10 +199,10 @@ export const SingleList: React.FC<Props> = ({
                 position="right"
                 noBorder
               >
-                <CustomMenu.MenuItem onClick={addIssueToGroup}>Create new</CustomMenu.MenuItem>
+                <CustomMenu.MenuItem onClick={addIssueToGroup}>创建新任务</CustomMenu.MenuItem>
                 {openIssuesListModal && (
                   <CustomMenu.MenuItem onClick={openIssuesListModal}>
-                    Add an existing issue
+                    添加已有任务
                   </CustomMenu.MenuItem>
                 )}
               </CustomMenu>

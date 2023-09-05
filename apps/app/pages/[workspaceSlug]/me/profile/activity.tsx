@@ -93,7 +93,7 @@ const ProfileActivity = () => {
                                 : activityItem.actor_detail.display_name}
                             </div>
                             <p className="mt-0.5 text-xs text-custom-text-200">
-                              Commented {timeAgo(activityItem.created_at)}
+                              评论 {timeAgo(activityItem.created_at)}
                             </p>
                           </div>
                           <div className="issue-comments-section p-0">
@@ -136,7 +136,7 @@ const ProfileActivity = () => {
                   ) : activityItem.field ? (
                     <ActivityMessage activity={activityItem} showIssue />
                   ) : (
-                    "created the issue."
+                    "创建任务"
                   );
 
                 if ("field" in activityItem && activityItem.field !== "updated_by") {

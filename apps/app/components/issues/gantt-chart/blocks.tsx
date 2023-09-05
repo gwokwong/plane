@@ -25,7 +25,7 @@ export const IssueGanttBlock = ({ data }: { data: IIssue }) => {
           <div className="space-y-1">
             <h5>{data?.name}</h5>
             <div>
-              {renderShortDate(data?.start_date ?? "")} to{" "}
+              {renderShortDate(data?.start_date ?? "")} - {" "}
               {renderShortDate(data?.target_date ?? "")}
             </div>
           </div>

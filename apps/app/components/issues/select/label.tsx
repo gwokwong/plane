@@ -195,7 +195,7 @@ export const IssueLabelSelect: React.FC<Props> = ({ setIsOpen, value, onChange, 
                 >
                   <span className="flex items-center justify-start gap-1 text-custom-text-200">
                     <PlusIcon className="h-4 w-4" aria-hidden="true" />
-                    <span>Create New Label</span>
+                    <span>创建新标签</span>
                   </span>
                 </button>
               </div>

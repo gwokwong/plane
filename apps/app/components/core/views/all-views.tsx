@@ -109,7 +109,7 @@ export const AllViews: React.FC<Props> = ({
             {...provided.droppableProps}
           >
             <TrashIcon className="h-4 w-4" />
-            Drop here to delete the issue.
+            点击这里删除问题
           </div>
         )}
       </StrictModeDroppable>

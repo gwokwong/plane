@@ -15,31 +15,31 @@ type Props = {
 
 const shortcuts = [
   {
-    title: "Navigation",
+    title: "导航",
     shortcuts: [
-      { keys: "Ctrl,K", description: "To open navigator" },
-      { keys: "↑", description: "Move up" },
-      { keys: "↓", description: "Move down" },
-      { keys: "←", description: "Move left" },
-      { keys: "→", description: "Move right" },
-      { keys: "Enter", description: "Select" },
-      { keys: "Esc", description: "Close" },
+      { keys: "Ctrl,K", description: "打开导航仪" },
+      { keys: "↑", description: "向上" },
+      { keys: "↓", description: "向下" },
+      { keys: "←", description: "向左" },
+      { keys: "→", description: "向右" },
+      { keys: "Enter", description: "选择" },
+      { keys: "Esc", description: "关闭" },
     ],
   },
   {
-    title: "Common",
+    title: "公共",
     shortcuts: [
-      { keys: "P", description: "To create project" },
-      { keys: "C", description: "To create issue" },
-      { keys: "Q", description: "To create cycle" },
-      { keys: "M", description: "To create module" },
-      { keys: "V", description: "To create view" },
-      { keys: "D", description: "To create page" },
-      { keys: "Delete", description: "To bulk delete issues" },
-      { keys: "H", description: "To open shortcuts guide" },
+      { keys: "P", description: "创建项目" },
+      { keys: "C", description: "创建任务" },
+      // { keys: "Q", description: "创建周期" },
+      // { keys: "M", description: "创建模块" },
+      // { keys: "V", description: "创建视图" },
+      // { keys: "D", description: "创建页面" },
+      { keys: "Delete", description: "批量删除任务" },
+      { keys: "H", description: "打开快捷方式指南" },
       {
         keys: "Ctrl,Alt,C",
-        description: "To copy issue url when on issue detail page",
+        description: "在任务详细信息页面复制任务网址",
       },
     ],
   },
@@ -93,7 +93,7 @@ export const ShortcutsModal: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                         as="h3"
                         className="flex justify-between text-lg font-medium leading-6 text-custom-text-100"
                       >
-                        <span>Keyboard Shortcuts</span>
+                        <span>快捷键</span>
                         <span>
                           <button type="button" onClick={() => setIsOpen(false)}>
                             <XMarkIcon
@@ -111,7 +111,7 @@ export const ShortcutsModal: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                             id="search"
                             name="search"
                             type="text"
-                            placeholder="Search for shortcuts"
+                            placeholder="搜索快捷键"
                             onChange={(e) => setQuery(e.target.value)}
                           />
                         </div>
@@ -152,7 +152,7 @@ export const ShortcutsModal: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                           ) : (
                             <div className="flex flex-col gap-y-3">
                               <p className="text-sm text-custom-text-200">
-                                No shortcuts found for{" "}
+                                未找到以下快捷键{" "}
                                 <span className="font-semibold italic">
                                   {`"`}
                                   {query}

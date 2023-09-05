@@ -115,7 +115,7 @@ export const CustomSearchSelect = ({
                     className="w-full bg-transparent py-1 px-2 text-xs text-custom-text-200 placeholder:text-custom-text-400 focus:outline-none"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Type to search..."
+                    placeholder="键入搜索..."
                     displayValue={(assigned: any) => assigned?.name}
                   />
                 </div>
