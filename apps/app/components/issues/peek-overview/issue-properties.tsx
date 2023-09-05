@@ -143,7 +143,7 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
                 disabled={readOnly}
               />
             ) : (
-              <span className="text-custom-text-200">Empty</span>
+              <span className="text-custom-text-200">空</span>
             )}
           </div>
         </div>

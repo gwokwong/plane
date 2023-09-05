@@ -95,7 +95,7 @@ export const IssueLabelSelect: React.FC<Props> = ({ setIsOpen, value, onChange, 
                 <Combobox.Input
                   className="w-full bg-transparent py-1 px-2 text-xs text-custom-text-200 focus:outline-none"
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Search for label..."
+                  placeholder="搜索标签..."
                   displayValue={(assigned: any) => assigned?.name}
                 />
               </div>

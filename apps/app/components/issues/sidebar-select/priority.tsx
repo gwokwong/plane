@@ -34,9 +34,19 @@ export const SidebarPrioritySelect: React.FC<Props> = ({ value, onChange, disabl
           {getPriorityIcon(value ?? "无", "!text-sm")}
         </span>
         <span>
+            {value !== null && value !== undefined ? <>
+                    {value === "urgent" && <span>急</span>}
+                    {value === "high" && <span>高</span>}
+                    {value === "medium" && <span>中</span>}
+                    {value === "low" && <span>低</span>}
+                    {value === "null" && <span>无</span>}
+                    {value === null && <span>无</span>}
+                    {value == undefined && <span>无</span>}
 
+                </>
+                : "无"}
             {/*["urgent", "high", "medium", "low", None]*/}
-            {value ?? "无"}
+            {/*{value ?? "无"}*/}
             {/*{value === "Urgent" && <span>急</span>}*/}
             {/*{value === "High" && <span>高</span>}*/}
             {/*{value === "Medium" && <span>中</span>}*/}
@@ -55,7 +65,18 @@ export const SidebarPrioritySelect: React.FC<Props> = ({ value, onChange, disabl
       <CustomSelect.Option key={option} value={option} className="capitalize">
         <>
           {getPriorityIcon(option, "text-sm")}
-          {option ?? "无"}
+          {/*{option ?? "无"}*/}
+            {option !== null && option !== undefined ? <>
+                    {option === "urgent" && <span>急</span>}
+                    {option === "high" && <span>高</span>}
+                    {option === "medium" && <span>中</span>}
+                    {option === "low" && <span>低</span>}
+                    {option === "null" && <span>无</span>}
+                    {option === null && <span>无</span>}
+                    {option == undefined && <span>无</span>}
+
+                </>
+                : "无"}
         </>
       </CustomSelect.Option>
     ))}

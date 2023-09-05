@@ -21,7 +21,31 @@ export const IssuePrioritySelect: React.FC<Props> = ({ value, onChange }) => (
           {getPriorityIcon(value, `text-xs ${value ? "" : "text-custom-text-200"}`)}
         </span>
         <span className={`${value ? "" : "text-custom-text-200"} capitalize`}>
-          {value ?? "优先级"}
+          {/*{value ?? "优先级"}*/}
+
+            {/*{value === "" && <span>无</span>}*/}
+            {value === undefined && <span>优先级</span>}
+                    {value !== null && value !== undefined ? <>
+                    {value === "urgent" && <span>急</span>}
+                    {value === "high" && <span>高</span>}
+                    {value === "medium" && <span>中</span>}
+                    {value === "low" && <span>低</span>}
+                    {value === "null" && <span>无</span>}
+                    {value === null && <span>无</span>}
+                    {value == undefined && <span>无</span>}
+
+                    </>
+            : "优先级"}
+            {/*{value ?*/}
+            {/*    <span>优先级</span> :*/}
+            {/*    <>*/}
+            {/*        {value === "urgent" && <span>急</span>}*/}
+            {/*        {value === "high" && <span>高</span>}*/}
+            {/*        {value === "medium" && <span>中</span>}*/}
+            {/*        {value === "low" && <span>低</span>}*/}
+            {/*        {value === "null" && <span>无</span>}*/}
+            {/*    </>*/}
+            {/*}*/}
         </span>
       </div>
     }
@@ -41,8 +65,13 @@ export const IssuePrioritySelect: React.FC<Props> = ({ value, onChange }) => (
                 {/*{priority === "low" && <span>低</span>}*/}
                 {/*{priority === "None" && <span>无</span>}*/}
 
-                {priority ?? "无"}
+                {/*{priority ?? "无"}*/}
 
+                {priority === "urgent" && <span>急</span>}
+                {priority === "high" && <span>高</span>}
+                {priority === "medium" && <span>中</span>}
+                {priority === "low" && <span>低</span>}
+                {priority === "null" && <span>无</span>}
             </span>
           </div>
         </div>

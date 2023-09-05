@@ -9,6 +9,7 @@ import { renderShortDateWithYearFormat } from "helpers/date-time.helper";
 import { capitalizeFirstLetter } from "helpers/string.helper";
 // types
 import { IIssueActivity } from "types";
+import React from "react";
 
 const IssueLink = ({ activity }: { activity: IIssueActivity }) => {
   const router = useRouter();
@@ -481,7 +482,18 @@ const activityDetails: {
       <>
         将优先级设为{" "}
         <span className="font-medium text-custom-text-100">
-          {activity.new_value ? capitalizeFirstLetter(activity.new_value) : "无"}
+             {activity.new_value !== null && activity.new_value !== undefined ? <>
+                     {activity.new_value === "urgent" && <span>急</span>}
+                     {activity.new_value === "high" && <span>高</span>}
+                     {activity.new_value === "medium" && <span>中</span>}
+                     {activity.new_value === "low" && <span>低</span>}
+                     {activity.new_value === "null" && <span>无</span>}
+                     {activity.new_value === null && <span>无</span>}
+                     {activity.new_value == undefined && <span>无</span>}
+
+                 </>
+                 : "无"}
+          {/*{activity.new_value ? capitalizeFirstLetter(activity.new_value) : "无"}*/}
         </span>
         {showIssue && (
           <>
