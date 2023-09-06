@@ -330,7 +330,7 @@ export const IssuesFilterView: React.FC = () => {
                               {/*{key === "key" ? "ID" : replaceUnderscoreIfSnakeCase(key)}*/}
                               {key === "key" && <div>ID</div>}
                               {key === "assignee" && <div>负责人</div>}
-                              {key === "due_date" && <div>到期时间</div>}
+                              {key === "due_date" && <div>结束时间</div>}
                               {key === "labels" && <div>标签</div>}
                               {key === "priority" && <div>优先级</div>}
                               {key === "state" && <div>状态</div>}
@@ -339,6 +339,8 @@ export const IssuesFilterView: React.FC = () => {
                               {key === "link" && <div>链接</div>}
                               {key === "estimate" && <div>估算点</div>}
                               {key === "start_date" && <div>开始时间</div>}
+                              {key === "created_on" && <div>创建时间</div>}
+                              {key === "updated_on" && <div>更新时间</div>}
 
                             </button>
                           );

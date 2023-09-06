@@ -150,12 +150,12 @@ export const PeekOverviewIssueProperties: React.FC<Props> = ({
         <div className="flex items-center gap-2 text-sm">
           <div className="flex-shrink-0 w-1/4 flex items-center gap-2 font-medium">
             <Icon iconName="calendar_today" className="!text-base flex-shrink-0" />
-            <span className="flex-grow truncate">到期时间</span>
+            <span className="flex-grow truncate">结束时间</span>
           </div>
           <div>
             {issue.target_date ? (
               <CustomDatePicker
-                placeholder="Due date"
+                placeholder="结束时间 "
                 value={issue.target_date}
                 onChange={(val) =>
                   handleUpdateIssue({

@@ -178,7 +178,7 @@ export const MyIssuesSelectFilters: React.FC<Props> = ({
           },
           {
             id: "target_date",
-            label: "到期时间",
+            label: "结束时间",
             value: DATE_FILTER_OPTIONS,
             hasChildren: true,
             children: [

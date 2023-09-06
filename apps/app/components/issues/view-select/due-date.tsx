@@ -57,7 +57,7 @@ export const ViewDueDateSelect: React.FC<Props> = ({
         }`}
       >
         <CustomDatePicker
-          placeholder="Due date"
+          placeholder="结束时间"
           value={issue?.target_date}
           onChange={(val) => {
             partialUpdateIssue(

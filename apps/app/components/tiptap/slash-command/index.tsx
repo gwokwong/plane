@@ -55,7 +55,7 @@ const Command = Extension.create({
 const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitting: "submitting" | "submitted" | "saved") => void) => ({ query }: { query: string }) =>
   [
     {
-      title: "Text",
+      title: "文本",
       description: "Just start typing with plain text.",
       searchTerms: ["p", "paragraph"],
       icon: <Text size={18} />,

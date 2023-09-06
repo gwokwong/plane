@@ -561,7 +561,7 @@ const activityDetails: {
       if (!activity.new_value)
         return (
           <>
-            删除了到期时间
+            删除了结束时间
             {showIssue && (
               <>
                 {" "}
@@ -574,7 +574,7 @@ const activityDetails: {
       else
         return (
           <>
-            将到期时间定为{" "}
+            将结束时间定为{" "}
             <span className="font-medium text-custom-text-100">
               {renderShortDateWithYearFormat(activity.new_value)}
             </span>
