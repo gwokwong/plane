@@ -1,9 +1,10 @@
 // react-datepicker
-import DatePicker from "react-datepicker";
+import DatePicker , { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 // helpers
 import { renderDateFormat } from "helpers/date-time.helper";
-
+import zh_CN from 'date-fns/locale/zh-CN'
+registerLocale('zh_CN', zh_CN)
 
 type Props = {
   renderAs?: "input" | "button";
@@ -42,6 +43,7 @@ export const CustomDatePicker: React.FC<Props> = ({
 }) => (
   <DatePicker
     placeholderText={placeholder}
+    locale={'zh_CN'}
     selected={value ? new Date(value) : null}
     onChange={(val) => {
       if (!val) onChange(null);
