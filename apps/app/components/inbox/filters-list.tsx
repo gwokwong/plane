@@ -118,7 +118,7 @@ export const InboxFiltersList = () => {
         onClick={clearAllFilters}
         className="flex items-center gap-x-1 rounded-full border border-custom-border-200 bg-custom-background-80 px-3 py-1.5 text-custom-text-200 hover:text-custom-text-100"
       >
-        <span>Clear all</span>
+        <span>清除全部</span>
         <XMarkIcon className="h-3 w-3" />
       </button>
     </div>

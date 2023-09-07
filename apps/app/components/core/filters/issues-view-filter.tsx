@@ -312,7 +312,7 @@ export const IssuesFilterView: React.FC = () => {
 
                           if (
                             issueView !== "spreadsheet" &&
-                            (key === "created_on" || key === "updated_on")
+                            (key === "created_on" || key === "updated_on"  )
                           )
                             return null;
 

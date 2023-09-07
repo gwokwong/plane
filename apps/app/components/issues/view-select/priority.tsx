@@ -78,7 +78,7 @@ export const ViewPrioritySelect: React.FC<Props> = ({
           >
             <span className="flex gap-1 items-center text-custom-text-200 text-xs">
               {getPriorityIcon(
-                issue.priority && issue.priority !== "" ? issue.priority ?? "" : "None",
+                issue.priority && issue.priority !== "" ? issue.priority ?? "" : "无",
                 `text-sm ${
                   issue.priority === "urgent"
                     ? "text-white"
@@ -93,8 +93,16 @@ export const ViewPrioritySelect: React.FC<Props> = ({
               )}
               {noBorder
                 ? issue.priority && issue.priority !== ""
-                  ? capitalizeFirstLetter(issue.priority) ?? ""
-                  : "None"
+                  ? <>
+                      {/*{!issue.priority && <span>无</span>}*/}
+                      {/*capitalizeFirstLetter(issue.priority)*/}
+                      {issue.priority === "urgent" && <span>急</span>}
+                      {issue.priority === "high" && <span>高</span>}
+                      {issue.priority === "medium" && <span>中</span>}
+                      {issue.priority === "low" && <span>低</span>}
+
+                      </> ?? ""
+                  : "无"
                 : ""}
             </span>
           </Tooltip>
@@ -109,7 +117,13 @@ export const ViewPrioritySelect: React.FC<Props> = ({
         <CustomSelect.Option key={priority} value={priority} className="capitalize">
           <>
             {getPriorityIcon(priority, "text-sm")}
-            {priority ?? "无"}
+            {/*{priority ?? "无"}*/}
+              {priority === "urgent" && <span>急</span>}
+              {priority === "high" && <span>高</span>}
+              {priority === "medium" && <span>中</span>}
+              {priority === "low" && <span>低</span>}
+              {!priority && <span>无</span>}
+
           </>
         </CustomSelect.Option>
       ))}

@@ -31,7 +31,7 @@ const IssueFilter = observer(() => {
         className="flex items-center gap-2 border border-gray-300 px-2 py-1 pr-1 rounded cursor-pointer hover:bg-gray-200/60"
         onClick={clearAllFilters}
       >
-        <div>Clear all filters</div>
+        <div>清除所有筛选</div>
       </div>
     </div>
   );

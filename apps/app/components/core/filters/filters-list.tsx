@@ -50,10 +50,19 @@ export const FiltersList: React.FC<Props> = ({
             className="flex items-center gap-x-2 rounded-full border border-custom-border-200 bg-custom-background-80 px-2 py-1"
           >
             <span className="capitalize text-custom-text-200">
-              {key === "target_date" ? "Due Date" : replaceUnderscoreIfSnakeCase(key)}:
+              {/*TODO 这里做所有帅选项的文字*/}
+              {key === "priority"&&"优先级:"}
+              {key === "target_date"&&"结束时间:"}
+              {key === "state"&&"状态:"}
+              {key === "labels"&&"标签:"}
+              {key === "assignees"&&"负责人:"}
+              {key === "created_by"&&"创建人:"}
+              {key === "start_date"&&"开始时间:"}
+
+              {/*{key === "target_date" ? "Due Date" : replaceUnderscoreIfSnakeCase(key)}:*/}
             </span>
             {filters[key] === null || (filters[key]?.length ?? 0) <= 0 ? (
-              <span className="inline-flex items-center px-2 py-0.5 font-medium">None</span>
+              <span className="inline-flex items-center px-2 py-0.5 font-medium">无</span>
             ) : Array.isArray(filters[key]) ? (
               <div className="space-x-2">
                 <div className="flex flex-wrap items-center gap-1">
@@ -143,6 +152,7 @@ export const FiltersList: React.FC<Props> = ({
                             {priority === "high" && <span>高</span>}
                             {priority === "medium" && <span>中</span>}
                             {priority === "low" && <span>低</span>}
+                            {!priority && <span>无</span>}
                             {priority === "null" && <span>无</span>}
                           </span>
                           <span
@@ -340,7 +350,7 @@ export const FiltersList: React.FC<Props> = ({
           onClick={clearAllFilters}
           className="flex items-center gap-x-1 rounded-full border border-custom-border-200 bg-custom-background-80 px-3 py-1.5 text-xs"
         >
-          <span>Clear all filters</span>
+          <span>清除全部筛选</span>
           <XMarkIcon className="h-3 w-3" />
         </button>
       )}

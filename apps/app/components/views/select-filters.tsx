@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { useRouter } from "next/router";
 
@@ -97,7 +97,15 @@ export const SelectFilters: React.FC<Props> = ({
               id: priority === null ? "null" : priority,
               label: (
                 <div className="flex items-center gap-2 capitalize">
-                  {getPriorityIcon(priority)} {priority ?? "无"}
+                  {getPriorityIcon(priority)}
+
+                  {priority === "urgent" && <span>急</span>}
+                  {priority === "high" && <span>高</span>}
+                  {priority === "medium" && <span>中</span>}
+                  {priority === "low" && <span>低</span>}
+                  {!priority  && <span>无</span>}
+
+                  {/*{priority ?? "无"}*/}
                 </div>
               ),
               value: {

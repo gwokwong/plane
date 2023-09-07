@@ -19,7 +19,7 @@ export const renderShortNumericDateFormat = (date: string | Date) =>
   });
 
 export const renderLongDetailDateFormat = (date: string | Date) =>
-  new Date(date).toLocaleDateString("en-UK", {
+  new Date(date).toLocaleDateString("zh-CN", {
     day: "numeric",
     month: "long",
     year: "numeric",

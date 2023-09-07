@@ -484,25 +484,25 @@ export const IssuesView: React.FC<Props> = ({
                 })
               }
             />
-            <PrimaryButton
-              onClick={() => {
-                if (viewId) {
-                  setFilters({}, true);
-                  setToastAlert({
-                    title: "查看更新",
-                    message: "您的视图已更新",
-                    type: "success",
-                  });
-                } else
-                  setCreateViewModal({
-                    query: filters,
-                  });
-              }}
-              className="flex items-center gap-2 text-sm"
-            >
-              {!viewId && <PlusIcon className="h-4 w-4" />}
-              {viewId ? "Update" : "Save"} view
-            </PrimaryButton>
+            {/*<PrimaryButton*/}
+            {/*  onClick={() => {*/}
+            {/*    if (viewId) {*/}
+            {/*      setFilters({}, true);*/}
+            {/*      setToastAlert({*/}
+            {/*        title: "查看更新",*/}
+            {/*        message: "您的视图已更新",*/}
+            {/*        type: "success",*/}
+            {/*      });*/}
+            {/*    } else*/}
+            {/*      setCreateViewModal({*/}
+            {/*        query: filters,*/}
+            {/*      });*/}
+            {/*  }}*/}
+            {/*  className="flex items-center gap-2 text-sm"*/}
+            {/*>*/}
+            {/*  {!viewId && <PlusIcon className="h-4 w-4" />}*/}
+            {/*  {viewId ? "Update" : "Save"} view*/}
+            {/*</PrimaryButton>*/}
           </div>
           {<div className="mt-3 border-t border-custom-border-200" />}
         </>
@@ -522,9 +522,9 @@ export const IssuesView: React.FC<Props> = ({
             ? "Cycle issues will appear here"
             : moduleId
             ? "Module issues will appear here"
-            : "Project issues will appear here",
+            : "项目任务将出现在这里",
           description:
-            "Issues help you track individual pieces of work. With Issues, keep track of what's going on, who is working on it, and what's done.",
+            "任务可帮助你跟踪单个工作。有了 \"任务\"，你就能跟踪正在进行的工作、谁在处理以及完成了哪些工作。",
           primaryButton: {
             icon: <PlusIcon className="h-4 w-4" />,
             text: "添加任务",

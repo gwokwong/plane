@@ -36,7 +36,7 @@ export const SpreadsheetColumns: React.FC<Props> = ({ columnData, gridTemplateCo
       style={{ gridTemplateColumns }}
     >
       {columnData.map((col: any) => {
-        if (col.isActive) {
+        if (col.isActive && col.propertyName !== "estimate" ) {  //屏蔽
           return (
             <div
               className={`bg-custom-background-90 w-full ${
@@ -94,6 +94,7 @@ export const SpreadsheetColumns: React.FC<Props> = ({ columnData, gridTemplateCo
                       {col.colName === "Labels" && <span>标签</span>}
                       {col.colName === "Start Date" && <span>开始时间</span>}
                       {col.colName === "Due Date" && <span>结束时间</span>}
+                      {col.colName === "Estimate" && <span>估算点</span>}
                       {col.colName === "Created On" && <span>创建时间</span>}
                       {col.colName === "Updated On" && <span>更新时间</span>}
 

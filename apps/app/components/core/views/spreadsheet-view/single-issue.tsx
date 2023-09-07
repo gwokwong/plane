@@ -352,18 +352,19 @@ export const SingleSpreadsheetIssue: React.FC<Props> = ({
             />
           </div>
         )}
-        {properties.estimate && (
-          <div className="flex items-center text-xs text-custom-text-200 text-center p-2 group-hover:bg-custom-background-80 border-custom-border-200">
-            <ViewEstimateSelect
-              issue={issue}
-              partialUpdateIssue={partialUpdateIssue}
-              position="left"
-              tooltipPosition={tooltipPosition}
-              user={user}
-              isNotAllowed={isNotAllowed}
-            />
-          </div>
-        )}
+        {/* TODO 如果标题隐藏，这里也需要隐藏*/}
+        {/*{properties.estimate && (*/}
+        {/*  <div className="flex items-center text-xs text-custom-text-200 text-center p-2 group-hover:bg-custom-background-80 border-custom-border-200">*/}
+        {/*    <ViewEstimateSelect*/}
+        {/*      issue={issue}*/}
+        {/*      partialUpdateIssue={partialUpdateIssue}*/}
+        {/*      position="left"*/}
+        {/*      tooltipPosition={tooltipPosition}*/}
+        {/*      user={user}*/}
+        {/*      isNotAllowed={isNotAllowed}*/}
+        {/*    />*/}
+        {/*  </div>*/}
+        {/*)}*/}
         {properties.created_on && (
           <div className="flex items-center text-xs cursor-default text-custom-text-200 text-center p-2 group-hover:bg-custom-background-80 border-custom-border-200">
             {renderLongDetailDateFormat(issue.created_at)}

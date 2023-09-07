@@ -56,7 +56,7 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
   [
     {
       title: "文本",
-      description: "Just start typing with plain text.",
+      description: "只需开始输入纯文本即可",
       searchTerms: ["p", "paragraph"],
       icon: <Text size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -64,8 +64,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "Heading 1",
-      description: "Big section heading.",
+      title: "标题1",
+      description: "大节标题",
       searchTerms: ["title", "big", "large"],
       icon: <Heading1 size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -73,8 +73,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "Heading 2",
-      description: "Medium section heading.",
+      title: "标题2",
+      description: "中节标题",
       searchTerms: ["subtitle", "medium"],
       icon: <Heading2 size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -82,8 +82,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "Heading 3",
-      description: "Small section heading.",
+      title: "标题3",
+      description: "小节标题",
       searchTerms: ["subtitle", "small"],
       icon: <Heading3 size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -91,8 +91,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "To-do List",
-      description: "Track tasks with a to-do list.",
+      title: "待办事项清单",
+      description: "使用待办事项列表跟踪任务",
       searchTerms: ["todo", "task", "list", "check", "checkbox"],
       icon: <CheckSquare size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -100,8 +100,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "Bullet List",
-      description: "Create a simple bullet list.",
+      title: "子弹列表",
+      description: "创建一个简单的列表",
       searchTerms: ["unordered", "point"],
       icon: <List size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -109,8 +109,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "Divider",
-      description: "Visually divide blocks",
+      title: "分割器",
+      description: "从视觉上划分区块",
       searchTerms: ["line", "divider", "horizontal", "rule", "separate"],
       icon: <MinusSquare size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -118,8 +118,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "Numbered List",
-      description: "Create a list with numbering.",
+      title: "编号列表",
+      description: "创建带编号的列表",
       searchTerms: ["ordered"],
       icon: <ListOrdered size={18} />,
       command: ({ editor, range }: CommandProps) => {
@@ -127,8 +127,8 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
       },
     },
     {
-      title: "Quote",
-      description: "Capture a quote.",
+      title: "引用",
+      description: "获取引用",
       searchTerms: ["blockquote"],
       icon: <TextQuote size={18} />,
       command: ({ editor, range }: CommandProps) =>
@@ -141,16 +141,16 @@ const getSuggestionItems = (workspaceSlug: string, setIsSubmitting?: (isSubmitti
           .run(),
     },
     {
-      title: "Code",
-      description: "Capture a code snippet.",
+      title: "代码",
+      description: "截取代码片段",
       searchTerms: ["codeblock"],
       icon: <Code size={18} />,
       command: ({ editor, range }: CommandProps) =>
         editor.chain().focus().deleteRange(range).toggleCodeBlock().run(),
     },
     {
-      title: "Image",
-      description: "Upload an image from your computer.",
+      title: "图片",
+      description: "从电脑上传图片",
       searchTerms: ["photo", "picture", "media"],
       icon: <ImageIcon size={18} />,
       command: ({ editor, range }: CommandProps) => {

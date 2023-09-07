@@ -71,7 +71,7 @@ export const IssuePrioritySelect: React.FC<Props> = ({ value, onChange }) => (
                 {priority === "high" && <span>高</span>}
                 {priority === "medium" && <span>中</span>}
                 {priority === "low" && <span>低</span>}
-                {priority === "null" && <span>无</span>}
+                {!priority  && <span>无</span>}
             </span>
           </div>
         </div>
