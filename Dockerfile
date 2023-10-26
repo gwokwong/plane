@@ -1,9 +1,12 @@
 FROM node:18-alpine AS builder
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirror.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 RUN apk add --no-cache libc6-compat
 # Set working directory
 WORKDIR /app
 ENV NEXT_PUBLIC_API_BASE_URL=http://NEXT_PUBLIC_API_BASE_URL_PLACEHOLDER
 
+RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn global add turbo
 RUN apk add tree
 COPY . .
@@ -14,6 +17,7 @@ CMD tree -I node_modules/
 # Add lockfile and package.json's of isolated subworkspace
 FROM node:18-alpine AS installer
 
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirror.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 ARG NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
@@ -21,7 +25,8 @@ ARG NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/yarn.lock ./yarn.lock
-RUN yarn install
+
+RUN yarn install  --verbose --network-timeout 500000
 
 # # Build the project
 COPY --from=builder /app/out/full/ .
@@ -42,7 +47,7 @@ FROM python:3.11.1-alpine3.17 AS backend
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV PIP_DISABLE_PIP_VERSION_CHECK=1 
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV DJANGO_SETTINGS_MODULE plane.settings.production
 ENV DOCKERIZED 1
 
