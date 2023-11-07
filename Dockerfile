@@ -42,12 +42,12 @@ FROM python:3.11.1-alpine3.17 AS backend
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV PIP_DISABLE_PIP_VERSION_CHECK=1 
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV DJANGO_SETTINGS_MODULE plane.settings.production
 ENV DOCKERIZED 1
 
 WORKDIR /code
-
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirror.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
 RUN apk --no-cache add \
     "libpq~=15" \
     "libxslt~=1.1" \
